@@ -1,0 +1,45 @@
+.presentation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  color: $white;
+  min-height: 646px;
+  text-align: center;
+  padding-top: 200px;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 12.5%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &:before {
+    left: 0;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &:after {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    right: 0;
+  }
+
+  .section__text {
+    max-width: 740px;
+    width: 60%;
+    margin: 0 auto 40px;
+  }
+
+  .dots {
+    margin-bottom: 64px;
+  }
+}

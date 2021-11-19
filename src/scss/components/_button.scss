@@ -12,6 +12,7 @@
   background-color: transparent;
   padding: 8px 5px;
 
+
   .round {
     display: flex;
     justify-content: center;
@@ -29,16 +30,22 @@
   &.btn_color-white {
     color: $white;
 
+    &:hover,
+    &:focus {
+      .round {
+        background-color: $black;
+
+        svg {
+          filter: invert(1);
+          transform: translateY(5px);
+        }
+      }
+    }
+
     .round {
       border-color: $white;
     }
 
-    //&:hover,
-    //&:focus {
-    //  .round {
-    //    background-color: $black;
-    //  }
-    //}
   }
 
 
@@ -49,8 +56,9 @@
     &:focus {
       .round {
         background-color: $black;
-        svg{
-         filter: invert(1);
+
+        svg {
+          filter: invert(1);
           transform: translateY(5px);
         }
       }
@@ -60,5 +68,78 @@
       border-color: $black
     }
   }
+
+  &_large {
+    background-color: #fff;
+    border: 1px solid #ffffff;
+  }
 }
 
+.decor-wrap-btn {
+  position: relative;
+  min-width: 380px;
+  padding: 6px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/svg/corner.svg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: contain;
+    width: 14px;
+    height: 20px;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
+
+  .btn_large {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    padding: 17px 55px;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 1;
+    &:before {
+      width: 100%;
+      height: 100%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: #000000;
+      transition: all .5s;
+      z-index: -1;
+
+    }
+
+    &:hover {
+      color: white;
+      .round{
+        border-color: #ffffff;
+        svg{
+          transform: translateX(5px);
+          filter: invert(1);
+        }
+      }
+    }
+
+    &:hover:before {
+      top: 0;
+    }
+  }
+}

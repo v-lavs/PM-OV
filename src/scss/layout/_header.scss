@@ -44,7 +44,7 @@
       }
     }
   }
-  .header__nav-footer {
+  &__nav-footer {
     display: none;
     .social-bar_small{
       padding-bottom: 37px;
@@ -74,6 +74,19 @@
     top: 34px;
     padding: 0;
     display: none;
+  }
+
+  &__link{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 35px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__link-icon{
+    width: 100%;
   }
 
   @include respond-to($md) {
