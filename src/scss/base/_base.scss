@@ -1,0 +1,97 @@
+body {
+  font: 400 16px $main-font;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.main {
+  padding-top: 100px;
+}
+
+.dots {
+  text-align: center;
+
+  .dot {
+    display: inline-block;
+    background-color: $dark-grey;
+    width: 6px;
+    line-height: 1;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.social-bar {
+  justify-content: center;
+  display: flex;
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    transition: .35s;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+
+    &_round {
+      background: $light-grey;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      margin-bottom: 18px;
+      padding: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $black;
+
+        svg path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+
+

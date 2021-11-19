@@ -1,0 +1,52 @@
+.menu {
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &__item {
+    line-height: 1;
+    margin: 0 37px;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 2px 8px 2px 7px;
+    transition: .5s;
+
+    &:before,
+    &:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      z-index: -1;
+      height: 4px;
+      background-color: #d9d9d9;
+      opacity: 0;
+    }
+    &:hover,
+    &:focus {
+      -webkit-text-stroke: .5px #000000;
+    }
+    &:hover:before,
+    &:focus:before{
+      opacity: 1;
+    }
+  }
+}
+
+
+//.breadcrumbs {
+//  display: inline-flex;
+//
+//
+//  .crumb {
+//
+//  }
+//
+//  a {
+//    display: inline-block;
+//  }
+//}

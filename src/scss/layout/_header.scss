@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  padding: 12px 0;
+  background-color: #f4f4f4;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-burger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+
+    .line {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin-bottom: 8px;
+      background-color: $black;
+    }
+  }
+  .lang-switch{
+    display: none;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    &__link{
+      display: inline-block;
+      margin: 0 11px;
+      &.active{
+        font-weight: 700;
+      }
+    }
+  }
+  .header__nav-footer {
+    display: none;
+    .social-bar_small{
+      padding-bottom: 37px;
+    }
+    .copywriting{
+      font-size: 12px;
+      max-width: 305px;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 46px;
+      border-top: 1px solid #c4c4c4;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../assets/img/svg/closeBtn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    right: 16px;
+    top: 34px;
+    padding: 0;
+    display: none;
+  }
+
+  @include respond-to($md) {
+    .lang-switch,
+    .btn-close,
+    .btn-burger,
+    .header__nav-footer {
+      display: block;
+    }
+    .header__nav {
+      position:fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f4f4f4;
+      transition: transform .5s;
+      transform: translateX(100%);
+      z-index: 999;
+      padding: 100px 16px 45px;
+      overflow-y: auto;
+      &.open {
+        transform: translateX(0);
+      }
+
+      .menu {
+        flex-direction: column;
+        font-size: 20px;
+        margin-bottom: 30px;
+        &__item{
+          margin: 0 0 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .2;
+  z-index: 500;
+}
+

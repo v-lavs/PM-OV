@@ -1,0 +1,66 @@
+//.form{
+//
+// }
+//
+
+
+
+/*----------- custom checkbox-------------*/
+//.label-checkmark {
+//  position: relative;
+//  display: inline-flex;
+//  align-items: center;
+//  font-size: 16px;
+//  margin-bottom: 16px;
+//  padding-left: 48px;
+//  transition: .35s;
+//  max-width: 555px;
+//  width: 100%;
+//}
+//
+//.checkbox {
+//  -webkit-appearance: none;
+//  -moz-appearance: none;
+//  position: absolute;
+//  opacity: 0;
+//
+//}
+//
+//.check-mark {
+//  position: absolute;
+//  width: 25px;
+//  height: 25px;
+//  background-color: $white;
+//  border: 1px solid $gray;
+//  display: inline-block;
+//  border-radius: 7px;
+//  transition: .35s;
+//  margin-left: -48px;
+//
+//  &:before {
+//    position: absolute;
+//    content: '';
+//    background-repeat: no-repeat;
+//    background-position: center center;
+//    background-size: contain;
+//    width: 31px;
+//    height: 29px;
+//    z-index: 1;
+//    bottom: 4px;
+//    left: -1px;
+//  }
+//}
+//
+//
+//.checkbox:hover + .check-mark {
+//  border-color: $dark;
+//}
+//
+//.checkbox:checked + .check-mark {
+//  border-color: $dark;
+//}
+//
+//.checkbox:checked + .check-mark:before {
+//  background-image: url(../assets/img/svg/check.svg);
+//}
+//

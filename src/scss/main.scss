@@ -1,0 +1,22 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/nav';
+@import 'components/slider';
+@import 'components/form';
+
+
+@import 'layout/layout';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import "pages/home/index";
+
+
+

@@ -1,0 +1,64 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: .35s;
+  background-color: transparent;
+  padding: 8px 5px;
+
+  .round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-right: 20px;
+    transition: .35s;
+  }
+
+
+  &.btn_color-white {
+    color: $white;
+
+    .round {
+      border-color: $white;
+    }
+
+    //&:hover,
+    //&:focus {
+    //  .round {
+    //    background-color: $black;
+    //  }
+    //}
+  }
+
+
+  &_color-black {
+    color: $black;
+
+    &:hover,
+    &:focus {
+      .round {
+        background-color: $black;
+        svg{
+         filter: invert(1);
+          transform: translateY(5px);
+        }
+      }
+    }
+
+    .round {
+      border-color: $black
+    }
+  }
+}
+
