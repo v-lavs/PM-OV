@@ -33,11 +33,11 @@
     &:hover,
     &:focus {
       .round {
-        background-color: $black;
+        background-color: $white;
 
         svg {
-          filter: invert(1);
-          transform: translateY(5px);
+          filter: invert(0);
+          transform: translateX(5px);
         }
       }
     }

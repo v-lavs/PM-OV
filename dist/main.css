@@ -74,7 +74,6 @@ textarea {
 
 textarea {
   vertical-align: top;
-  resize: none;
 }
 
 :focus {
@@ -327,13 +326,13 @@ body {
 
 .btn.btn_color-white:hover .round,
 .btn.btn_color-white:focus .round {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .btn.btn_color-white:hover .round svg,
 .btn.btn_color-white:focus .round svg {
-  filter: invert(1);
-  transform: translateY(5px);
+  filter: invert(0);
+  transform: translateX(5px);
 }
 
 .btn.btn_color-white .round {
@@ -491,7 +490,42 @@ body {
   opacity: 1;
 }
 
-/*----------- custom checkbox-------------*/
+.contact-form {
+  max-width: 350px;
+  width: 100%;
+}
+
+.contact-form .btn_submit {
+  margin-top: 32px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 14px;
+}
+
+.contact-form .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.contact-form .input,
+.contact-form .textarea {
+  width: 100%;
+  background-color: #000000;
+  font-size: 16px;
+  line-height: 1.19;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px 0;
+}
+
+.contact-form ::placeholder {
+  color: #ffffff;
+}
+
+.contact-form .textarea {
+  width: 100%;
+  background-color: #000000;
+}
 
 .container {
   width: 100%;
