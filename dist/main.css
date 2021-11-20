@@ -1127,8 +1127,8 @@ body {
 .drones__img-sector {
   display: block;
   position: absolute;
-  max-width: 408px;
-  width: 63%;
+  max-width: 403px;
+  width: 64%;
   height: auto;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-180deg);
