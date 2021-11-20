@@ -27,6 +27,7 @@
     "bootstrap-4-grid": "^2.4.1",
     "braces": "^2.3.2",
     "jquery": "^3.5.1",
+    "jquery-nice-select": "^1.1.0",
     "natives": "^1.1.6",
     "waypoints": "^4.0.1"
   }

@@ -4,6 +4,7 @@
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ../../node_modules/waypoints/lib/jquery.waypoints.min.js ;
+//= include ../../node_modules/jquery-nice-select/js/jquery.nice-select.js
 
 
 // CUSTOM SCRIPTS
@@ -45,6 +46,9 @@ $(document).ready(function () {
     }
     smoothScrollToAnchor('.btn_scroll');
     smoothScrollToAnchor('.menu__link');
+
+    //CUSTOM SELECT
+    $('.custom-select').niceSelect();
 
     //BANNER SLIDER HOME
     const home_banner_slider = new Swiper(".slider-services", {
@@ -102,7 +106,7 @@ $(document).ready(function () {
         },
     });
 
-//    ANIMATION
+   //    ANIMATION
     const sectionDrones = document.querySelector('.drones__img-blocks');
 
     if (sectionDrones) {

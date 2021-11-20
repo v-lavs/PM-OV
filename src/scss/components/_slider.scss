@@ -1,12 +1,42 @@
-//swiper pagination-bullets
+.slider__btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  margin-left: 3px;
+  transition: background-color .4s;
 
-//.swiper-container-horizontal > .swiper-pagination-bullets {
-//
-//}
-//
-//.swiper-pagination-bullets .swiper-pagination-bullet {
-//
-//  &.swiper-pagination-bullet-active {
-//
-//  }
-//}
+  path {
+    stroke: #000;
+  }
+
+  &:hover {
+    background-color: #000;
+
+    svg {
+      transform: translateX(5px);
+    }
+
+    path {
+      stroke: #fff;
+    }
+  }
+
+}
+
+.slider__arrow_prev {
+  left: 11%;
+
+  &:hover {
+    svg {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.slider__arrow_next {
+  right: 11%;
+
+}

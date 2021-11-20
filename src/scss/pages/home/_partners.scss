@@ -82,34 +82,6 @@
     align-items: flex-end;
   }
 
-  &__btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: none;
-    background-color: transparent;
-    margin-left: 3px;
-    transition: background-color .4s;
-
-    path {
-      stroke: #000;
-    }
-
-    &:hover {
-      background-color: #000;
-
-      svg {
-        transform: translateX(5px);
-      }
-
-      path {
-        stroke: #fff;
-      }
-    }
-
-  }
-
   &__prev {
     &:hover {
       svg {
