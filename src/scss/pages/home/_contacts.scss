@@ -1,0 +1,42 @@
+.contacts {
+  background-color: #000000;
+  color: #ffffff;
+  padding-bottom: 95px;
+
+  .d-flex {
+    flex-wrap: wrap;
+  }
+
+  &_left,
+  &_right {
+    width: 50%;
+  }
+
+  .heading {
+    color: #ffffff;
+    width: 100%;
+    flex-grow: 1;
+
+    margin-bottom: 65px;
+  }
+
+  .heading_md {
+    padding: 0;
+    margin-bottom: 37px;
+  }
+
+  .heading_sm {
+    margin-bottom: 5px;
+  }
+  .contacts__info-item{
+    margin-bottom: 25px;
+  }
+}
+
+.contacts-slider {
+  height: 506px;
+  &__slide{
+    padding-top: 45px;
+    padding-bottom: 95px;
+  }
+}

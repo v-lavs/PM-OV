@@ -127,6 +127,16 @@
       }
     }
   }
+  &__link{
+    display: inline-block;
+    transition: .35s;
+    &:hover,
+    &:focus{
+      svg path{
+        fill:#000000;
+      }
+    }
+  }
 }
 
 .backdrop {

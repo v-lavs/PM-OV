@@ -24,11 +24,6 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
-
-    $(document).on('scroll', function () {
-        onHeaderScrol();
-    });
-
     // SMOOTH SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
