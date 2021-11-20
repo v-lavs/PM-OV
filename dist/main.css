@@ -268,6 +268,31 @@ body {
   font-size: 12px;
 }
 
+.cover-anim__frame {
+  overflow: hidden;
+  transform: translateX(-110%);
+  transition: transform .5s;
+}
+
+.cover-anim__content {
+  transform: translateX(110%);
+  transition: transform .5s;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.anim_started .cover-anim__frame,
+.anim_started .cover-anim__content {
+  transform: none;
+}
+
+.anim_started.fade {
+  opacity: 1;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -332,6 +357,11 @@ body {
 
 .btn_color-black .round {
   border-color: #000000;
+}
+
+.btn_scroll:hover .round svg,
+.btn_scroll:focus .round svg {
+  transform: translateY(5px);
 }
 
 .btn_submit {
@@ -856,6 +886,110 @@ body {
 
 .slider__arrow.swiper-button-disabled {
   opacity: 0;
+}
+
+.company-partners .section__header {
+  margin-bottom: 73px;
+}
+
+.partners-slider {
+  color: #545454;
+}
+
+.partners-slider .swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.partners-slider .row {
+  display: flex;
+}
+
+.partners-slider__part {
+  width: 50%;
+}
+
+.partners-slider__part_media * {
+  height: 100%;
+}
+
+.partners-slider__img-wrap {
+  clip-path: polygon(0% 30px, 30px 0%, 100% 0%, 100% 5%, 100% 100%, 100% 100%, 0% 100%, 0 0);
+  max-height: 400px;
+}
+
+.partners-slider__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partners-slider__content {
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 26px;
+}
+
+.partners-slider__article {
+  max-width: 490px;
+}
+
+.partners-slider__article p {
+  margin-bottom: 20px;
+}
+
+.partners-slider__header {
+  margin-bottom: 44px;
+}
+
+.partners-slider__footer {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  padding-left: 40px;
+  height: 42px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.partners-slider__btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  margin-left: 3px;
+  transition: background-color .4s;
+}
+
+.partners-slider__btn path {
+  stroke: #000;
+}
+
+.partners-slider__btn:hover {
+  background-color: #000;
+}
+
+.partners-slider__btn:hover svg {
+  transform: translateX(5px);
+}
+
+.partners-slider__btn:hover path {
+  stroke: #fff;
+}
+
+.partners-slider__prev:hover svg {
+  transform: translateX(-5px);
+}
+
+.partners-slider .social-bar__link {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
 }
 
 .presentation {

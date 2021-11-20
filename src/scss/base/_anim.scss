@@ -1,0 +1,29 @@
+.cover-anim {
+  &__frame {
+    overflow: hidden;
+    transform: translateX(-110%);
+    transition: transform .5s;
+  }
+
+  &__content {
+    transform: translateX(110%);
+    transition: transform .5s;
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.anim_started {
+  .cover-anim__frame,
+  .cover-anim__content {
+    transform: none;
+  }
+
+  &.fade {
+    opacity: 1;
+  }
+}
+

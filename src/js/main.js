@@ -57,5 +57,47 @@ $(document).ready(function () {
     });
 
 
+    //PARTNER  SLIDE
+    const partners_slider = new Swiper(".partners-slider", {
+        slidesPerView: 1,
+        speed: 0,
+        allowTouchMove: false,
+        loop: true,
+        on: {
+            afterInit: function () {
+                $(this.slides[this.activeIndex]).find('.cover-anim').addClass('anim_started');
+                $(this.slides[this.activeIndex]).find('.fade').addClass('anim_started');
+            }
+        }
+    });
 
+    const animTime = 600;
+
+    partners_slider.on('slideChange', function () {
+        $(this.slides[this.activeIndex]).find('.cover-anim').addClass('anim_started');
+        $(this.slides[this.activeIndex]).find('.fade').addClass('anim_started');
+    });
+
+    $('.partners-slider__next').click(function () {
+        $('.partners-slider .anim_started').removeClass('anim_started');
+        setTimeout(function () {
+            partners_slider.slideNext();
+        }, animTime);
+    });
+
+    $('.partners-slider__prev').click(function () {
+        $('.partners-slider .anim_started').removeClass('anim_started');
+        setTimeout(function () {
+            partners_slider.slidePrev();
+        }, animTime);
+    });
+
+//CONTACTS SLIDER
+    var contactSlider = new Swiper(".contacts-slider", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 });
