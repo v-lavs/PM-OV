@@ -1,7 +1,6 @@
 .contacts {
   background-color: #000000;
   color: #ffffff;
-  padding-bottom: 95px;
 
   .d-flex {
     flex-wrap: wrap;
@@ -16,11 +15,11 @@
     color: #ffffff;
     width: 100%;
     flex-grow: 1;
-
     margin-bottom: 65px;
   }
 
   .heading_md {
+    display: inline-block;
     padding: 0;
     margin-bottom: 37px;
   }
