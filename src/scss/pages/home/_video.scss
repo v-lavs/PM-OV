@@ -52,6 +52,10 @@
     height: 0;
     overflow: hidden;
     padding-top: 40%;
+    &.video_enabled{
+      display: block;
+      cursor: pointer;
+    }
   }
 
   &__link,
@@ -130,4 +134,14 @@
       transform: translate(-50%, -50%) rotate(-180deg);
     }
   }
+}
+
+/* Enabled */
+
+.video_enabled {
+  cursor: pointer;
+}
+
+.video_enabled .btn_video {
+  display: block;
 }
