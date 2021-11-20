@@ -14,7 +14,7 @@ header, nav, section, article, aside, footer {
   display: block
 }
 select, input, textarea        {  font: inherit; color: inherit; vertical-align:middle; }
-textarea                       { vertical-align:top;}
+textarea                       { vertical-align:top; resize:none;}
 :focus                         { outline:none; }
 input[type=submit], button     { cursor:pointer; }
 img, fieldset                  { border:0; max-width: 100%; height: auto; vertical-align: top;}

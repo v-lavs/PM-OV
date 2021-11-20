@@ -74,6 +74,7 @@ textarea {
 
 textarea {
   vertical-align: top;
+  resize: none;
 }
 
 :focus {
@@ -215,7 +216,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .wrap-anim-bg {
@@ -525,6 +526,8 @@ body {
 .contact-form .textarea {
   width: 100%;
   background-color: #000000;
+  resize: both;
+  overflow: auto;
 }
 
 .container {
@@ -1038,6 +1041,7 @@ body {
   text-align: center;
   padding-top: 200px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .presentation:before,
@@ -1093,7 +1097,45 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
+}
+
+.drones__lottie-anim {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 615px;
+  width: 80%;
+  height: auto;
+  z-index: 0;
+}
+
+.drones__img-blocks {
+  position: relative;
+  max-width: 634px;
+  width: 72%;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.drones__img-blocks.active_anim .drones__img-sector {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.drones__img-sector {
+  display: block;
+  position: absolute;
+  max-width: 408px;
+  width: 63%;
+  height: auto;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-180deg);
+  left: calc(50% + 46px);
+  transform-origin: 0 50%;
+  transition: .5s;
+  z-index: -1;
 }
 
 .drones .dots {
@@ -1147,6 +1189,24 @@ body {
 .contacts-slider__slide {
   padding-top: 45px;
   padding-bottom: 95px;
+}
+
+.contacts-slider .swiper-pagination-vertical.swiper-pagination-bullets,
+.contacts-slider .swiper-vertical > .swiper-pagination-bullets {
+  right: 50px;
+}
+
+.contacts-slider .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.contacts-slider .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  border-color: transparent;
 }
 
 @media only screen and (max-width: 980px) {

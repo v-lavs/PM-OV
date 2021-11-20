@@ -34,8 +34,24 @@
 
 .contacts-slider {
   height: 506px;
+
   &__slide{
     padding-top: 45px;
     padding-bottom: 95px;
+  }
+  .swiper-pagination-vertical.swiper-pagination-bullets,
+  .swiper-vertical>.swiper-pagination-bullets {
+    right: 50px;
+  }
+  .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #ffffff;
+    border-color: transparent;
   }
 }

@@ -3,6 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../../node_modules/waypoints/lib/jquery.waypoints.min.js ;
 
 
 // CUSTOM SCRIPTS
@@ -99,5 +100,14 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+
+//    ANIMATION
+    let sectorRotete = new Waypoint({
+        element: document.querySelector('.drones__img-blocks'),
+        handler: function (direction) {
+            this.element.classList.add('active_anim');
+        },
+        offset: '60%'
     });
 });

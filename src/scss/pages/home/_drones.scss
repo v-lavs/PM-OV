@@ -6,6 +6,7 @@
   &__part-right {
     width: 45%;
     padding-left: 105px;
+    //z-index: 1;
   }
 
   &__part-left {
@@ -20,7 +21,47 @@
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+  }
+
+  &__lottie-anim {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 615px;
+    width: 80%;
+    height: auto;
+    z-index: 0;
+  }
+
+  &__img-blocks {
+    position: relative;
+    max-width: 634px;
+    width: 72%;
+    margin-left: auto;
+    z-index: 1;
+
+    &.active_anim {
+      .drones__img-sector {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+    }
+  }
+
+  &__img-sector {
+    display: block;
+    position: absolute;
+    max-width: 408px;
+    width: 63%;
+    height: auto;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-180deg);
+    left: calc(50% + 46px);
+    transform-origin: 0 50%;
+    transition: .5s;
+    z-index: -1;
   }
 
   .dots {

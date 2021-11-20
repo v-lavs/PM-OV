@@ -10,7 +10,7 @@
   text-align: center;
   padding-top: 200px;
   overflow: hidden;
-
+  z-index: 1;
   &:before,
   &:after {
     position: absolute;
