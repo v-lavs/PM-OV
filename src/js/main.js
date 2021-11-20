@@ -61,6 +61,31 @@ $(document).ready(function () {
         },
     });
 
+    // Layout toggle
+
+    const $layoutToggle = $('.layout-toggle');
+
+    $layoutToggle.find('.layout-toggle__btn').click(function () {
+        const $parent = $(this).parent('.layout-toggle');
+        const btns = $parent.find('.layout-toggle__btn');
+
+        const selected_layout_class = $(this).data('layout');
+        const layout_ID = $parent.data('for');
+        const $layout = $('#' + layout_ID);
+
+        const layoutClasses = $(btns).map(function (index, item) {
+            return $(item).data('layout');
+        });
+
+        $(btns).removeClass('layout-toggle__btn_active');
+        $(this).addClass('layout-toggle__btn_active');
+
+        layoutClasses.each(function (index, className) {
+            $layout.removeClass(className);
+        });
+
+        $layout.addClass(selected_layout_class);
+    });
 
     //PARTNER  SLIDE
     const partners_slider = new Swiper(".partners-slider", {
@@ -77,6 +102,7 @@ $(document).ready(function () {
     });
 
     const animTime = 600;
+    // Client's Review
 
     partners_slider.on('slideChange', function () {
         $(this.slides[this.activeIndex]).find('.cover-anim').addClass('anim_started');
@@ -100,6 +126,7 @@ $(document).ready(function () {
 //CONTACTS SLIDER
     var contactSlider = new Swiper(".contacts-slider", {
         direction: "vertical",
+        parallax: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,

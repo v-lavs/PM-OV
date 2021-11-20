@@ -3,8 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <title>ПРОЄКТИ</title>
+
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body>
 
+<section class="section section-projects">
+    <div class="container">
+        <header class="section__header">
+            <a href="index.html" class="back-btn"></a>
+
+            <nav class="section__header-item breadcrumbs">
+                <div class="breadcrumbs__item">
+                    <a href="index.html">ГОЛОВНА</a>
+                </div>
+                <div class="breadcrumbs__separator">/</div>
+                <div class="breadcrumbs__item">
+                    <span>ПРОЄКТИ</span>
+                </div>
+            </nav>
+
+            <div class="section__header-item section__header-item_right search-result">
+                РЕЗУЛЬТАТИ 1-12 З 20
+            </div>
+
+            <div class="projects-filter section__header-item">
+                <div class="projects-filter__item">
+                    <select class="custom-select">
+                        <option data-disrlay="ТИП ОБ’ЄКТУ">ТИП ОБ’ЄКТУ</option>
+                        <option value="1">ТИП 1</option>
+                        <option value="2">ТИП 2</option>
+                    </select>
+                </div>
+
+                <div class="projects-filter__item">
+                    <select class="custom-select">
+                        <option value="">РІК</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+
+                <div class="projects-filter__item">
+                    <select class="custom-select">
+                        <option value="">ЛОКАЦІЯ</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="circle-decor section__header-item"></div>
+
+            <nav class="layout-toggle section__header-item" data-for="projects-layout">
+                <button
+                        data-layout="projects-layout_grid"
+                        class="layout-toggle__btn layout-toggle__btn_grid"></button>
+                <button
+                        data-layout="projects-layout_list"
+                        class="layout-toggle__btn layout-toggle__btn_list layout-toggle__btn_active"></button>
+            </nav>
+        </header>
+
+        <div class="projects-layout projects-layout_list" id="projects-layout">
+            <div class="projects-layout__item">
+                <a href="#" class="projects-layout__inner" style="background-image: url('assets/img/projects/1.jpg')">
+                    <div class="projects-layout__content">
+                        <h2 class="projects-layout__title">PORSHE CENTER</h2>
+
+                        <div class="projects-layout__info">
+                            <div class="projects-layout__info-item">Київ, Україна</div>
+                            <div class="projects-layout__info-item">О. Висоцький</div>
+                            <div class="projects-layout__info-item">2020</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projects-layout__item">
+                <a href="#" class="projects-layout__inner" style="background-image: url('assets/img/projects/2.jpg')">
+                    <div class="projects-layout__content">
+                        <h2 class="projects-layout__title">PORSHE CENTER</h2>
+
+                        <div class="projects-layout__info">
+                            <div class="projects-layout__info-item">Київ, Україна</div>
+                            <div class="projects-layout__info-item">О. Висоцький</div>
+                            <div class="projects-layout__info-item">2020</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projects-layout__item">
+                <a href="#" class="projects-layout__inner" style="background-image: url('assets/img/projects/3.jpg')">
+                    <div class="projects-layout__content">
+                        <h2 class="projects-layout__title">PLAZA RIO</h2>
+
+                        <div class="projects-layout__info">
+                            <div class="projects-layout__info-item">Київ, Україна</div>
+                            <div class="projects-layout__info-item">О. Висоцький</div>
+                            <div class="projects-layout__info-item">2020</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="projects-layout__item">
+                <a href="#" class="projects-layout__inner" style="background-image: url('assets/img/projects/4.jpg')">
+                    <div class="projects-layout__content">
+                        <h2 class="projects-layout__title">EAST GATE LOGISTIC</h2>
+
+                        <div class="projects-layout__info">
+                            <div class="projects-layout__info-item">Київ, Україна</div>
+                            <div class="projects-layout__info-item">О. Висоцький</div>
+                            <div class="projects-layout__info-item">2020</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pagination page__pagination">
+    <a class="pagination__item pagination__item_prev pagination__item_disabled" href="#">ПОПЕРЕДНЯ</a>
+    <a class="pagination__item pagination__item_active" href="#">1</a>
+    <a class="pagination__item" href="#">2</a>
+    <a class="pagination__item pagination__item_next pagination__item_active" href="#">НАСТУПНА</a>
+</div>
+
+
+<section class="section section-reviews">
+    <div class="container">
+
+        <header class="section__header">
+            <h2>Відгуки клієнтів</h2>
+        </header>
+
+        <div class="swiper slider-reviews">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-review__row">
+                        <div class="slider-review__part slider-review__part_logo">
+                            <img src="assets/img/clients/barnherz.png" alt="">
+                        </div>
+                        <div class="slider-review__part slider-review__part_content">
+                            <h3 class="slider-review__title">BHS Ried</h3>
+                            <p>Будівля у формі багатогранника виглядає ззовні привабливою та змінила обриси нашої
+                                лікарні. Пацієнтам та працівникам подобається світла дружня атмосфера в нашому новому
+                                операційному та амбулаторному корпусі</p>
+                        </div>
+                    </div>
+                    <div class="slider-review__row">
+                        <div class="slider-review__part slider-review__part_logo">
+                            <img src="assets/img/clients/billa.jpg" alt="">
+                        </div>
+                        <div class="slider-review__part slider-review__part_content">
+                            <h3 class="slider-review__title">Billa</h3>
+                            <p>Billa співпрацює з компанією з 2012 року. Протягом цього часу ми виявилися надійними
+                                партнером, який у змозі ефективно вирішувати усі питання, пов’язані з будівництвом та
+                                реконструкцією філій BILLA. Особливо слід підкреслити постійне прагнення підприємства до
+                                подальшого розвитку та досконалості, готовність знаходити рішення навіть на найскладніші
+                                запитання, а також застосовувати прогресивні методи та інноваційні шляхи.</p>
+                        </div>
+                    </div>
+                    <div class="slider-review__row">
+                        <div class="slider-review__part slider-review__part_logo">
+                            <img src="assets/img/clients/h&m.png" alt="">
+                        </div>
+                        <div class="slider-review__part slider-review__part_content">
+                            <h3 class="slider-review__title">H&M</h3>
+                            <p>Ми вдячні за професійну та хорошу співпрацю в ході відновлення наших торгових площ.
+                                Особливі обставини, які склалися в умовах експлуатації, не вплинули на якість чи
+                                встановлені строки та виділений бюджет. Команда OV Project Management швидко та
+                                професійно реагувала на неочікувані обставини під час виконання будівельних робіт та на
+                                короткострокові корективи під час реалізації проєкту.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-review__row">
+                        <div class="slider-review__part slider-review__part_logo">
+                            <img src="assets/img/clients/barnherz.png" alt="">
+                        </div>
+                        <div class="slider-review__part slider-review__part_content">
+                            <h3 class="slider-review__title">BHS Ried</h3>
+                            <p>Будівля у формі багатогранника виглядає ззовні привабливою та змінила обриси нашої
+                                лікарні. Пацієнтам та працівникам подобається світла дружня атмосфера в нашому новому
+                                операційному та амбулаторному корпусі</p>
+                        </div>
+                    </div>
+                    <div class="slider-review__row">
+                        <div class="slider-review__part slider-review__part_logo">
+                            <img src="assets/img/clients/billa.jpg" alt="">
+                        </div>
+                        <div class="slider-review__part slider-review__part_content">
+                            <h3 class="slider-review__title">Billa</h3>
+                            <p>Billa співпрацює з компанією з 2012 року. Протягом цього часу ми виявилися надійними
+                                партнером, який у змозі ефективно вирішувати усі питання, пов’язані з будівництвом та
+                                реконструкцією філій BILLA. Особливо слід підкреслити постійне прагнення підприємства до
+                                подальшого розвитку та досконалості, готовність знаходити рішення навіть на найскладніші
+                                запитання, а також застосовувати прогресивні методи та інноваційні шляхи.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="slider-review__footer">
+                <div class="slider-review__pages">
+                    <span class="dark-text">Показано</span> <span class="current-slide dark-text">1</span> з <span
+                        class="total-slides">3</span>
+                </div>
+                <nav class="nav slider-review__nav">
+
+                        <button class="slider__btn slider__arrow_prev">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5.83374L0.999999 5.83374" stroke="black" stroke-linecap="square"
+                                      stroke-linejoin="round"/>
+                                <path d="M5 10.0005L0.833334 5.83382L5 1.66716" stroke="black"
+                                      stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <button class="slider__btn slider__arrow_next">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.16724L15 5.16724" stroke="black" stroke-linecap="square"
+                                      stroke-linejoin="round"/>
+                                <path d="M11 1.00049L15.1667 5.16716L11 9.33382" stroke="black"
+                                      stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                </nav>
+            </footer>
+        </div>
+    </div>
+</section>
+
+<script src="lib/swiper@7/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
 </body>
 </html>

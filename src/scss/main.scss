@@ -12,6 +12,10 @@
 @import 'components/nav';
 @import 'components/slider';
 @import 'components/form';
+@import 'components/layout-toggle';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/custom-select';
 
 
 @import 'layout/layout';
@@ -20,6 +24,7 @@
 @import 'layout/footer';
 
 @import "pages/home/index";
+@import "pages/priojects/index";
 
 
 

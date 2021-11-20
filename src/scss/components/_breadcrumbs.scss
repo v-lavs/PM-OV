@@ -1,0 +1,14 @@
+.breadcrumbs {
+  display: flex;
+  font-size: 14px;
+  line-height: 17px;
+
+  &__separator {
+    margin: 0 3px;
+  }
+  &__item{
+    a {
+      font-weight: 700;
+    }
+  }
+}

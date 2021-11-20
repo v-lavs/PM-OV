@@ -1,0 +1,53 @@
+.layout-toggle {
+  display: flex;
+
+  &__btn {
+    display: flex;
+    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+    padding: 8px 0;
+
+    :last-child {
+      margin-right: 0;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: 12px;
+      background-color: #D9D9D9;
+      margin-right: 3px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_grid {
+      &:before,
+      &:after {
+        width: 12px;
+      }
+    }
+
+    &_list {
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        width: 24px;
+      }
+    }
+    
+    &_active {
+      &:before,
+      &:after {
+        background-color: #000;
+      }
+    }
+  }
+}
