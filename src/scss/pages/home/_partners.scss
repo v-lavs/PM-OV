@@ -2,6 +2,20 @@
   .section__header {
     margin-bottom: 73px;
   }
+
+  .d-flex {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .dots {
+    max-width: 256px;
+    width: 25%;
+    display: flex;
+    .dot:last-child {
+      margin-left: auto;
+    }
+  }
 }
 
 .partners-slider {

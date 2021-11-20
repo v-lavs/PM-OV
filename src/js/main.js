@@ -43,8 +43,8 @@ $(document).ready(function () {
         })
 
     }
-
-    smoothScrollToAnchor('.menu__link')
+    smoothScrollToAnchor('.btn_scroll');
+    smoothScrollToAnchor('.menu__link');
 
     //BANNER SLIDER HOME
     const home_banner_slider = new Swiper(".slider-services", {
@@ -103,11 +103,97 @@ $(document).ready(function () {
     });
 
 //    ANIMATION
-    let sectorRotete = new Waypoint({
-        element: document.querySelector('.drones__img-blocks'),
-        handler: function (direction) {
-            this.element.classList.add('active_anim');
+    const sectionDrones = document.querySelector('.drones__img-blocks');
+
+    if (sectionDrones) {
+        const sectorRotate = new Waypoint({
+            element: sectionDrones,
+            handler: function (direction) {
+                this.element.classList.add('active_anim');
+            },
+            offset: '60%'
+        });
+    }
+
+    const clients_review = new Swiper(".slider-reviews", {
+        spaceBetween: 30,
+        speed: 1500,
+        navigation: {
+            nextEl: ".slider__arrow_next",
+            prevEl: ".slider__arrow_prev",
         },
-        offset: '60%'
+        on: {
+            afterInit: function () {
+                const $slider = $('.slider-reviews');
+                const currIndexEL = $slider.find('.current-slide');
+                const totalIndexEL = $slider.find('.total-slides');
+                $(currIndexEL).html(this.activeIndex + 1);
+                $(totalIndexEL).html(this.slides.length);
+            }
+        }
     });
+
+    clients_review.on('slideChange', function () {
+        const $slider = $('.slider-reviews');
+        const currIndexEL = $slider.find('.current-slide');
+        const totalIndexEL = $slider.find('.total-slides');
+        $(currIndexEL).html(this.activeIndex + 1);
+        $(totalIndexEL).html(this.slides.length);
+    });
+
+    //    VIDEO YOUTYBE
+    // function findVideos() {
+    //     let videos = document.querySelectorAll('.video__content');
+    //
+    //     for (let i = 0; i < videos.length; i++) {
+    //         setupVideo(videos[i]);
+    //     }
+    // }
+    //
+    // function setupVideo(video) {
+    //     let link = video.querySelector('.video__link');
+    //     let media = video.querySelector('.video__media');
+    //     let button = video.querySelector('.btn_video');
+    //     // let id = parseMediaURL(media);
+    //
+    //     let id = media.getAttribute('data-video');
+    //
+    //     video.addEventListener('click', () => {
+    //         let iframe = createIframe(id);
+    //
+    //         link.remove();
+    //         button.remove();
+    //         video.appendChild(iframe);
+    //     });
+    //
+    //     link.removeAttribute('href');
+    //     video.classList.add('video_enabled');
+    // }
+    //
+    // // function parseMediaURL(media) {
+    // //     let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+    // //     let url = media.src;
+    // //     let match = url.match(regexp);
+    // //
+    // //     return match[1];
+    // // }
+    //
+    // function createIframe(id) {
+    //     let iframe = document.createElement('iframe');
+    //
+    //     iframe.setAttribute('allowfullscreen', '');
+    //     iframe.setAttribute('allow', 'autoplay');
+    //     iframe.setAttribute('src', generateURL(id));
+    //     iframe.classList.add('video__media');
+    //
+    //     return iframe;
+    // }
+    //
+    // function generateURL(id) {
+    //     let query = '?rel=0&showinfo=0&autoplay=1';
+    //     return 'https://www.youtube.com/embed/' + id + query;
+    // }
+    //
+    // findVideos();
+
 });
