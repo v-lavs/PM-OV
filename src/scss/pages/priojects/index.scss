@@ -1,13 +1,5 @@
 .section-projects {
-  .section__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 80px;
 
-    .search-result {
-      color: #7F7F7F;
-    }
-  }
 
   .projects-filter {
     display: flex;
@@ -22,13 +14,6 @@
     }
     .custom-select {
       color: #7F7F7F;
-    }
-  }
-
-  .section__header-item {
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
     }
   }
 
