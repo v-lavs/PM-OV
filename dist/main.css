@@ -543,13 +543,37 @@ body {
   z-index: 1;
 }
 
-.chevron {
+.decor-light {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-neuron_light {
+  position: absolute;
+  right: 106px;
+  top: -60px;
+  width: 576px;
+  height: 396px;
+  background-image: url(../assets/img/bg-light.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.list-with-column {
+  column-count: 2;
+  column-gap: 104px;
+  column-width: 275px;
+}
+
+.list-with-column li {
   position: relative;
   margin-bottom: 20px;
   padding-left: 27px;
 }
 
-.chevron:before {
+.list-with-column li:before {
   position: absolute;
   content: '';
   display: block;
@@ -562,19 +586,6 @@ body {
   left: 0;
   top: 3px;
   z-index: 1;
-}
-
-.bg-neuron_light {
-  position: absolute;
-  right: 106px;
-  top: -200px;
-  width: 576px;
-  height: 396px;
-  background-image: url(../assets/img/bg-light.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 0;
 }
 
 .heading {
@@ -1413,7 +1424,7 @@ body {
 
 .decor-grey {
   background-color: #d9d9d9;
-  padding: 60px 0;
+  padding: 60px 0 65px;
 }
 
 .decor-grey__content,
@@ -1465,7 +1476,7 @@ body {
 
 .decor-grey__row {
   position: relative;
-  padding: 60px 26px 70px;
+  padding: 60px 26px 88px;
   justify-content: space-between;
 }
 
@@ -1775,7 +1786,7 @@ body {
   margin-right: 16px;
 }
 
-.presentation {
+.bg-dark {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1790,8 +1801,8 @@ body {
   z-index: 1;
 }
 
-.presentation:before,
-.presentation:after {
+.bg-dark:before,
+.bg-dark:after {
   position: absolute;
   content: '';
   display: block;
@@ -1802,23 +1813,32 @@ body {
   background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.presentation:before {
+.bg-dark:before {
   left: 0;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.presentation:after {
+.bg-dark:after {
   transform: matrix(1, 0, 0, -1, 0, 0);
   right: 0;
 }
 
-.presentation .section__text {
+.bg-dark .section__text {
   max-width: 740px;
   width: 60%;
   margin: 0 auto 40px;
+  font-size: 32px;
 }
 
-.presentation .dots {
+.bg-dark .section__text p {
+  margin-bottom: 30px;
+}
+
+.bg-dark .section__text p:last-child {
+  margin-bottom: 0;
+}
+
+.bg-dark .dots {
   margin-bottom: 64px;
 }
 
@@ -2321,7 +2341,6 @@ body {
 .banner-video {
   position: relative;
   min-height: 800px;
-  margin-bottom: 100px;
   overflow: hidden;
   color: #ffffff;
 }
@@ -2438,7 +2457,7 @@ body {
 }
 
 .project-work {
-  position: relative;
+  padding-top: 100px;
 }
 
 .inform-drones .section-banner {
@@ -2504,6 +2523,61 @@ body {
 .inform-drones .section-banner__footer .btn_round-white:hover .round svg,
 .inform-drones .section-banner__footer .btn_round-white:focus .round svg {
   filter: invert(1);
+}
+
+.inform-drones .presentation .section__text {
+  font-size: 20px;
+}
+
+.inform-drones .presentation .section__text p {
+  margin-bottom: 20px;
+}
+
+.inform-drones .presentation .section__text p:last-child {
+  margin-bottom: 0;
+}
+
+.inform-drones .section-decisions {
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+.inform-drones .section-decisions .heading {
+  margin-bottom: 42px;
+}
+
+.inform-drones .benefits {
+  padding-bottom: 60px;
+}
+
+.inform-drones .benefits .section__header {
+  padding-top: 100px;
+}
+
+.inform-drones .benefits .heading {
+  margin-bottom: 32px;
+}
+
+.inform-drones .benefits-card__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.inform-drones .block-imgs-dron .media-holder {
+  position: relative;
+}
+
+.inform-drones .block-imgs-dron .media-holder img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 980px) {

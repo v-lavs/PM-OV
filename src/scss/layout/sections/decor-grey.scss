@@ -1,6 +1,6 @@
 .decor-grey{
   background-color: #d9d9d9;
-  padding: 60px 0;
+  padding: 60px 0 65px;
   &__content,
   &__content-inner{
     position: relative;
@@ -49,7 +49,7 @@
   }
   &__row{
     position: relative;
-    padding: 60px 26px 70px;
+    padding: 60px 26px 88px;
     justify-content: space-between;
     &:after{
       position: absolute;

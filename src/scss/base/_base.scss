@@ -241,31 +241,14 @@ body {
   }
 }
 
-.chevron {
+.decor-light{
   position: relative;
-  margin-bottom: 20px;
-  padding-left: 27px;
-
-  &:before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url(../assets/img/svg/angle-double.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    left: 0;
-    top: 3px;
-    z-index: 1;
-  }
+  overflow: hidden;
 }
-
 .bg-neuron_light {
   position: absolute;
   right: 106px;
-  top: -200px;
+  top: -60px;
   width: 576px;
   height: 396px;
   background-image: url(../assets/img/bg-light.png);
@@ -273,5 +256,31 @@ body {
   background-position: center;
   background-size: cover;
   z-index: 0;
+}
+
+.list-with-column{
+  column-count: 2;
+  column-gap: 104px;
+  column-width: 275px;
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 27px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../assets/img/svg/angle-double.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 0;
+      top: 3px;
+      z-index: 1;
+    }
+  }
 }
 
