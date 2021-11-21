@@ -241,10 +241,12 @@ body {
   }
 }
 
-.decor-light{
+.decor-light {
   position: relative;
   overflow: hidden;
+  padding-top: 100px;
 }
+
 .bg-neuron_light {
   position: absolute;
   right: 106px;
@@ -258,10 +260,11 @@ body {
   z-index: 0;
 }
 
-.list-with-column{
+.list-with-column {
   column-count: 2;
   column-gap: 104px;
   column-width: 275px;
+
   li {
     position: relative;
     margin-bottom: 20px;

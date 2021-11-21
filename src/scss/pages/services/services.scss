@@ -1,0 +1,32 @@
+.services {
+  .section-banner {
+    .heading {
+      position: relative;
+      padding-left: 20px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 2px;
+        background-color: #000000;
+        left: 0;
+        top: -20px;
+        bottom: -5px;
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .decor-light {
+    .bg-neuron_light{
+      right: auto;
+    }
+    .heading {
+      margin-bottom: 42px;
+    }
+  }
+}

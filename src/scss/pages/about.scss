@@ -1,0 +1,19 @@
+.about-us {
+  .decor-grey {
+    &__row {
+      justify-content: center;
+    }
+
+    &__col {
+      max-width: 665px;
+      width: 100%;
+      text-align: center;
+      p{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

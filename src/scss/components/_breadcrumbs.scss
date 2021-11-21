@@ -3,10 +3,18 @@
   font-size: 14px;
   line-height: 17px;
 
-  &__separator {
-    margin: 0 3px;
-  }
   &__item{
+    position: relative;
+    padding-right: 10px;
+    &:after{
+      position: absolute;
+      content: '/';
+      right: 3px;
+      z-index: 1;
+    }
+    &:last-child:after{
+      display: none;
+    }
     a {
       font-weight: 700;
     }
