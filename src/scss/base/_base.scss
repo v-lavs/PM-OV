@@ -123,17 +123,22 @@ body {
 
 .section {
   padding-bottom: 100px;
+
   &__header {
     display: flex;
     align-items: center;
-    margin-bottom: 80px;
 
     .search-result {
       color: #7F7F7F;
     }
+    &_white{
+      color: #ffffff;
+    }
   }
+
   &__header-item {
     margin-right: 40px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -148,10 +153,11 @@ body {
   background-color: #7F7F7F;
 }
 
-.card-decor{
+.card-decor {
   position: relative;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -163,12 +169,13 @@ body {
     height: 12px;
     z-index: 1;
   }
-  &:before{
+
+  &:before {
     top: 4px;
     left: 4px;
   }
 
-  &:after{
+  &:after {
     right: 4px;
     bottom: 4px;
     transform: rotate(180deg);
@@ -180,30 +187,42 @@ body {
 }
 
 
-.dynamic-content{
-  p{
+.dynamic-content {
+  p {
     font-size: 16px;
     line-height: 1.19;
     margin-bottom: 1.188rem;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
-  h1,h2{
+
+  h1, h2 {
     font-size: 32px;
     margin-bottom: 2.625rem;
   }
-  h3{
+
+  h3 {
     font-size: 20px;
   }
-  h4{
+
+  h4 {
     font-size: 16px;
   }
-  ul li{
+
+  ul {
+    column-count: 2;
+    column-gap: 104px;
+    column-width: 275px;
+  }
+
+  ul li {
     position: relative;
     margin-bottom: 15px;
     padding-left: 27px;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -221,11 +240,12 @@ body {
 }
 
 
-.chevron{
+.chevron {
   position: relative;
   margin-bottom: 20px;
   padding-left: 27px;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
