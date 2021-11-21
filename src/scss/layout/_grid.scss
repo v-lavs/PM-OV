@@ -1,27 +1,27 @@
 
-.container{
+.container {
   width: 100%;
   max-width: 1240px;
   padding: 0 20px;
   margin: 0 auto;
-  @include respond-to($laptop-md){
+  @include respond-to($laptop-md) {
     //max-width: 1240px;
   }
-  @include respond-to($laptop){
+  @include respond-to($laptop) {
     //max-width: 1120px;
   }
-  @include respond-to($lg){
+  @include respond-to($lg) {
     //max-width: 940px;
   }
-  @include respond-to($md){
+  @include respond-to($md) {
     //max-width: 720px;
   }
-  @include respond-to($sm){
+  @include respond-to($sm) {
     //max-width: 580px;
   }
 
-  @include respond-to($xs){
+  @include respond-to($xs) {
     //max-width: 420px;
     //padding: 0 40px;
-     }
+  }
 }

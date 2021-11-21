@@ -1,0 +1,127 @@
+.grid-layout {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  &__col {
+    padding: 20px;
+    min-height: 1px;
+    flex-shrink: 0;
+
+    &_3 {
+      width: 25%;
+
+      .grid-layout__content_sm {
+        padding-top: 100%;
+      }
+
+      .grid-layout__content_md {
+        padding-top: 129.63%;
+      }
+    }
+
+    &_6 {
+      width: 50%;
+
+      .grid-layout__content_sm {
+        padding-top: 46.552%;
+      }
+
+      .grid-layout__content_md {
+        padding-top: 60.344%;
+      }
+    }
+
+    &_12 {
+      width: 100%;
+
+      .grid-layout__content_sm {
+        padding-top: 22.5%;
+      }
+
+      .grid-layout__content_md {
+        padding-top: 29.167%;
+      }
+    }
+  }
+
+  .media-holder {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:before {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    background-color: #D9D9D9;
+    color: black;
+    overflow: hidden;
+    transition: .35s;
+
+    &_white {
+      color: #fff;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 80%;
+      width: 300px;
+      top: 10%;
+      left: 100%;
+      transition: .6s;
+      background-size: auto 100%;
+      opacity: 0;
+      background: url("../assets/img/svg/square-bg.svg") left center no-repeat;
+    }
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+
+      &:before {
+        left: calc(100% - 100px);
+        opacity: 1;
+      }
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    z-index: 1;
+    &_align-end {
+      justify-content: flex-end;
+    }
+  }
+
+  .badge-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 20px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

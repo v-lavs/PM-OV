@@ -1062,6 +1062,134 @@ body {
   margin: 0 auto;
 }
 
+.grid-layout__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.grid-layout__col {
+  padding: 20px;
+  min-height: 1px;
+  flex-shrink: 0;
+}
+
+.grid-layout__col_3 {
+  width: 25%;
+}
+
+.grid-layout__col_3 .grid-layout__content_sm {
+  padding-top: 100%;
+}
+
+.grid-layout__col_3 .grid-layout__content_md {
+  padding-top: 129.63%;
+}
+
+.grid-layout__col_6 {
+  width: 50%;
+}
+
+.grid-layout__col_6 .grid-layout__content_sm {
+  padding-top: 46.552%;
+}
+
+.grid-layout__col_6 .grid-layout__content_md {
+  padding-top: 60.344%;
+}
+
+.grid-layout__col_12 {
+  width: 100%;
+}
+
+.grid-layout__col_12 .grid-layout__content_sm {
+  padding-top: 22.5%;
+}
+
+.grid-layout__col_12 .grid-layout__content_md {
+  padding-top: 29.167%;
+}
+
+.grid-layout .media-holder {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-layout .media-holder:before {
+  display: none;
+}
+
+.grid-layout__content {
+  position: relative;
+  display: block;
+  background-color: #D9D9D9;
+  color: black;
+  overflow: hidden;
+  transition: .35s;
+}
+
+.grid-layout__content_white {
+  color: #fff;
+}
+
+.grid-layout__content:before {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 300px;
+  top: 10%;
+  left: 100%;
+  transition: .6s;
+  background-size: auto 100%;
+  opacity: 0;
+  background: url("../assets/img/svg/square-bg.svg") left center no-repeat;
+}
+
+.grid-layout__content:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid-layout__content:hover:before {
+  left: calc(100% - 100px);
+  opacity: 1;
+}
+
+.grid-layout__content:hover path {
+  fill: white;
+}
+
+.grid-layout__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  z-index: 1;
+}
+
+.grid-layout__inner_align-end {
+  justify-content: flex-end;
+}
+
+.grid-layout .badge-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 20px;
+}
+
+.grid-layout .badge-icon svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .header {
   position: fixed;
   padding: 12px 0;
