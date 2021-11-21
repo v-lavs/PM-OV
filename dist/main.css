@@ -331,7 +331,7 @@ body {
 }
 
 .main {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .dots {
@@ -431,6 +431,7 @@ body {
 }
 
 .section__header {
+  padding-top: 60px;
   display: flex;
   align-items: center;
 }
@@ -680,6 +681,16 @@ body {
 
 .btn.btn_color-white .round {
   border-color: #ffffff;
+}
+
+.btn.btn_color-white.btn_scroll-white:hover .icon-white,
+.btn.btn_color-white.btn_scroll-white:focus .icon-white {
+  transform: translate(0, 5px);
+}
+
+.btn.btn_color-white.btn_scroll-white:hover .icon-white path,
+.btn.btn_color-white.btn_scroll-white:focus .icon-white path {
+  stroke: #000000;
 }
 
 .btn_color-black {
@@ -2342,23 +2353,13 @@ body {
 .banner-video__content {
   position: relative;
   height: 100%;
-  padding-top: 140px;
+  padding-top: 80px;
   padding-bottom: 36px;
   justify-content: space-between;
 }
 
 .banner-video__content > * {
   z-index: 1;
-}
-
-.banner-video__content .wrap-btn .btn_color-white:hover .icon-white,
-.banner-video__content .wrap-btn .btn_color-white:focus .icon-white {
-  transform: translate(0, 5px);
-}
-
-.banner-video__content .wrap-btn .btn_color-white:hover .icon-white path,
-.banner-video__content .wrap-btn .btn_color-white:focus .icon-white path {
-  stroke: #000000;
 }
 
 .banner-video__content .d-flex {
@@ -2438,6 +2439,71 @@ body {
 
 .project-work {
   position: relative;
+}
+
+.inform-drones .section-banner {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 170px;
+  position: relative;
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.inform-drones .section-banner:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.325) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.inform-drones .section-banner__text-content {
+  max-width: 580px;
+  line-height: 1.2;
+}
+
+.inform-drones .section-banner .heading {
+  margin-bottom: 28px;
+  color: #ffffff;
+}
+
+.inform-drones .section-banner__sub-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.inform-drones .section-banner .container {
+  position: relative;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.inform-drones .section-banner__footer .btn_round-white {
+  margin-right: 70px;
+}
+
+.inform-drones .section-banner__footer .btn_round-white .round {
+  background-color: #ffffff;
+}
+
+.inform-drones .section-banner__footer .btn_round-white:hover .round,
+.inform-drones .section-banner__footer .btn_round-white:focus .round {
+  background-color: transparent;
+}
+
+.inform-drones .section-banner__footer .btn_round-white:hover .round svg,
+.inform-drones .section-banner__footer .btn_round-white:focus .round svg {
+  filter: invert(1);
 }
 
 @media only screen and (max-width: 980px) {

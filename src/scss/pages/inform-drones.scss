@@ -1,0 +1,68 @@
+.inform-drones {
+  .section-banner {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 170px;
+    position: relative;
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.325) 0%, rgba(0, 0, 0, 0.65) 100%);
+    }
+
+    &__text-content {
+      max-width: 580px;
+      line-height: 1.2;
+    }
+
+    .heading {
+      margin-bottom: 28px;
+      color: #ffffff;
+    }
+
+    &__sub-title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .container {
+      position: relative;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    &__footer {
+      .btn_round-white {
+        margin-right: 70px;
+
+        .round {
+          background-color: #ffffff;
+        }
+
+        &:hover,
+        &:focus {
+          .round {
+            background-color: transparent;
+            svg{
+              filter:invert(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

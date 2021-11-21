@@ -45,7 +45,18 @@
     .round {
       border-color: $white;
     }
+    &.btn_scroll-white {
+      &:hover,
+      &:focus {
+        .icon-white {
+          transform: translate(0, 5px);
 
+          path {
+            stroke: #000000;
+          }
+        }
+      }
+    }
   }
 
   &_color-black {
@@ -77,6 +88,7 @@
         }
       }
     }
+
   }
 
   &_submit {
