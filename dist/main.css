@@ -838,6 +838,12 @@ body {
   font-weight: 700;
 }
 
+.back-btn {
+  transform: rotate(180deg);
+  display: inline-flex;
+  margin-right: 20px;
+}
+
 .pagination {
   display: flex;
   flex-wrap: wrap;
