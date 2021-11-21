@@ -88,6 +88,14 @@ $(document).ready(function () {
     });
 
     //PARTNER  SLIDE
+    const quoteHolder = $('#partner-quote');
+    function showPartnerQuote (currSlide) {
+        if(quoteHolder.length > 0) {
+            const quote = $(currSlide).find('.quote-template').html();
+            quoteHolder.html(quote);
+        }
+    }
+
     const partners_slider = new Swiper(".partners-slider", {
         slidesPerView: 1,
         speed: 0,
@@ -95,8 +103,10 @@ $(document).ready(function () {
         loop: true,
         on: {
             afterInit: function () {
-                $(this.slides[this.activeIndex]).find('.cover-anim').addClass('anim_started');
-                $(this.slides[this.activeIndex]).find('.fade').addClass('anim_started');
+                const currSlide = this.slides[this.activeIndex];
+                $(currSlide).find('.cover-anim').addClass('anim_started');
+                $(currSlide).find('.fade').addClass('anim_started');
+                showPartnerQuote(currSlide);
             }
         }
     });
@@ -105,8 +115,10 @@ $(document).ready(function () {
     // Client's Review
 
     partners_slider.on('slideChange', function () {
-        $(this.slides[this.activeIndex]).find('.cover-anim').addClass('anim_started');
-        $(this.slides[this.activeIndex]).find('.fade').addClass('anim_started');
+        const currSlide = this.slides[this.activeIndex];
+        $(currSlide).find('.cover-anim').addClass('anim_started');
+        $(currSlide).find('.fade').addClass('anim_started');
+        showPartnerQuote(currSlide);
     });
 
     $('.partners-slider__next').click(function () {

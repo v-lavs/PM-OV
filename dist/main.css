@@ -1090,6 +1090,55 @@ body {
   margin-top: 10px;
 }
 
+.partner-quote {
+  text-align: center;
+  padding: 200px 0 100px;
+  background: url("../assets/img/svg/bg-logo.svg") center no-repeat;
+}
+
+.partner-quote__text {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 700;
+  max-width: 660px;
+  width: 100%;
+  margin: auto auto 40px;
+  padding: 0 1em;
+}
+
+.partner-quote__text:before,
+.partner-quote__text:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1.25em;
+  height: 0.875em;
+  background: url("../assets/img/svg/quote.svg") center no-repeat;
+  z-index: 1;
+}
+
+.partner-quote__text:before {
+  top: -1.26em;
+}
+
+.partner-quote__text:after {
+  transform: rotate(180deg);
+  bottom: -1.25em;
+  right: 0;
+}
+
+.partner-quote__title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.partner-quote__position {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .container {
   width: 100%;
   max-width: 1240px;
