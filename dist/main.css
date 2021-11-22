@@ -2685,6 +2685,74 @@ body {
   margin-bottom: 0;
 }
 
+.post {
+  font-size: 16px;
+  line-height: 19px;
+  color: #545454;
+  padding: 20px 0;
+}
+
+.post__content,
+.post__thumb {
+  width: 50%;
+}
+
+.post__content {
+  padding-left: 20px;
+}
+
+.post__thumb {
+  position: relative;
+  display: block;
+  padding-top: 21%;
+  margin-right: 20px;
+}
+
+.post__thumb img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.post__data {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.post__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.post__text {
+  margin-bottom: 33px;
+}
+
+.post__link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.post__link:hover,
+.post__link:focus {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 980px) {
   .header .lang-switch,
   .header .btn-close,
