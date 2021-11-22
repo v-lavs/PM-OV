@@ -11,8 +11,36 @@
 
 $(document).ready(function () {
 
+
+    function useTextRevealAnim() {
+        const $textWrap = $('.text-reveal');
+
+        $textWrap.each(function (index, item) {
+            const textContent = $(item).text();
+
+            const parsedWords = textContent.split(' ').map(function(item) {
+                const wordWrap = $('<span class="text-reveal__word-wrap"></span>');
+                const word = $('<span class="text-reveal__word"></span>');
+
+                word.html(item + '&nbsp;');
+                wordWrap.html(word);
+
+                return wordWrap;
+            });
+
+            $(item).html(parsedWords);
+        });
+    }
+
+    useTextRevealAnim();
+
+    setTimeout(function () {
+        console.log(111)
+        $('.section-intro').addClass('anim_started');
+    }, 1000);
+
     //MOBILE MENU
-    var nav = $('.header__nav');
+    const nav = $('.header__nav');
 
     $('.btn-burger').click(function (e) {
         e.preventDefault();

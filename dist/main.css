@@ -648,6 +648,37 @@ body {
   opacity: 1;
 }
 
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+}
+
+.text-reveal__word-wrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transform: translateY(100%);
+  transition: 1s;
+}
+
+.text-reveal__word {
+  display: block;
+  position: relative;
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+.anim_started .text-reveal {
+  opacity: 1;
+}
+
+.anim_started .text-reveal__word-wrap,
+.anim_started .text-reveal__word {
+  transform: none;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
