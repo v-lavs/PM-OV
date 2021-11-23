@@ -276,6 +276,5 @@ $(document).ready(function () {
     findVideos();
 
 //    GALLERY
-    const gallery = baguetteBox.run('.gallery');
-    baguetteBox.show(index, gallery[0]);
+    const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
 });

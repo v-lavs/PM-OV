@@ -65,6 +65,11 @@
   display: none;
 }
 
+#baguetteBox-overlay .full-image figcaption {
+  bottom: 85px;
+  background: transparent;
+}
+
 .gallery {
   &__item-inner {
     overflow: hidden;

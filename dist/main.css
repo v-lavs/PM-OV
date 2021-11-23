@@ -1523,6 +1523,11 @@ body {
   display: none;
 }
 
+#baguetteBox-overlay .full-image figcaption {
+  bottom: 85px;
+  background: transparent;
+}
+
 .gallery__item-inner {
   overflow: hidden;
 }
