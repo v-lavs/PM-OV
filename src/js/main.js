@@ -18,7 +18,7 @@ $(document).ready(function () {
         $textWrap.each(function (index, item) {
             const textContent = $(item).text();
 
-            const parsedWords = textContent.split(' ').map(function(item) {
+            const parsedWords = textContent.split(' ').map(function (item) {
                 const wordWrap = $('<span class="text-reveal__word-wrap"></span>');
                 const word = $('<span class="text-reveal__word"></span>');
 
@@ -72,6 +72,7 @@ $(document).ready(function () {
         })
 
     }
+
     smoothScrollToAnchor('.btn_scroll');
     smoothScrollToAnchor('.menu__link');
 
@@ -117,8 +118,9 @@ $(document).ready(function () {
 
     //PARTNER  SLIDE
     const quoteHolder = $('#partner-quote');
-    function showPartnerQuote (currSlide) {
-        if(quoteHolder.length > 0) {
+
+    function showPartnerQuote(currSlide) {
+        if (quoteHolder.length > 0) {
             const quote = $(currSlide).find('.quote-template').html();
             quoteHolder.html(quote);
         }
@@ -173,7 +175,7 @@ $(document).ready(function () {
         },
     });
 
-   //    ANIMATION
+    //    ANIMATION
     const sectionDrones = document.querySelector('.drones__img-blocks');
 
     if (sectionDrones) {
@@ -260,15 +262,4 @@ $(document).ready(function () {
     }
 
     findVideos();
-
-
-    let parent = document.querySelector('.sticky').parentElement;
-
-    while (parent) {
-        const hasOverflow = getComputedStyle(parent).overflow;
-        if (hasOverflow !== 'visible') {
-            console.log(hasOverflow, parent);
-        }
-        parent = parent.parentElement;
-    }
 });
