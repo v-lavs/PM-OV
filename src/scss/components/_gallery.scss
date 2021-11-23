@@ -76,36 +76,48 @@
   }
 
   &__item {
-    &-img{
+    position: relative;
+
+    &-img {
       transition: .8s;
     }
-    &:after,
-    &:before {
+
+    .icon-zoom {
       position: absolute;
-      content: '';
-      display: block;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      left: 120px;
-      bottom: 86px;
-      z-index: 2;
-
-    }
-
-    &:after {
       width: 67px;
       height: 68px;
-      background-image: url(../assets/img/);
-    }
+      left: 86px;
+      bottom: 86px;
+      opacity: 0;
 
-    &:before {
-      width: 32px;
-      height: 32px;
-      background-image: url(../assets/img/);
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      &:after,
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      &:after {
+        width: 67px;
+        height: 68px;
+        background-image: url(../assets/img/svg/round_btn_bg-w.svg);
+        transform: rotate(-45deg);
+        z-index: 1;
+        transition: .3s;
+      }
+
+      &:before {
+        width: 32px;
+        height: 32px;
+        background-image: url(../assets/img/svg/maximize-2.svg);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
     }
 
     &:hover,
@@ -113,12 +125,49 @@
       .gallery__item-img {
         transition: .8s;
         transform: scale(1.05);
+        opacity: 1;
+      }
+
+      .icon-zoom {
+        z-index: 2;
+        opacity: 1;
+      }
+
+      .icon-zoom:after {
+        transition: .3s;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.services {
+  .gallery__item {
+    &:hover,
+    &:focus {
+      .gallery__item-inner:before {
+        transition: .5s;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
       }
     }
 
-    &:hover:after,
-    &:focus:after {
-      transform: rotate(0deg);
+    &-inner {
+      position: relative;
+      transition: .5s;
+
+      &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
     }
+  }
+
+  .grid-layout__col_6 .grid-layout__content_sm {
+    padding-top: 57.75%;
   }
 }

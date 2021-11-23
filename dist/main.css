@@ -1532,47 +1532,94 @@ body {
   overflow: hidden;
 }
 
+.gallery__item {
+  position: relative;
+}
+
 .gallery__item-img {
   transition: .8s;
 }
 
-.gallery__item:after,
-.gallery__item:before {
+.gallery__item .icon-zoom {
+  position: absolute;
+  width: 67px;
+  height: 68px;
+  left: 86px;
+  bottom: 86px;
+  opacity: 0;
+}
+
+.gallery__item .icon-zoom:after,
+.gallery__item .icon-zoom:before {
   position: absolute;
   content: '';
   display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 120px;
-  bottom: 86px;
-  z-index: 2;
 }
 
-.gallery__item:after {
+.gallery__item .icon-zoom:after {
   width: 67px;
   height: 68px;
-  background-image: url(../assets/img/);
+  background-image: url(../assets/img/svg/round_btn_bg-w.svg);
+  transform: rotate(-45deg);
+  z-index: 1;
+  transition: .3s;
 }
 
-.gallery__item:before {
+.gallery__item .icon-zoom:before {
   width: 32px;
   height: 32px;
-  background-image: url(../assets/img/);
+  background-image: url(../assets/img/svg/maximize-2.svg);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .gallery__item:hover .gallery__item-img,
 .gallery__item:focus .gallery__item-img {
   transition: .8s;
   transform: scale(1.05);
+  opacity: 1;
 }
 
-.gallery__item:hover:after,
-.gallery__item:focus:after {
+.gallery__item:hover .icon-zoom,
+.gallery__item:focus .icon-zoom {
+  z-index: 2;
+  opacity: 1;
+}
+
+.gallery__item:hover .icon-zoom:after,
+.gallery__item:focus .icon-zoom:after {
+  transition: .3s;
   transform: rotate(0deg);
+}
+
+.services .gallery__item:hover .gallery__item-inner:before,
+.services .gallery__item:focus .gallery__item-inner:before {
+  transition: .5s;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+}
+
+.services .gallery__item-inner {
+  position: relative;
+  transition: .5s;
+}
+
+.services .gallery__item-inner:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.services .grid-layout__col_6 .grid-layout__content_sm {
+  padding-top: 57.75%;
 }
 
 .benefits-card:hover .benefits-card__content {
