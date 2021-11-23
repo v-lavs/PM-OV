@@ -104,4 +104,26 @@
       }
     }
   }
+
+  .section-related-post{
+    .section__header{
+      .heading{
+        display: block;
+        width: 100%;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          max-width: 930px;
+          width: 78%;
+          height: 1px;
+          background-color: #000000;
+          z-index: 1;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
 }
