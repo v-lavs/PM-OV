@@ -12,6 +12,11 @@
     background-position: center 0;
     background-size: inherit;
 
+    &__part_right {
+      padding-left: 30px;
+      width: 75%;
+    }
+
     &__part_left {
       position: relative;
       display: flex;
@@ -51,8 +56,7 @@
     }
 
     .slider-wrap {
-      padding-left: 30px;
-      width: 75%;
+      width: calc(100% - 45px + (100vw - 125%) / 2);
     }
   }
 
@@ -169,7 +173,6 @@
 }
 
 .slider-mj-project {
-  width: calc(75% + (75vw - 50%) / 2);
   .swiper-slide {
     width: 580px;
     height: 290px;
@@ -180,4 +183,8 @@
     padding: 40px 20px;
     color: #ffffff;
   }
+}
+
+.wrapper {
+  overflow: hidden;
 }

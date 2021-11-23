@@ -3147,6 +3147,11 @@ body {
   background-size: inherit;
 }
 
+.about-us .major-projects__part_right {
+  padding-left: 30px;
+  width: 75%;
+}
+
 .about-us .major-projects__part_left {
   position: relative;
   display: flex;
@@ -3184,8 +3189,7 @@ body {
 }
 
 .about-us .major-projects .slider-wrap {
-  padding-left: 30px;
-  width: 75%;
+  width: calc(100% - 45px + (100vw - 125%) / 2);
 }
 
 .about-us .section-banner {
@@ -3297,10 +3301,6 @@ body {
   transform: rotate(-90deg) translate(30%, -50%);
 }
 
-.slider-mj-project {
-  width: calc(75% + (75vw - 50%) / 2);
-}
-
 .slider-mj-project .swiper-slide {
   width: 580px;
   height: 290px;
@@ -3310,6 +3310,10 @@ body {
   background-size: cover;
   padding: 40px 20px;
   color: #ffffff;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 .news .section__header {
