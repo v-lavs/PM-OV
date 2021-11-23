@@ -1,4 +1,5 @@
 @import "../../node_modules/jquery-nice-select/css/nice-select";
+@import "../../node_modules/baguettebox.js/dist/baguetteBox";
 
 @import 'utils/variables';
 @import 'utils/mixins';
@@ -17,6 +18,9 @@
 @import 'components/pagination';
 @import 'components/custom-select';
 @import 'components/partner-quote';
+@import 'components/gallery';
+@import 'components/benefits-card';
+
 
 @import 'layout/layout';
 @import 'layout/grid';

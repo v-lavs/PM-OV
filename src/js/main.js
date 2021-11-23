@@ -5,6 +5,7 @@
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ../../node_modules/waypoints/lib/jquery.waypoints.min.js ;
 //= include ../../node_modules/jquery-nice-select/js/jquery.nice-select.js
+//= include ../../node_modules/baguettebox.js/dist/baguetteBox.min.js ;
 
 
 // CUSTOM SCRIPTS
@@ -89,6 +90,17 @@ $(document).ready(function () {
             prevEl: ".slider__arrow_prev",
         },
     });
+
+    const majorProjectsSlider = new Swiper(".slider-mj-project", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        speed: 1500,
+        navigation: {
+            nextEl: ".slider__arrow_next",
+            prevEl: ".slider__arrow_prev",
+        },
+    });
+
 
     // Layout toggle
 
@@ -262,4 +274,8 @@ $(document).ready(function () {
     }
 
     findVideos();
+
+//    GALLERY
+    const gallery = baguetteBox.run('.gallery');
+    baguetteBox.show(index, gallery[0]);
 });

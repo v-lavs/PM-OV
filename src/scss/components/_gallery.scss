@@ -1,0 +1,119 @@
+#baguetteBox-overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.baguetteBox-button#close-button {
+  background: #000000;
+  border-radius: 0;
+  width: 69px;
+  height: 69px;
+
+  svg {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    g {
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+  }
+}
+
+.baguetteBox-button#next-button,
+.baguetteBox-button#previous-button {
+  bottom: 0;
+  top: auto;
+  background: #000000;
+  border-radius: 0;
+  width: 69px;
+  height: 69px;
+}
+
+.baguetteBox-button#next-button {
+  transform: translateX(100%);
+  right: 50%;
+}
+
+.baguetteBox-button#previous-button {
+  transform: translateX(-100%);
+  left: 50%;
+}
+
+.baguetteBox-button#next-button:before,
+.baguetteBox-button#previous-button:before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-image: url(../assets/img/svg/arrow-right.svg);
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.baguetteBox-button#previous-button:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.baguetteBox-button#next-button svg,
+.baguetteBox-button#previous-button svg {
+  display: none;
+}
+
+.gallery {
+  &__item-inner {
+    overflow: hidden;
+  }
+
+  &__item {
+    &-img{
+      transition: .8s;
+    }
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 120px;
+      bottom: 86px;
+      z-index: 2;
+
+    }
+
+    &:after {
+      width: 67px;
+      height: 68px;
+      background-image: url(../assets/img/);
+    }
+
+    &:before {
+      width: 32px;
+      height: 32px;
+      background-image: url(../assets/img/);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      .gallery__item-img {
+        transition: .8s;
+        transform: scale(1.05);
+      }
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: rotate(0deg);
+    }
+  }
+}
