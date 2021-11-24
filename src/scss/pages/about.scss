@@ -17,6 +17,12 @@
       width: 75%;
     }
 
+    .slider-mj-project {
+      .inner-helper {
+        width: 100%;
+      }
+    }
+
     &__part_left {
       position: relative;
       display: flex;
@@ -52,6 +58,21 @@
             filter: invert(1);
           }
         }
+      }
+    }
+
+    .slider__arrow {
+      //width: 70px;
+      //height: 70px;
+
+      &:before {
+        background: url(../assets/img/svg/arrow-right-sm.svg) center center no-repeat;
+        background-size: 23px 14px;
+      }
+
+      &:after {
+        background: url(../assets/img/svg/round_btn_bg-w.svg) center center no-repeat;
+        background-size: contain;
       }
     }
 
@@ -183,8 +204,4 @@
     padding: 40px 20px;
     color: #ffffff;
   }
-}
-
-.wrapper {
-  overflow: hidden;
 }

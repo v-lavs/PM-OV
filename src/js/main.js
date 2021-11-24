@@ -36,7 +36,6 @@ $(document).ready(function () {
     useTextRevealAnim();
 
     setTimeout(function () {
-        console.log(111)
         $('.section-intro').addClass('anim_started');
     }, 1000);
 
@@ -178,28 +177,19 @@ $(document).ready(function () {
     });
 
 //CONTACTS SLIDER
-    var contactSlider = new Swiper(".contacts-slider", {
+
+    const contactSlider = new Swiper(".contacts-slider", {
+
         direction: "vertical",
-        parallax: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
+
     });
 
-    //    ANIMATION
-    const sectionDrones = document.querySelector('.drones__img-blocks');
 
-    if (sectionDrones) {
-        const sectorRotate = new Waypoint({
-            element: sectionDrones,
-            handler: function (direction) {
-                this.element.classList.add('active_anim');
-            },
-            offset: '60%'
-        });
-    }
-
+    //SLIDER REVIEW
     const clients_review = new Swiper(".slider-reviews", {
         spaceBetween: 30,
         speed: 1500,
@@ -275,6 +265,26 @@ $(document).ready(function () {
 
     findVideos();
 
-//    GALLERY
+
+    //    GALLERY
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
+
+
+    //    ANIMATION
+    const sectionDrones = document.querySelector('.drones');
+
+    if (sectionDrones) {
+        const sectorRotate = new Waypoint({
+            element: sectionDrones,
+            handler: function (direction) {
+                this.element.classList.add('active_anim');
+                setTimeout(function () {
+
+                    $('.drones').addClass('anim_started');
+                }, 1100);
+            },
+            offset: '60%'
+        });
+    }
+
 });

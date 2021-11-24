@@ -583,6 +583,11 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
+  overflow: hidden;
+}
+
+.wrapper.with-sticky {
+  overflow: visible;
 }
 
 .d-flex {
@@ -946,6 +951,22 @@ body {
 
 .anim_started .text-reveal__word-wrap,
 .anim_started .text-reveal__word {
+  transform: none;
+}
+
+.drones .cover-anim__frame {
+  overflow: hidden;
+  transform: translateX(110%);
+  transition: transform 1.2s;
+}
+
+.drones .cover-anim__content {
+  transform: translateX(-110%);
+  transition: transform 1.2s;
+}
+
+.drones.anim_started .cover-anim__frame,
+.drones.anim_started .cover-anim__content {
   transform: none;
 }
 
@@ -2416,6 +2437,10 @@ body {
   margin-bottom: 64px;
 }
 
+.drones.active_anim .drones__img-sector {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .drones .d-flex {
   align-items: center;
 }
@@ -2437,31 +2462,27 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
+  padding-left: 75px;
   display: flex;
   align-items: center;
 }
 
 .drones__lottie-anim {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   max-width: 615px;
-  width: 80%;
+  width: 100%;
   height: auto;
   z-index: 0;
 }
 
 .drones__img-blocks {
-  position: relative;
+  position: absolute;
   max-width: 634px;
   width: 72%;
-  margin-left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1;
-}
-
-.drones__img-blocks.active_anim .drones__img-sector {
-  transform: translate(-50%, -50%) rotate(0deg);
 }
 
 .drones__img-sector {
@@ -2548,6 +2569,15 @@ body {
 .contacts-slider .swiper-pagination-bullet-active {
   background-color: #ffffff;
   border-color: transparent;
+}
+
+.contacts-slider .parallax-bg {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-map {
@@ -3199,6 +3229,10 @@ body {
   width: 75%;
 }
 
+.about-us .major-projects .slider-mj-project .inner-helper {
+  width: 100%;
+}
+
 .about-us .major-projects__part_left {
   position: relative;
   display: flex;
@@ -3233,6 +3267,16 @@ body {
 .about-us .major-projects__part_left .btn_color-white:hover .round svg,
 .about-us .major-projects__part_left .btn_color-white:focus .round svg {
   filter: invert(1);
+}
+
+.about-us .major-projects .slider__arrow:before {
+  background: url(../assets/img/svg/arrow-right-sm.svg) center center no-repeat;
+  background-size: 23px 14px;
+}
+
+.about-us .major-projects .slider__arrow:after {
+  background: url(../assets/img/svg/round_btn_bg-w.svg) center center no-repeat;
+  background-size: contain;
 }
 
 .about-us .major-projects .slider-wrap {
@@ -3357,10 +3401,6 @@ body {
   background-size: cover;
   padding: 40px 20px;
   color: #ffffff;
-}
-
-.wrapper {
-  overflow: hidden;
 }
 
 .news .section__header {
@@ -3491,6 +3531,7 @@ body {
 }
 
 .single-news .article__inner {
+  display: flex;
   padding: 0 22.25%;
   width: 100%;
 }
@@ -3501,14 +3542,15 @@ body {
 
 .single-news .info-sticky {
   position: sticky;
-  height: 0;
-  transform: translate(0, 0);
-  left: -100%;
+  height: max-content;
+  transform: translateX(-195px);
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 0;
   padding: 4px;
   background-color: transparent;
   z-index: 20;
+  order: -1;
 }
 
 .single-news .info-sticky .post-date {

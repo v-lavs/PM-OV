@@ -53,8 +53,32 @@
   .text-reveal {
     opacity: 1;
   }
+
   .text-reveal__word-wrap,
   .text-reveal__word {
     transform: none
+  }
+}
+
+
+.drones {
+  .cover-anim {
+    &__frame {
+      overflow: hidden;
+      transform: translateX(110%);
+      transition: transform 1.2s;
+    }
+
+    &__content {
+      transform: translateX(-110%);
+      transition: transform 1.2s;
+    }
+  }
+
+  &.anim_started {
+    .cover-anim__frame,
+    .cover-anim__content {
+      transform: none;
+    }
   }
 }

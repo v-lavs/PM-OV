@@ -27,7 +27,7 @@
   }
 
   .article__inner {
-
+    display: flex;
     padding: 0 22.25%;
     width: 100%;
   }
@@ -38,15 +38,15 @@
 
   .info-sticky {
     position: sticky;
-    height: 0;
-    transform: translate(0, 0);
-    left: -100%;
+    height: max-content;
+    transform: translateX(-195px);
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 0;
     padding: 4px;
     background-color: transparent;
     z-index: 20;
-
+    order: -1;
     .post-date {
       display: flex;
       flex-direction: column;
