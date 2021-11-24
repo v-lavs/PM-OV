@@ -272,9 +272,8 @@ $(document).ready(function () {
 
     //    ANIMATION
     setTimeout(function () {
-        $('.section-intro').addClass('banner_anim');
-        $('.section-banner').addClass('banner_anim');
-    }, 400);
+        $('.fadeInUp').addClass('active_anim');
+        }, 400);
 
     const sectionDrones = document.querySelector('.drones');
 

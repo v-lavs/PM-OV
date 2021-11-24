@@ -82,23 +82,15 @@
   }
 }
 
-.inform-drones .section-banner{
-  &.banner_anim{
-    .section-banner__text-content,
-    .section-banner__footer{
-      transform: translate3d(0,0,0);
+.fadeInUp{
+  transform: translateY(125px);
+  transition: .85s;
+  opacity: 0;
+
+  &.active_anim{
+      transform: translateY(0);
       opacity: 1
     }
   }
-}
-//@keyframes fadeInUp {
-//  from {
-//    transform: translate3d(0,40px,0)
-//  }
-//
-//  to {
-//    transform: translate3d(0,0,0);
-//    opacity: 1
-//  }
-//}
+
 
