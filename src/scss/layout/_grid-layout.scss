@@ -75,27 +75,9 @@
       color: #fff;
     }
 
-    //&:before {
-    //  content: '';
-    //  position: absolute;
-    //  height: 80%;
-    //  width: 300px;
-    //  top: 10%;
-    //  left: 100%;
-    //  transition: .6s;
-    //  background-size: auto 100%;
-    //  opacity: 0;
-    //  background: url("../assets/img/svg/square-bg.svg") left center no-repeat;
-    //}
-
     &:hover {
       background-color: #000;
       color: #fff;
-
-      //&:before {
-      //  left: calc(100% - 100px);
-      //  opacity: 1;
-      //}
 
       path {
         fill: white;

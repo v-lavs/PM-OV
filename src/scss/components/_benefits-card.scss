@@ -3,7 +3,6 @@
     position: absolute;
     left: calc(100% - 100px);
     height: 80%;
-    width: 300px;
     top: 10%;
 
     &__frame {
@@ -59,32 +58,3 @@
     overflow: hidden;
   }
 }
-
-//.benefits .card {
-//  .cover-anim {
-//    position: absolute;
-//    left: calc(100% - 100px);
-//    height: 80%;
-//    width: 300px;
-//    top: 10%;
-//
-//    &__frame {
-//      overflow: hidden;
-//      transform: translateX(110%);
-//      transition: transform 1.2s;
-//    }
-//
-//    &__content {
-//      transform: translateX(-110%);
-//      transition: transform 1.2s;
-//    }
-//  }
-//
-//  &:hover {
-//    .cover-anim__frame,
-//    .cover-anim__content {
-//      transform: none;
-//    }
-//  }
-//
-//}

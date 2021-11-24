@@ -1647,7 +1647,6 @@ body {
   position: absolute;
   left: calc(100% - 100px);
   height: 80%;
-  width: 300px;
   top: 10%;
 }
 
