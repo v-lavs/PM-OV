@@ -1643,6 +1643,25 @@ body {
   padding-top: 57.75%;
 }
 
+.benefits-card .cover-anim {
+  position: absolute;
+  left: calc(100% - 100px);
+  height: 80%;
+  width: 300px;
+  top: 10%;
+}
+
+.benefits-card .cover-anim__frame {
+  overflow: hidden;
+  transform: translateX(110%);
+  transition: transform .8s;
+}
+
+.benefits-card .cover-anim__content {
+  transform: translateX(-110%);
+  transition: transform .8s;
+}
+
 .benefits-card:hover .benefits-card__content {
   transform: translateY(0);
 }
@@ -1653,6 +1672,11 @@ body {
 
 .benefits-card:hover .benefits-card__text {
   opacity: 1;
+}
+
+.benefits-card:hover .cover-anim__frame,
+.benefits-card:hover .cover-anim__content {
+  transform: none;
 }
 
 .benefits-card__content {
@@ -1764,27 +1788,9 @@ body {
   color: #fff;
 }
 
-.grid-layout__content:before {
-  content: '';
-  position: absolute;
-  height: 80%;
-  width: 300px;
-  top: 10%;
-  left: 100%;
-  transition: .6s;
-  background-size: auto 100%;
-  opacity: 0;
-  background: url("../assets/img/svg/square-bg.svg") left center no-repeat;
-}
-
 .grid-layout__content:hover {
   background-color: #000;
   color: #fff;
-}
-
-.grid-layout__content:hover:before {
-  left: calc(100% - 100px);
-  opacity: 1;
 }
 
 .grid-layout__content:hover path {

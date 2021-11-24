@@ -1,16 +1,42 @@
-.benefits-card{
-  &:hover{
-    .benefits-card__content{
-      transform: translateY(0);
+.benefits-card {
+  .cover-anim {
+    position: absolute;
+    left: calc(100% - 100px);
+    height: 80%;
+    width: 300px;
+    top: 10%;
+
+    &__frame {
+      overflow: hidden;
+      transform: translateX(110%);
+      transition: transform .8s;
     }
-    .benefits-card__title{
-      top: -10px;
-    }
-    .benefits-card__text{
-      opacity: 1;
+
+    &__content {
+      transform: translateX(-110%);
+      transition: transform .8s;
     }
   }
-  &__content{
+
+  &:hover {
+    .benefits-card__content {
+      transform: translateY(0);
+    }
+
+    .benefits-card__title {
+      top: -10px;
+    }
+
+    .benefits-card__text {
+      opacity: 1;
+    }
+    .cover-anim__frame,
+    .cover-anim__content {
+      transform: none;
+    }
+  }
+
+  &__content {
     position: relative;
     transform: translateY(100%);
     transition: transform .5s;
@@ -18,12 +44,14 @@
     z-index: 2;
 
   }
-  &__title{
+
+  &__title {
     position: absolute;
     transform: translateY(-100%);
     max-height: 100%;
   }
-  &__text{
+
+  &__text {
     max-width: 267px;
     opacity: 0;
     transition: opacity .5s;
@@ -31,3 +59,32 @@
     overflow: hidden;
   }
 }
+
+//.benefits .card {
+//  .cover-anim {
+//    position: absolute;
+//    left: calc(100% - 100px);
+//    height: 80%;
+//    width: 300px;
+//    top: 10%;
+//
+//    &__frame {
+//      overflow: hidden;
+//      transform: translateX(110%);
+//      transition: transform 1.2s;
+//    }
+//
+//    &__content {
+//      transform: translateX(-110%);
+//      transition: transform 1.2s;
+//    }
+//  }
+//
+//  &:hover {
+//    .cover-anim__frame,
+//    .cover-anim__content {
+//      transform: none;
+//    }
+//  }
+//
+//}
