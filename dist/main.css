@@ -970,6 +970,12 @@ body {
   transform: none;
 }
 
+.inform-drones .section-banner.banner_anim .section-banner__text-content,
+.inform-drones .section-banner.banner_anim .section-banner__footer {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -3103,6 +3109,9 @@ body {
 .inform-drones .section-banner__text-content {
   max-width: 580px;
   line-height: 1.2;
+  transform: translate3d(0, 125px, 0);
+  transition: transform .85s, opacity .35s;
+  opacity: 0;
 }
 
 .inform-drones .section-banner .heading {
@@ -3113,6 +3122,12 @@ body {
 .inform-drones .section-banner__sub-title {
   font-size: 24px;
   font-weight: 400;
+}
+
+.inform-drones .section-banner__footer {
+  transform: translate3d(0, 125px, 0);
+  transition: transform .85s, opacity .35s;
+  opacity: 0;
 }
 
 .inform-drones .section-banner__footer .btn_round-white {

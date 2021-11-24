@@ -3,9 +3,13 @@
   .section-banner {
     padding-bottom: 170px;
     color: #ffffff;
+
     &__text-content {
       max-width: 580px;
       line-height: 1.2;
+      transform: translate3d(0, 125px, 0);
+      transition: transform .85s, opacity .35s;
+      opacity: 0;
     }
 
     .heading {
@@ -19,6 +23,10 @@
     }
 
     &__footer {
+      transform: translate3d(0, 125px, 0);
+      transition: transform .85s, opacity .35s;
+      opacity: 0;
+
       .btn_round-white {
         margin-right: 70px;
 
