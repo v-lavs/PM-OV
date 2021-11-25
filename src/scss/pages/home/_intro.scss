@@ -68,6 +68,7 @@
         left: 5px;
         top: 50%;
         transform: translateY(-50%);
+        opacity: 0;
       }
     }
   }
@@ -81,14 +82,20 @@
     flex-direction: column;
     opacity: 0;
   }
-
+.btn_scroll{
+  opacity: 0;
+}
   &.anim_started {
     .social-bar {
       transition: .8s;
       left: 9px;
       opacity: 1
     }
-
+    .btn_scroll,
+    .services__item:before{
+      opacity: 1;
+    transition: .5s;
+    }
     .slider-services {
       transition: .8s;
       transform: translateY(0);

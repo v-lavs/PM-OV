@@ -2196,6 +2196,7 @@ body {
   left: 5px;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0;
 }
 
 .section-intro .social-bar {
@@ -2208,10 +2209,20 @@ body {
   opacity: 0;
 }
 
+.section-intro .btn_scroll {
+  opacity: 0;
+}
+
 .section-intro.anim_started .social-bar {
   transition: .8s;
   left: 9px;
   opacity: 1;
+}
+
+.section-intro.anim_started .btn_scroll,
+.section-intro.anim_started .services__item:before {
+  opacity: 1;
+  transition: .5s;
 }
 
 .section-intro.anim_started .slider-services {
@@ -3291,21 +3302,6 @@ body {
   text-transform: uppercase;
 }
 
-.inform-drones .block-imgs-dron .media-holder {
-  position: relative;
-}
-
-.inform-drones .block-imgs-dron .media-holder img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .services .section-banner .heading {
   position: relative;
   padding-left: 20px;
@@ -3418,6 +3414,17 @@ body {
   padding-bottom: 100px;
 }
 
+.about-us .section-banner__inner {
+  transform: translateY(125px);
+  opacity: 0;
+}
+
+.about-us .section-banner.anim_started .section-banner__inner {
+  transition: .65s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .about-us .section-banner:before {
   display: none;
 }
@@ -3427,7 +3434,7 @@ body {
 }
 
 .about-us .section-banner .section__header {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .about-us .section-banner__inner {

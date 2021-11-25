@@ -31,11 +31,12 @@ $(document).ready(function () {
         });
     }
 
-    // Home banner animation
+    // HOME BANNER ANIMATION
     useTextRevealAnim();
 
     setTimeout(function () {
         $('.section-intro').addClass('anim_started');
+        $('.header.fadeInUp').addClass('active_anim');
     }, 500);
 
     setTimeout(() => {
@@ -47,7 +48,7 @@ $(document).ready(function () {
             preserveAspectRatio: "xMidYMid meet",
             path: './assets/json/main_screen.json'
         })
-    }, 1000);
+    }, 600);
 
     //MOBILE MENU
     const nav = $('.header__nav');
@@ -111,7 +112,7 @@ $(document).ready(function () {
     });
 
 
-    // Layout toggle
+    // LAYOUT TOGGLE
 
     const $layoutToggle = $('.layout-toggle');
 
@@ -163,8 +164,8 @@ $(document).ready(function () {
     });
 
     const animTime = 600;
-    // Client's Review
 
+    //CLIENTS REVIEW
     partners_slider.on('slideChange', function () {
         const currSlide = this.slides[this.activeIndex];
         $(currSlide).find('.cover-anim').addClass('anim_started');
@@ -281,17 +282,16 @@ $(document).ready(function () {
 
 
     //    ANIMATION
-    setTimeout(function () {
-        $('.fadeInUp').addClass('active_anim');
-    }, 2000);
-    setTimeout(function () {
-        $('.fadeInDown').addClass('active_anim');
-    }, 2000);
+
+    $('.fadeInUp').addClass('active_anim');
+
+
+    $('.fadeInDown').addClass('active_anim');
 
 
     setTimeout(function () {
         $('.section-banner').addClass('anim_started');
-    }, 2100);
+    }, 500);
 
 
     const sectionDrones = document.querySelector('.drones');
@@ -306,6 +306,17 @@ $(document).ready(function () {
                 }, 1100);
             },
             offset: '60%'
+        });
+    }
+
+    const sectionGallery = document.querySelector('.gallery');
+    if (sectionGallery) {
+        const imgGroving = new Waypoint({
+            element: sectionGallery,
+            handler: function (direction) {
+                this.element.classList.add('anim_started');
+            },
+            offset: '50%'
         });
     }
 

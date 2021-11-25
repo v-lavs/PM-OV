@@ -46,12 +46,12 @@
         }
 
         .loader__wrap-img {
-            width: 26.5%;
+            width: auto;
             height: 100vh;
         }
 
         .loader__img-neuron {
-            width: 100%;
+            width: auto;
             height: 100%;
         }
 
@@ -134,7 +134,6 @@
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./dist/main.css">
-
     <script src="lib/lottie/lottie.js"></script>
 </head>
 
@@ -871,7 +870,7 @@
                     clearInterval(t);
                     w = 0;
                 }
-            }, 25);
+            },40);
     }
 
     loader();
