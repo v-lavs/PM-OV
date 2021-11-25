@@ -12,17 +12,168 @@
     <meta name="robots" content="noindex">
     <meta name="yandex" content="none">
 
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*preloader*/
+        .preloader {
+            position: fixed;
+            overflow: hidden;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+
+        .loader {
+            width: 100%;
+            height: 100vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-color: #f4f4f4
+        }
+
+        .loader__wrap-img {
+            width: 26.5%;
+            height: 100vh;
+        }
+
+        .loader__img-neuron {
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader__img-neuron.rotate {
+            transform: scale(-1, 1)
+        }
+
+        .loader__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loader .logo-site {
+            display: block;
+            max-width: 296px;
+            height: auto;
+            margin: 0 auto 40px
+        }
+
+        .loader .dots {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .loader .dot {
+            display: inline-block;
+            background-color: #7f7f7f;
+            width: 6px;
+            line-height: 1;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .loader .dot:last-child {
+            margin-right: 0;
+        }
+
+        .loader .cover-anim_top .cover-anim__frame {
+            overflow: hidden;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+
+        .loader .cover-anim_top .cover-anim__content {
+            transform: translateY(-110%);
+            opacity: 0;
+        }
+
+
+        .loader .cover-anim_top.anim_started .cover-anim__frame,
+        .loader .cover-anim_top.anim_started .cover-anim__content {
+            transition: transform 2s;
+            transform: none;
+            opacity: 1;
+        }
+
+
+        @media only screen and (max-width: 1180px) {
+            .loader .logo-site {
+                max-width: 243px
+            }
+
+            .loader__wrap-img {
+                width: 30%
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .loader {
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center
+            }
+        }
+
+    </style>
 
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./dist/main.css">
-    <script src="../../../../курсы html-css/solis новый гaлп/src/js/main.js"></script>
+
+    <script src="lib/lottie/lottie.js"></script>
 </head>
 
 <body>
 
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__wrap-img">
+            <div class="loader__img-neuron" id="loaderNeuron"></div>
+        </div>
+        <div class="loader__content">
+            <div class="cover-anim_top">
+                <div class="cover-anim__frame">
+                    <div class="cover-anim__content">
+                        <a href="#" class="logo-site">
+                            <img src="assets/img/logo-OV.svg" alt="OV, Project Management">
+                        </a>
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter">
+                <span>0%</span>
+            </div>
+        </div>
+
+        <div class="loader__wrap-img">
+            <div class="loader__img-neuron rotate" id="loaderNeuronRight"></div>
+        </div>
+    </div>
+</div>
+
+
 <div class="wrapper">
-    <header class="header">
+    <header class="header fadeInDown">
         <div class="container">
             <a href="#" class="header__logo">
                 <img src="assets/img/logo.svg" alt="OV Project Management" class="header__logo-img">
@@ -153,8 +304,8 @@
                     </svg>
                 </a>
             </div>
-            <div class="anim-json">
-                <img src="assets/img/bg-banner.png" alt="" class="anim-json__img">
+            <div class="neuron__wrap-img">
+                <div class="neuron__img" id="neuron__img"></div>
             </div>
             <div class="container">
                 <div class="section-intro__content">
@@ -304,9 +455,12 @@
 
         <section class="section presentation bg-dark" id="presentation">
             <div class="lottie-bg">
-                <div class="wrap-anim-bg rotate-anim-bg"><img src="assets/img/lottie-neyron.png" alt=""
-                                                              class="anim-img"></div>
-                <div class="wrap-anim-bg"><img src="assets/img/lottie-neyron.png" alt="" class="anim-img"></div>
+                <div class="lottie-bg_part">
+                    <div class="lottie-bg__container" id="neuronBgBlack"></div>
+                </div>
+                <div class="lottie-bg_part">
+                    <div class="lottie-bg__container rotate" id="neuronBgBlackRight"></div>
+                </div>
             </div>
             <div class="section__text">
                 Ми робимо процеси девелопменту <b>цивілізованими,
@@ -341,7 +495,9 @@
                             <div class="video__link">
                                 <img src="assets/img/poster.jpg" data-video="U3_uxUSeZV4" alt="" class="video__media">
                             </div>
-                            <button class="btn_video" aria-label="button play"><span class="rounded"></span>Переглянути відео</button>
+                            <button class="btn_video" aria-label="button play"><span class="rounded"></span>Переглянути
+                                відео
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -586,8 +742,11 @@
                                         <span class="round">
                                             <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                                <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                                                <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5"
+                                                      stroke-linecap="square" stroke-linejoin="round"/>
+                                                <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black"
+                                                      stroke-width="1.5" stroke-linecap="square"
+                                                      stroke-linejoin="round"/>
                                             </svg>
                                         </span> Надіслати запит
                                     </button>
@@ -673,6 +832,54 @@
         </div>
     </footer>
 </div>
+
+
+<script>
+
+    /*====================================
+*     LOADER
+======================================*/
+    const obj = document.querySelector('.preloader');
+    const inner = document.querySelector('.preloader .counter');
+
+    function loader() {
+        lottie.loadAnimation({
+            container: document.getElementById('loaderNeuron'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+
+        lottie.loadAnimation({
+            container: document.getElementById('loaderNeuronRight'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+
+        document.querySelector('.cover-anim_top').classList.add('anim_started');
+
+        let w = 0,
+            t = setInterval(function () {
+                w = w + 2;
+                inner.textContent = w + '%';
+                if (w === 100) {
+                    clearInterval(t);
+                    w = 0;
+                }
+            }, 25);
+    }
+
+    loader();
+
+    document.addEventListener("DOMContentLoaded", function () {
+        obj.style = 'display: none';
+    });
+</script>
 
 <script src="lib/swiper@7/swiper-bundle.min.js"></script>
 <script src="dist/main.js"></script>

@@ -11,20 +11,30 @@
         width: 2px;
         background-color: #000000;
         left: 0;
-        top: -20px;
+        top: 100%;
         bottom: -5px;
+        opacity: 0;
       }
     }
 
     &:before {
       display: none;
     }
+
+    &.anim_started {
+      .heading:before {
+        top: -20px;
+        opacity: 1;
+        transition: .85s;
+      }
+    }
   }
 
   .decor-light {
-    .bg-neuron_light{
+    .bg-neuron_light {
       right: auto;
     }
+
     .heading {
       margin-bottom: 42px;
     }

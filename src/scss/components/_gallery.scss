@@ -127,6 +127,14 @@
         transform: scale(1.05);
         opacity: 1;
       }
+      .card-decor:before{
+        top: 25px;
+        left: 25px;
+      }
+      .card-decor:after{
+        right: 25px;
+        bottom: 25px;
+      }
 
       .icon-zoom {
         z-index: 2;

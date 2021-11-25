@@ -5,23 +5,23 @@
   padding: 0 20px;
   margin: 0 auto;
   @include respond-to($laptop-md) {
-    //max-width: 1240px;
+    max-width: 1080px;
   }
   @include respond-to($laptop) {
-    //max-width: 1120px;
+    max-width: 960px;
   }
   @include respond-to($lg) {
-    //max-width: 940px;
+    max-width: 768px;
   }
   @include respond-to($md) {
-    //max-width: 720px;
+    max-width: 640px;
   }
   @include respond-to($sm) {
-    //max-width: 580px;
+    max-width: 580px;
   }
 
-  @include respond-to($xs) {
-    //max-width: 420px;
-    //padding: 0 40px;
-  }
+  //@include respond-to($xs) {
+  //  //max-width: 420px;
+  //  //padding: 0 40px;
+  //}
 }

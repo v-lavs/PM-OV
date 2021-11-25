@@ -124,7 +124,7 @@
       z-index: 999;
       padding: 100px 16px 45px;
       overflow-y: auto;
-
+      height: 100vh;
       &.open {
         transform: translateX(0);
       }

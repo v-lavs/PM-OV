@@ -11,8 +11,6 @@
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
-
-
     function useTextRevealAnim() {
         const $textWrap = $('.text-reveal');
 
@@ -33,10 +31,22 @@ $(document).ready(function () {
         });
     }
 
+    // Home banner animation
     useTextRevealAnim();
 
     setTimeout(function () {
         $('.section-intro').addClass('anim_started');
+    }, 500);
+
+    setTimeout(() => {
+        const neuronBanner = lottie.loadAnimation({
+            container: document.getElementById('neuron__img'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: "xMidYMid meet",
+            path: './assets/json/main_screen.json'
+        })
     }, 1000);
 
     //MOBILE MENU
@@ -273,13 +283,18 @@ $(document).ready(function () {
     //    ANIMATION
     setTimeout(function () {
         $('.fadeInUp').addClass('active_anim');
-        }, 400);
+    }, 2000);
     setTimeout(function () {
+        $('.fadeInDown').addClass('active_anim');
+    }, 2000);
 
-        $('.single-projects').find('.cover-anim').addClass('anim_started');
-    }, 1100);
+
+    setTimeout(function () {
+        $('.section-banner').addClass('anim_started');
+    }, 2100);
+
+
     const sectionDrones = document.querySelector('.drones');
-
     if (sectionDrones) {
         const sectorRotate = new Waypoint({
             element: sectionDrones,
@@ -294,4 +309,57 @@ $(document).ready(function () {
         });
     }
 
+//    LOTTIE ANIMATION
+    window.addEventListener('resize', function () {
+        window.lottie.resize();
+    });
+
+
+    //ANIMATION PRESENTATION
+    function renderNeuron(container, lottieObj) {
+        if (container) {
+            const inViewport = elementInViewport(container, .3);
+
+            if (inViewport) {
+                lottieObj.play();
+            }
+        }
+    }
+
+    function elementInViewport(element, offsetTop) {
+        const bounds = element.getBoundingClientRect();
+        return (
+            (window.innerHeight - bounds.top - bounds.height * offsetTop > 0)
+        );
+    }
+
+    const neuronContainer = document.getElementById('neuronBgBlack');
+    const animationBgBlack = lottie.loadAnimation({
+        container: neuronContainer,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMax slice'
+        },
+        path: './assets/json/main_screen.json'
+    });
+    const neuronContainerR = document.getElementById('neuronBgBlackRight');
+    const animationBgBlackR = lottie.loadAnimation({
+        container: neuronContainerR,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        },
+        path: './assets/json/main_screen.json'
+    });
+
+    document.addEventListener('scroll', function () {
+        renderNeuron(neuronContainer, animationBgBlack);
+        renderNeuron(neuronContainerR, animationBgBlackR);
+    });
 });
+
+

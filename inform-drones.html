@@ -13,11 +13,10 @@
 
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./dist/main.css">
 </head>
+
 <body>
 <div class="wrapper">
-
     <main class="inform-drones">
         <section class="section-banner" style="background-image: url(assets/img/karl-greif.jpg);">
             <div class="container ">
@@ -127,9 +126,12 @@
         </section>
         <section class="section presentation bg-dark">
             <div class="lottie-bg">
-                <div class="wrap-anim-bg rotate-anim-bg"><img src="assets/img/lottie-neyron.png" alt=""
-                                                              class="anim-img"></div>
-                <div class="wrap-anim-bg"><img src="assets/img/lottie-neyron.png" alt="" class="anim-img"></div>
+                <div class="lottie-bg_part">
+                    <div class="lottie-bg__container" id="neuronBgBlack"></div>
+                </div>
+                <div class="lottie-bg_part">
+                    <div class="lottie-bg__container rotate" id="neuronBgBlackRight"></div>
+                </div>
             </div>
             <div class="section__text">
                 <p>
@@ -151,14 +153,13 @@
             <div class="decor-wrap-btn">
                 <a href="#" class="btn btn_large">
                         <span class="round">
-                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5" stroke-linecap="square"
-                                      stroke-linejoin="round"/>
-                                <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black" stroke-width="1.5"
-                                      stroke-linecap="square" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round"/>
+                        <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                 </span>
                     Завантажити презентацію
                 </a>
             </div>
@@ -430,10 +431,10 @@
             </div>
         </section>
     </main>
-
 </div>
 
 <script src="lib/swiper@7/swiper-bundle.min.js"></script>
+<script src="lib/lottie/lottie.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>

@@ -15,6 +15,9 @@
       transform: translateX(-110%);
       transition: transform .8s;
     }
+    img{
+      opacity: .45;
+    }
   }
 
   &:hover {

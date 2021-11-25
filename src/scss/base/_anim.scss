@@ -11,6 +11,19 @@
   }
 }
 
+.cover-anim_top {
+  .cover-anim__frame {
+    overflow: hidden;
+    transform: translateY(110%);
+    transition: transform .85s;
+  }
+
+  .cover-anim__content {
+    transform: translateY(-110%);
+    transition: transform .85s;
+  }
+}
+
 .fade {
   opacity: 0;
   transition: opacity .5s;
@@ -48,7 +61,9 @@
     transition: 1s;
   }
 }
+.anim_started-top{
 
+}
 .anim_started {
   .text-reveal {
     opacity: 1;
@@ -82,15 +97,28 @@
   }
 }
 
-.fadeInUp{
+.fadeInUp {
   transform: translateY(125px);
-  transition: .85s;
   opacity: 0;
 
-  &.active_anim{
-      transform: translateY(0);
-      opacity: 1
-    }
+  &.active_anim {
+    transition: .85s;
+    transform: translateY(0);
+    opacity: 1
   }
+}
+
+.fadeInDown {
+  transform: translateY(-20%);
+  opacity: 0;
+
+  &.active_anim {
+    transition: .85s;
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+
 
 

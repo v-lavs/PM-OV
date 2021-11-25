@@ -39,14 +39,17 @@
     }
 
     .loader__wrap-img {
-        width: 28%;
+        width: 26.5%;
+        height: 100vh;
     }
 
-    .loader__wrap-img img {
-        width: 100%
+    .loader__img-neuron {
+        width: 100%;
+        height: 100%;
+
     }
 
-    .loader__wrap-img.rotate {
+    .loader__img-neuron.rotate {
         transform: scale(-1, 1)
     }
 
@@ -62,6 +65,47 @@
         height: auto;
         margin: 0 auto 40px
     }
+
+    .dots {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .dot {
+        display: inline-block;
+        background-color: #7f7f7f;
+        width: 6px;
+        line-height: 1;
+        height: 6px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .dot:last-child {
+        margin-right: 0;
+    }
+    .cover-anim_top .cover-anim__frame {
+        overflow: hidden;
+        transform: translateY(110%);
+        opacity: 0;
+        /*transition: transform .85s;*/
+    }
+
+    .cover-anim_top .cover-anim__content {
+        transform: translateY(-110%);
+        opacity: 0;
+        /*transition: transform .85s;*/
+    }
+
+
+  .cover-anim_top.anim_started .cover-anim__frame,
+   .cover-anim_top.anim_started .cover-anim__content {
+         transition: transform 2s;
+        transform: none;
+        opacity: 1;
+    }
+
+
 
     @media only screen and (max-width: 1180px) {
         .loader .logo-site {
@@ -90,37 +134,68 @@
 
 <div class="preloader">
     <div class="loader">
-        <div class="loader__wrap-img rotate">
-            <img src="assets/img/lottie-neyron.png" alt="">
+        <div class="loader__wrap-img">
+            <div class="loader__img-neuron" id="loaderNeuron"></div>
         </div>
         <div class="loader__content">
-            <a href="#" class="logo-site">
-                <img src="assets/img/logo-OV.svg" alt="OV, Project Management">
-            </a>
-
+            <div class="cover-anim_top">
+                <div class="cover-anim__frame">
+                    <div class="cover-anim__content">
+                        <a href="#" class="logo-site">
+                            <img src="assets/img/logo-OV.svg" alt="OV, Project Management">
+                        </a>
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="counter">
-                <span>0%</span>
+                0%
             </div>
         </div>
 
         <div class="loader__wrap-img">
-            <img src="assets/img/lottie-neyron.png" alt="">
+            <div class="loader__img-neuron rotate" id="loaderNeuronRight"></div>
         </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="lib/lottie/lottie.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
+        const neuronPreloader = lottie.loadAnimation({
+            container: document.getElementById('loaderNeuron'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+        const neuronPreloaderRight = lottie.loadAnimation({
+            container: document.getElementById('loaderNeuronRight'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+        setTimeout(function () {
+            $('.cover-anim_top').addClass('anim_started');
+        }, 1000);
+
         var counter = 0;
         var count = 0;
-        var i = setInterval(function(){
+        var i = setInterval(function () {
             $(".loader .loader-counter h1").html(count + "%");
             counter++;
             count++;
-            if(counter == 101){
+            if (counter == 101) {
                 clearInterval(i);
             }
-        },1500);
+        }, 1500);
     });
 </script>
 </body>
