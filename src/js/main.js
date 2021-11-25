@@ -274,7 +274,10 @@ $(document).ready(function () {
     setTimeout(function () {
         $('.fadeInUp').addClass('active_anim');
         }, 400);
+    setTimeout(function () {
 
+        $('.single-projects').find('.cover-anim').addClass('anim_started');
+    }, 1100);
     const sectionDrones = document.querySelector('.drones');
 
     if (sectionDrones) {
