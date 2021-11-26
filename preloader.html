@@ -22,7 +22,6 @@
         background: #ffffff;
     }
 
-
     .loader {
         width: 100%;
         height: 100vh;
@@ -44,6 +43,7 @@
     }
 
     .loader__img-neuron {
+        width: auto;
         height: 100%;
     }
 
@@ -64,12 +64,12 @@
         margin: 0 auto 40px
     }
 
-    .dots {
+    .loader .dots {
         text-align: center;
         margin-bottom: 40px;
     }
 
-    .dot {
+    .loader .dot {
         display: inline-block;
         background-color: #7f7f7f;
         width: 6px;
@@ -79,26 +79,24 @@
         margin-right: 10px;
     }
 
-    .dot:last-child {
+    .loader .dot:last-child {
         margin-right: 0;
     }
 
-    .cover-anim_top .cover-anim__frame {
+    .loader .cover-anim_top .cover-anim__frame {
         overflow: hidden;
         transform: translateY(110%);
         opacity: 0;
-        /*transition: transform .85s;*/
     }
 
-    .cover-anim_top .cover-anim__content {
+    .loader .cover-anim_top .cover-anim__content {
         transform: translateY(-110%);
         opacity: 0;
-        /*transition: transform .85s;*/
     }
 
 
-    .cover-anim_top.anim_started .cover-anim__frame,
-    .cover-anim_top.anim_started .cover-anim__content {
+    .loader .cover-anim_top.anim_started .cover-anim__frame,
+    .loader .cover-anim_top.anim_started .cover-anim__content {
         transition: transform 2s;
         transform: none;
         opacity: 1;
@@ -121,12 +119,7 @@
             -ms-flex-pack: center;
             justify-content: center
         }
-
-        .loader__wrap-img {
-
-        }
     }
-
 </style>
 
 
@@ -162,8 +155,12 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="lib/lottie/lottie.js"></script>
+
 <script>
-    $(document).ready(function () {
+    const obj = document.querySelector('.preloader');
+    const inner = document.querySelector('.preloader .counter');
+
+    function loader() {
         lottie.loadAnimation({
             container: document.getElementById('loaderNeuron'),
             renderer: 'svg',
@@ -172,6 +169,7 @@
             preserveAspectRatio: 'xMidYMid slice',
             path: './assets/json/preloader.json'
         });
+
         lottie.loadAnimation({
             container: document.getElementById('loaderNeuronRight'),
             renderer: 'svg',
@@ -180,20 +178,29 @@
             preserveAspectRatio: 'xMidYMid slice',
             path: './assets/json/preloader.json'
         });
-        setTimeout(function () {
-            $('.cover-anim_top').addClass('anim_started');
-        }, 1000);
 
-        var counter = 0;
-        var count = 0;
-        var i = setInterval(function () {
-            $(".loader .loader-counter h1").html(count + "%");
-            counter++;
-            count++;
-            if (counter == 101) {
-                clearInterval(i);
+        document.querySelector('.cover-anim_top').classList.add('anim_started');
+
+        let w = 0,
+            t = setInterval(function () {
+                w = w + 2;
+                inner.textContent = w + '%';
+                if (w === 100) {
+                    clearInterval(t);
+                    w = 0;
+                }
+            },40);
+    }
+
+    loader();
+
+    window.addEventListener("load", function (event) {
+        setTimeout(function () {
+            var preloader = document.getElementById('preloader');
+            if (!preloader.classList.contains('done')) {
+                preloader.classList.add('done');
             }
-        }, 1500);
+        },50);
     });
 </script>
 </body>

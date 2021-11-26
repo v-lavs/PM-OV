@@ -3645,10 +3645,11 @@ body {
   min-height: 550px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: cover;
+  background-size: 120% 120%;
   color: #ffffff;
   padding-bottom: 60px;
   margin-bottom: 64px;
+  overflow: hidden;
 }
 
 .single-news .section-banner:before {
