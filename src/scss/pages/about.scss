@@ -15,12 +15,17 @@
     &__part_right {
       padding-left: 30px;
       width: 75%;
+
+      .wrap-btn_mob {
+        display: none;
+      }
     }
 
     .slider-mj-project {
       .inner-helper {
         width: 100%;
       }
+
     }
 
     &__part_left {
@@ -62,8 +67,6 @@
     }
 
     .slider__arrow {
-      //width: 70px;
-      //height: 70px;
 
       &:before {
         background: url(../assets/img/svg/arrow-right-sm.svg) center center no-repeat;
@@ -234,23 +237,118 @@
       display: block;
     }
   }
+
+  .partner-quote {
+    background: url("../assets/img/svg/bg-logo.svg") left 30px center no-repeat;
+    background-size: contain;
+  }
+  .benefits:before {
+    display: none;
+  }
+
+  .about-us {
+
+    .section-banner {
+      min-height: auto;
+      &__inner {
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+
+      &__logo {
+        margin: auto;
+        width: 69%;
+      }
+    }
+
+    .major-projects {
+      background-image: none;
+      padding-bottom: 60px;
+
+      .d-flex {
+        margin: 0 -17px;
+      }
+
+      .slider-wrap {
+        width: 100%;
+      }
+
+      .swiper-wrapper {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        min-height: 273px;
+        padding: 50px;
+        margin-bottom: 15px;
+      }
+
+      &__part_left {
+        display: none;
+      }
+
+      &__part_right {
+        width: 100%;
+        padding: 0;
+
+        .wrap-btn_mob {
+          padding-top: 25px;
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .slider__arrow {
+        display: none !important;
+      }
+    }
+
+    .slider-mj-project__title {
+      font-size: 32px;
+    }
+  }
 }
 
-@include respond-to($sm) {
+@include respond-to($xs) {
   .about-us {
-    .cover-anim__frame{
-      margin: 0 -17px;
+    .section-banner {
+      padding-bottom: 60px;
     }
-    .section-banner__bg{
+
+    .partners-slider {
+      margin-bottom: 33px;
+    }
+
+    .major-projects {
+      padding-top: 60px;
+    }
+
+    .section-banner__bg {
       min-height: 605px;
       padding-bottom: 20px;
     }
-    .section-banner__logo{
-      width: 69%;
-    }
-    .major-projects {
-      &__part_left {
-        display: none;
+
+    .partner-quote {
+      padding-top: 130px;
+      background-size: 100%;
+      background-position: left 14px top 30px;
+
+      &__text {
+        font-size: 20px;
+      }
+
+      &__position {
+        font-size: 14px;
+      }
+
+      &__title {
+        font-size: 16px;
       }
     }
   }

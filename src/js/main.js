@@ -353,16 +353,15 @@ $(document).ready(function () {
 
 
     const majorProect = document.querySelector('.major-projects');
-    if ($(window).width() >= 678) {
-        if (majorProect) {
-            const sliderGroving = new Waypoint({
-                element: majorProect,
-                handler: function (direction) {
-                    this.element.classList.add('anim_started');
-                },
-                offset: '50%'
-            });
-        }
+
+    if (majorProect) {
+        const sliderGroving = new Waypoint({
+            element: majorProect,
+            handler: function (direction) {
+                this.element.classList.add('anim_started');
+            },
+            offset: '50%'
+        });
     }
 //    LOTTIE ANIMATION
     window.addEventListener('resize', function () {

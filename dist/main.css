@@ -1466,6 +1466,7 @@ body {
   width: 1.25em;
   height: 0.875em;
   background: url("../assets/img/svg/quote.svg") center no-repeat;
+  background-size: contain;
   z-index: 1;
 }
 
@@ -3360,6 +3361,10 @@ body {
   width: 75%;
 }
 
+.about-us .major-projects__part_right .wrap-btn_mob {
+  display: none;
+}
+
 .about-us .major-projects .slider-mj-project .inner-helper {
   width: 100%;
 }
@@ -4047,6 +4052,81 @@ body {
     height: 100%;
     display: block;
   }
+
+  .partner-quote {
+    background: url("../assets/img/svg/bg-logo.svg") left 30px center no-repeat;
+    background-size: contain;
+  }
+
+  .benefits:before {
+    display: none;
+  }
+
+  .about-us .section-banner {
+    min-height: auto;
+  }
+
+  .about-us .section-banner__inner {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  .about-us .section-banner__logo {
+    margin: auto;
+    width: 69%;
+  }
+
+  .about-us .major-projects {
+    background-image: none;
+    padding-bottom: 60px;
+  }
+
+  .about-us .major-projects .d-flex {
+    margin: 0 -17px;
+  }
+
+  .about-us .major-projects .slider-wrap {
+    width: 100%;
+  }
+
+  .about-us .major-projects .swiper-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-us .major-projects .swiper-slide {
+    width: 100%;
+    min-height: 273px;
+    padding: 50px;
+    margin-bottom: 15px;
+  }
+
+  .about-us .major-projects__part_left {
+    display: none;
+  }
+
+  .about-us .major-projects__part_right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-us .major-projects__part_right .wrap-btn_mob {
+    padding-top: 25px;
+    display: block;
+    text-align: center;
+  }
+
+  .about-us .major-projects .slider__arrow {
+    display: none !important;
+  }
+
+  .about-us .slider-mj-project__title {
+    font-size: 32px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -4304,9 +4384,24 @@ body {
   .video .container {
     padding: 0;
   }
+}
 
-  .about-us .cover-anim__frame {
-    margin: 0 -17px;
+@media only screen and (max-width: 580px) {
+  .container {
+    max-width: 100%;
+    padding: 0 17px;
+  }
+
+  .about-us .section-banner {
+    padding-bottom: 60px;
+  }
+
+  .about-us .partners-slider {
+    margin-bottom: 33px;
+  }
+
+  .about-us .major-projects {
+    padding-top: 60px;
   }
 
   .about-us .section-banner__bg {
@@ -4314,19 +4409,22 @@ body {
     padding-bottom: 20px;
   }
 
-  .about-us .section-banner__logo {
-    width: 69%;
+  .about-us .partner-quote {
+    padding-top: 130px;
+    background-size: 100%;
+    background-position: left 14px top 30px;
   }
 
-  .about-us .major-projects__part_left {
-    display: none;
+  .about-us .partner-quote__text {
+    font-size: 20px;
   }
-}
 
-@media only screen and (max-width: 580px) {
-  .container {
-    max-width: 100%;
-    padding: 0 17px;
+  .about-us .partner-quote__position {
+    font-size: 14px;
+  }
+
+  .about-us .partner-quote__title {
+    font-size: 16px;
   }
 }
 
