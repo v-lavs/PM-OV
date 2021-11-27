@@ -41,3 +41,13 @@
   }
 }
 
+
+@include respond-to($sm) {
+  .services {
+    .grid-layout__col_6 {
+      .grid-layout__content_sm {
+        padding-top: 38.75%;
+      }
+    }
+  }
+}
