@@ -77,7 +77,10 @@
 
 @include respond-to($sm) {
   .bg-dark {
-    padding: 180px 0;
+    padding: 200px 0;
+    &:before{
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75) );
+    }
 
     .section__text {
       max-width: 100%;

@@ -247,9 +247,13 @@
   }
 
   .about-us {
+    .decor-grey__col {
+      text-align: left;
+    }
 
     .section-banner {
       min-height: auto;
+
       &__inner {
         min-height: 600px;
         display: flex;
@@ -284,7 +288,7 @@
 
       .swiper-slide {
         width: 100%;
-        min-height: 273px;
+        height: 273px;
         padding: 50px;
         margin-bottom: 15px;
       }
@@ -321,6 +325,12 @@
       padding-bottom: 60px;
     }
 
+    .major-projects {
+      .swiper-slide {
+        height: 238px;
+      }
+    }
+
     .partners-slider {
       margin-bottom: 33px;
     }
@@ -351,5 +361,11 @@
         font-size: 16px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .partner-quote {
+    padding-bottom: 0;
   }
 }

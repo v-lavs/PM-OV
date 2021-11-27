@@ -43,5 +43,9 @@
 
 
 @include respond-to($sm) {
-
+  .decor-light {
+    .bg-neuron_light {
+      display: none;
+    }
+  }
 }

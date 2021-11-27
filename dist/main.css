@@ -4033,6 +4033,10 @@ body {
     display: none;
   }
 
+  .about-us .decor-grey__col {
+    text-align: left;
+  }
+
   .about-us .section-banner {
     min-height: auto;
   }
@@ -4071,7 +4075,7 @@ body {
 
   .about-us .major-projects .swiper-slide {
     width: 100%;
-    min-height: 273px;
+    height: 273px;
     padding: 50px;
     margin-bottom: 15px;
   }
@@ -4232,7 +4236,11 @@ body {
   }
 
   .bg-dark {
-    padding: 180px 0;
+    padding: 200px 0;
+  }
+
+  .bg-dark:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75));
   }
 
   .bg-dark .section__text {
@@ -4399,6 +4407,10 @@ body {
     width: auto;
     height: 100px;
   }
+
+  .decor-light .bg-neuron_light {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 580px) {
@@ -4443,6 +4455,10 @@ body {
     padding-bottom: 60px;
   }
 
+  .about-us .major-projects .swiper-slide {
+    height: 238px;
+  }
+
   .about-us .partners-slider {
     margin-bottom: 33px;
   }
@@ -4472,6 +4488,12 @@ body {
 
   .about-us .partner-quote__title {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .partner-quote {
+    padding-bottom: 0;
   }
 }
 
