@@ -113,3 +113,13 @@
     }
   }
 }
+
+
+@include respond-to($sm){
+  .grid-layout{
+    margin: 0 -17px;
+  }
+  .grid-layout__col_6{
+    width: 100%;
+  }
+}

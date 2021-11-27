@@ -4013,6 +4013,14 @@ body {
     max-width: 580px;
   }
 
+  .grid-layout {
+    margin: 0 -17px;
+  }
+
+  .grid-layout__col_6 {
+    width: 100%;
+  }
+
   .footer_top {
     flex-wrap: wrap;
     padding: 52px 0 45px;

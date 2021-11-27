@@ -94,6 +94,7 @@ $(document).ready(function () {
     const home_banner_slider = new Swiper(".slider-services", {
         slidesPerView: "auto",
         spaceBetween: 30,
+        slidesOffsetAfter: 30,
         speed: 1500,
         navigation: {
             nextEl: ".slider__arrow_next",
@@ -104,6 +105,7 @@ $(document).ready(function () {
     const majorProjectsSlider = new Swiper(".slider-mj-project", {
         slidesPerView: "auto",
         spaceBetween: 30,
+        slidesOffsetAfter: 30,
         speed: 1500,
         navigation: {
             nextEl: ".slider__arrow_next",
