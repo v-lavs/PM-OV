@@ -21,6 +21,7 @@
     width: 32px;
     height: 32px;
     padding: 4px;
+    margin-left: 30px;
 
     .line {
       display: block;
@@ -84,6 +85,7 @@
 
   &__right-bar {
     flex-shrink: 0;
+    margin-left: auto;
   }
 
   &__link {
@@ -101,7 +103,7 @@
     width: 100%;
   }
 
-  @include respond-to($md) {
+  @include respond-to($lg) {
     .lang-switch,
     .btn-close,
     .btn-burger,

@@ -186,4 +186,11 @@
       top: 0;
     }
   }
+  @include respond-to($md){
+    .btn_large{
+      padding: 10px 40px;
+    }
+  }
 }
+
+

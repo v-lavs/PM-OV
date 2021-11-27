@@ -1,37 +1,31 @@
 .bg-dark {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: $black;
   color: $white;
   min-height: 646px;
+  padding-top: 100px;
   text-align: center;
-  padding-top: 200px;
   overflow: hidden;
   z-index: 1;
 
-  &:before,
-  &:after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 12.5%;
-    top: 0;
-    bottom: 0;
+  .container {
+    position: relative;
     z-index: 1;
-    background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   }
 
   &:before {
+    position: absolute;
+    content: '';
+    display: block;
     left: 0;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-
-  &:after {
-    transform: matrix(1, 0, 0, -1, 0, 0);
     right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) .1%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85) 99.9%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
   .section__text {
@@ -53,6 +47,12 @@
     margin-bottom: 64px;
   }
 
+  .decor-wrap-btn {
+    width: fit-content;
+    margin: 0 auto;
+
+  }
+
   .lottie-bg {
     position: absolute;
     display: flex;
@@ -69,13 +69,14 @@
       height: 100%;
       display: flex;
       align-items: center;
+
       &.rotate {
         transform: scale(-1, 1);
       }
 
       svg {
         display: block;
-        height: auto!important;
+        height: auto !important;
       }
     }
 
@@ -88,3 +89,70 @@
     }
   }
 }
+
+@include respond-to($laptop) {
+  .decor-wrap-btn {
+    min-width: 230px;
+  }
+  .bg-dark .section__text {
+    max-width: 630px;
+    font-size: 28px;
+  }
+}
+
+@include respond-to($laptop) {
+  .bg-dark .section__text {
+    font-size: 22px;
+  }
+}
+
+@include respond-to($md) {
+  .bg-dark .section__text {
+    width: 100%;
+  }
+}
+
+@include respond-to($sm) {
+  .bg-dark {
+    min-height: 700px;
+
+    .lottie-bg {
+      flex-direction: column;
+      align-items: center;
+
+      padding: 150px 0;
+    }
+
+    .dots {
+      margin-bottom: 40px;
+    }
+
+    .lottie-bg_part {
+      width: 33%;
+      transform: rotate(90deg);
+      position: absolute;
+
+      &-left {
+        top: -15%;
+      }
+
+      &-right {
+        bottom: -15%;
+      }
+    }
+
+    &:before {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) .1%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85) 99.9%);
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .bg-dark {
+    min-height: 672px;
+  }
+  .bg-dark .lottie-bg_part {
+    width: 50%;
+  }
+}
+

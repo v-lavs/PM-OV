@@ -2,7 +2,7 @@
   display: flex;
   font-size: 12px;
   text-transform: uppercase;
-
+  flex-wrap: wrap;
   &__item {
     line-height: 1;
     margin: 0 37px;
@@ -33,6 +33,11 @@
     &:hover:before,
     &:focus:before{
       opacity: 1;
+    }
+  }
+  @include respond-to($laptop-md){
+    .menu__item{
+      margin: 0 20px;
     }
   }
 }

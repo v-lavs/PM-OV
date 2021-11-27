@@ -8,13 +8,14 @@
 
   .form-group {
     margin-bottom: 14px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
   .input,
-  .textarea{
+  .textarea {
     width: 100%;
     background-color: #000000;
     font-size: 16px;
@@ -23,13 +24,27 @@
     border-bottom: 1px solid #ffffff;
     padding: 10px 0;
   }
+
   ::placeholder {
     color: #ffffff;
   }
+
   .textarea {
     width: 100%;
     background-color: #000000;
     resize: both;
     overflow: auto;
+  }
+}
+
+@include respond-to($sm) {
+  .contact-form {
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .btn_submit {
+      margin-top: 22px;
+    }
   }
 }

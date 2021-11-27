@@ -103,6 +103,20 @@ body {
       }
     }
   }
+  @include respond-to($laptop-md){
+    .social-bar__link_round{
+      width: 60px;
+      height: 60px;
+      padding: 15px;
+    }
+  }
+  @include respond-to($md){
+   .social-bar__link_round {
+      width: 45px;
+      height: 45px;
+      padding: 12px;
+    }
+  }
 }
 
 .section {
@@ -128,6 +142,9 @@ body {
     &:last-child {
       margin-right: 0;
     }
+  }
+  @include respond-to($sm){
+    padding-bottom: 60px;
   }
 }
 

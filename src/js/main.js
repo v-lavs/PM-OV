@@ -191,11 +191,21 @@ $(document).ready(function () {
 
     const contactSlider = new Swiper(".contacts-slider", {
 
-        direction: "vertical",
+        direction: "horizontal",
+
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            320: {
+                direction: "horizontal",
+            },
+
+            767: {
+                direction: "vertical",
+            }
+        }
 
     });
 
@@ -382,6 +392,23 @@ $(document).ready(function () {
         renderNeuron(neuronContainer, animationBgBlack);
         renderNeuron(neuronContainerR, animationBgBlackR);
     });
+
+
+    // let renderNeuron = new Waypoint({
+    //     element: neuronContainer,
+    //     handler: function (direction) {
+    //         animationBgBlack.play();
+    //     },
+    //     offset: '40%'
+    // })
+    // let renderNeuronR = new Waypoint({
+    //     element: neuronContainerR,
+    //     handler: function (direction) {
+    //         animationBgBlackR.play();
+    //     },
+    //     offset: '40%'
+    // })
+
 });
 
 

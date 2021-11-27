@@ -153,3 +153,38 @@
 .video_enabled .btn_video {
   display: block;
 }
+
+@include respond-to($lg){
+  .video{
+    &__content{
+      padding-top: 60%;
+    }
+  }
+}
+
+@include respond-to($sm){
+  .video{
+    padding-top: 60px;
+
+    &__inner:before,
+    &__inner:after,
+    &__wrap:before,
+    &__wrap:after{
+      display: none;
+    }
+    .btn_video{
+      width: auto;
+      height: auto;
+      .rounded{
+        margin-bottom: 0;
+      }
+    }
+    .btn__text{
+      display: none;
+    }
+    &__inner,
+    .container{
+      padding: 0;
+    }
+  }
+}
