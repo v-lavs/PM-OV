@@ -188,6 +188,10 @@ body {
 
 .page__pagination {
   padding-bottom: 100px;
+  @include respond-to($sm) {
+    padding-bottom: 60px;
+    font-size: 14px;
+  }
 }
 
 

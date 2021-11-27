@@ -1902,6 +1902,7 @@ body {
 .header .lang-switch__link {
   display: inline-block;
   margin: 0 11px;
+  vertical-align: middle;
 }
 
 .header .lang-switch__link.active {
@@ -3024,6 +3025,7 @@ body {
 
 .slider-review__row {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 100px;
 }
 
@@ -4103,6 +4105,11 @@ body {
     padding-bottom: 60px;
   }
 
+  .page__pagination {
+    padding-bottom: 60px;
+    font-size: 14px;
+  }
+
   .contact-form .form-group {
     margin-bottom: 17px;
   }
@@ -4355,6 +4362,42 @@ body {
   .video__inner,
   .video .container {
     padding: 0;
+  }
+
+  .section-projects {
+    padding-bottom: 30px;
+  }
+
+  .projects-layout__item {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .projects-layout__content {
+    padding: 40px 40px 10px;
+  }
+
+  .projects-layout_list .projects-layout__inner {
+    min-height: 240px;
+  }
+
+  .projects-layout_list .projects-layout__title {
+    font-size: 28px;
+  }
+
+  .section-reviews .section__header {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .slider-review__part {
+    width: 100%;
+  }
+
+  .slider-review__part img {
+    max-width: 310px;
+    width: auto;
+    height: 100px;
   }
 }
 
