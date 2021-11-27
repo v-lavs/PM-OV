@@ -4016,6 +4016,12 @@ body {
     width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+
+  .chart-wrap::-webkit-scrollbar {
+    width: 0;
   }
 
   .chart-wrap img {

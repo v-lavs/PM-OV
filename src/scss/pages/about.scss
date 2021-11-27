@@ -231,6 +231,15 @@
     overflow-x: scroll;
     overflow-y: hidden;
 
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    -ms-overflow-style: none;
+
+
+    overflow: -moz-scrollbars-none;
+
     img {
       max-width: 1200px;
       height: 100%;
