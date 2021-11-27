@@ -933,6 +933,7 @@ body {
   position: relative;
   transform: translateY(-100%);
   transition: 1s;
+  line-height: 1;
 }
 
 .anim_started .text-reveal {
@@ -1942,7 +1943,6 @@ body {
 
 .header__right-bar {
   flex-shrink: 0;
-  margin-left: auto;
 }
 
 .header__link {
@@ -2201,8 +2201,7 @@ body {
   width: 12px;
   height: 24px;
   left: 5px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   opacity: 0;
 }
 
@@ -3806,12 +3805,8 @@ body {
     padding: 20px;
   }
 
-  .section-intro .services {
-    font-size: 32px;
-  }
-
-  .section-intro .services__item:before {
-    top: 40%;
+  .section-intro__content {
+    max-width: 65%;
   }
 
   .slider-services .swiper-slide {
@@ -3851,6 +3846,10 @@ body {
   .advantages .grid-layout__inner,
   .benefits .grid-layout__inner {
     padding: 40px;
+  }
+
+  .header .header__right-bar {
+    margin-left: auto;
   }
 
   .header .lang-switch,
@@ -3957,8 +3956,8 @@ body {
     padding-top: 40px;
   }
 
-  .section-intro .services {
-    font-size: 28px;
+  .section-intro__content {
+    max-width: 100%;
   }
 
   .section-intro .neuron__wrap-img,
@@ -4390,6 +4389,34 @@ body {
   .container {
     max-width: 100%;
     padding: 0 17px;
+  }
+
+  .section-intro .services {
+    margin-bottom: 17px;
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .section-intro .services__item {
+    margin-bottom: 5px;
+    padding-left: 30px;
+  }
+
+  .section-intro .services__item:before {
+    height: 20px;
+    top: 4px;
+  }
+
+  .section-intro__content {
+    padding-top: 32px;
+  }
+
+  .slider-services {
+    width: 100%;
+  }
+
+  .slider-services .swiper-slide {
+    width: 100%;
   }
 
   .about-us .section-banner {

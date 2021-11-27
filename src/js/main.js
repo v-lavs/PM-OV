@@ -92,13 +92,18 @@ $(document).ready(function () {
 
     //BANNER SLIDER HOME
     const home_banner_slider = new Swiper(".slider-services", {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 30,
         slidesOffsetAfter: 30,
         speed: 1500,
         navigation: {
             nextEl: ".slider__arrow_next",
             prevEl: ".slider__arrow_prev",
+        },
+        breakpoints: {
+            581: {
+                slidesPerView: 'auto',
+            },
         },
     });
 

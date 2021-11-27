@@ -6,7 +6,6 @@
   right: 0;
   z-index: 999;
 
-
   .container {
     position: relative;
     display: flex;
@@ -85,7 +84,6 @@
 
   &__right-bar {
     flex-shrink: 0;
-    margin-left: auto;
   }
 
   &__link {
@@ -101,47 +99,6 @@
 
   &__link-icon {
     width: 100%;
-  }
-
-  @include respond-to($lg) {
-    .lang-switch,
-    .btn-close,
-    .btn-burger,
-    .header__nav-footer {
-      display: block;
-    }
-    .header__nav {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #f4f4f4;
-      transition: transform .5s;
-      transform: translateX(100%);
-      z-index: 999;
-      padding: 100px 16px 45px;
-      overflow-y: auto;
-      height: 100vh;
-      &.open {
-        transform: translateX(0);
-      }
-
-      .menu {
-        flex-direction: column;
-        font-size: 20px;
-        margin-bottom: 30px;
-
-        &__item {
-          margin: 0 0 15px;
-          text-align: center;
-        }
-      }
-    }
   }
 
   &__link {
@@ -169,3 +126,52 @@
   z-index: 500;
 }
 
+
+@include respond-to($lg) {
+  .header {
+    .header__right-bar {
+      margin-left: auto;
+    }
+
+    .lang-switch,
+    .btn-close,
+    .btn-burger,
+    .header__nav-footer {
+      display: block;
+    }
+
+    .header__nav {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f4f4f4;
+      transition: transform .5s;
+      transform: translateX(100%);
+      z-index: 999;
+      padding: 100px 16px 45px;
+      overflow-y: auto;
+      height: 100vh;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      .menu {
+        flex-direction: column;
+        font-size: 20px;
+        margin-bottom: 30px;
+
+        &__item {
+          margin: 0 0 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
