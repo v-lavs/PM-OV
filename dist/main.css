@@ -2115,7 +2115,10 @@ body {
   position: absolute;
   content: '';
   background-image: url(../assets/img/line-d-grey.svg);
-  width: 980px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 82%;
   height: 10px;
   z-index: 1;
   left: 50%;
@@ -3910,6 +3913,24 @@ body {
   .footer__nav-item {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+
+  .decor-grey .d-flex {
+    flex-direction: column;
+  }
+
+  .decor-grey .decor-grey__row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .decor-grey .decor-grey__col {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .decor-grey .dots {
+    padding-top: 40px;
   }
 
   .section-intro .services {
