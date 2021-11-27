@@ -1005,6 +1005,7 @@ body {
   background-color: transparent;
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid;
   margin-right: 20px;
@@ -2504,8 +2505,8 @@ body {
 }
 
 .bg-dark .section__text {
-  max-width: 740px;
-  width: 60%;
+  max-width: 840px;
+  width: 75%;
   margin: 0 auto 40px;
   font-size: 32px;
 }
@@ -2527,39 +2528,25 @@ body {
   margin: 0 auto;
 }
 
-.bg-dark .lottie-bg {
+.bg-dark .presentation_bg {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding-top: 70px;
-  z-index: -1;
+  z-index: 0;
+  top: 50%;
+  width: 26%;
+  transform: translateY(-50%);
 }
 
-.bg-dark .lottie-bg__container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.bg-dark .lottie-bg__container.rotate {
-  transform: scale(-1, 1);
-}
-
-.bg-dark .lottie-bg__container svg {
+.bg-dark .presentation_bg svg {
   display: block;
-  height: auto !important;
 }
 
-.bg-dark .lottie-bg_part {
-  width: 24%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.bg-dark .presentation_bg-left {
+  left: 0;
+}
+
+.bg-dark .presentation_bg-right {
+  right: 0;
+  transform: scale(-1, 1) translateY(-50%);
 }
 
 .drones.active_anim .drones__img-sector {
@@ -3813,19 +3800,6 @@ body {
     width: 440px;
     height: 290px;
   }
-
-  .decor-wrap-btn {
-    min-width: 230px;
-  }
-
-  .bg-dark .section__text {
-    max-width: 630px;
-    font-size: 28px;
-  }
-
-  .bg-dark .section__text {
-    font-size: 22px;
-  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -4000,10 +3974,6 @@ body {
     padding-left: 0;
     width: 100%;
     align-items: center;
-  }
-
-  .bg-dark .section__text {
-    width: 100%;
   }
 
   .drones {
@@ -4255,35 +4225,38 @@ body {
   }
 
   .bg-dark {
-    min-height: 700px;
+    padding: 180px 0;
   }
 
-  .bg-dark .lottie-bg {
-    flex-direction: column;
-    align-items: center;
-    padding: 150px 0;
+  .bg-dark .section__text {
+    max-width: 100%;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
   }
 
   .bg-dark .dots {
     margin-bottom: 40px;
   }
 
-  .bg-dark .lottie-bg_part {
-    width: 33%;
-    transform: rotate(90deg);
-    position: absolute;
+  .bg-dark .presentation_bg {
+    width: 181px;
+    left: 50%;
+    right: auto;
+    transform-origin: 0 50%;
   }
 
-  .bg-dark .lottie-bg_part-left {
-    top: -15%;
+  .bg-dark .presentation_bg-left {
+    top: auto;
+    transform: translateY(50%) rotate(-90deg);
+    right: 0;
+    bottom: 0;
   }
 
-  .bg-dark .lottie-bg_part-right {
-    bottom: -15%;
-  }
-
-  .bg-dark:before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0.1%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85) 99.9%);
+  .bg-dark .presentation_bg-right {
+    transform: translateY(-50%) rotate(90deg);
+    top: 0;
   }
 
   .drones {
@@ -4386,6 +4359,10 @@ body {
 }
 
 @media only screen and (max-width: 580px) {
+  .decor-wrap-btn {
+    min-width: 100%;
+  }
+
   .container {
     max-width: 100%;
     padding: 0 17px;
@@ -4462,13 +4439,5 @@ body {
 
   .benefits .grid-layout__col_3 .grid-layout__content_sm {
     padding-top: 46.552%;
-  }
-
-  .bg-dark {
-    min-height: 672px;
-  }
-
-  .bg-dark .lottie-bg_part {
-    width: 50%;
   }
 }

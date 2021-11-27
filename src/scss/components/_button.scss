@@ -20,6 +20,7 @@
     background-color: transparent;
     width: 36px;
     height: 36px;
+    flex-shrink: 0;
     border-radius: 50%;
     border: 1px solid;
     margin-right: 20px;
@@ -190,6 +191,12 @@
     .btn_large{
       padding: 10px 40px;
     }
+  }
+}
+
+@include respond-to($xs){
+  .decor-wrap-btn {
+    min-width: 100%;
   }
 }
 
