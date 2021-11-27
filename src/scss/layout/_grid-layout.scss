@@ -202,7 +202,7 @@
   }
 }
 
-@include respond-to($xxs) {
+@media screen and (max-width: 400px){
   .benefits .grid-layout__col_3 {
     width: 100%;
 

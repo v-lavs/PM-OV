@@ -147,7 +147,7 @@
   }
 }
 
-@include respond-to($xxs) {
+@media screen and (max-width: 400px) {
   .bg-dark {
     min-height: 672px;
   }

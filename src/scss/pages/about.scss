@@ -238,6 +238,16 @@
 
 @include respond-to($sm) {
   .about-us {
+    .cover-anim__frame{
+      margin: 0 -17px;
+    }
+    .section-banner__bg{
+      min-height: 605px;
+      padding-bottom: 20px;
+    }
+    .section-banner__logo{
+      width: 69%;
+    }
     .major-projects {
       &__part_left {
         display: none;

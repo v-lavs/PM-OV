@@ -106,7 +106,7 @@ $(document).ready(function () {
     let majorProjectsSlider;
 
     function slidersInit() {
-        if ($(window).width() >= 678) {
+        if ($(window).width() >= 768) {
             if (!majorProjectsSlider) {
                 majorProjectsSlider = new Swiper(".slider-mj-project", {
                     slidesPerView: "auto",
@@ -352,18 +352,18 @@ $(document).ready(function () {
     }
 
 
-
     const majorProect = document.querySelector('.major-projects');
-    if (majorProect) {
-        const sliderGroving = new Waypoint({
-            element: majorProect,
-            handler: function (direction) {
-                this.element.classList.add('anim_started');
-            },
-            offset: '50%'
-        });
+    if ($(window).width() >= 678) {
+        if (majorProect) {
+            const sliderGroving = new Waypoint({
+                element: majorProect,
+                handler: function (direction) {
+                    this.element.classList.add('anim_started');
+                },
+                offset: '50%'
+            });
+        }
     }
-
 //    LOTTIE ANIMATION
     window.addEventListener('resize', function () {
         window.lottie.resize();

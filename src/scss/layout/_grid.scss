@@ -13,19 +13,15 @@
   @include respond-to($lg) {
     max-width: 768px;
   }
-  @include respond-to($md) {
+  @include respond-to($md){
     max-width: 640px;
   }
-  @include respond-to($sm) {
+  @include respond-to($sm){
     max-width: 580px;
   }
 
-  @include respond-to($xs) {
-     max-width: 420px;
+  @include respond-to($xs){
+    max-width: 100%;
      padding: 0 17px;
    }
-  @include respond-to($xxs) {
-    max-width: 100%;
-    padding: 0 17px;
-  }
 }

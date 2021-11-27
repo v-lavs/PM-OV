@@ -4305,6 +4305,19 @@ body {
     padding: 0;
   }
 
+  .about-us .cover-anim__frame {
+    margin: 0 -17px;
+  }
+
+  .about-us .section-banner__bg {
+    min-height: 605px;
+    padding-bottom: 20px;
+  }
+
+  .about-us .section-banner__logo {
+    width: 69%;
+  }
+
   .about-us .major-projects__part_left {
     display: none;
   }
@@ -4312,17 +4325,12 @@ body {
 
 @media only screen and (max-width: 580px) {
   .container {
-    max-width: 420px;
+    max-width: 100%;
     padding: 0 17px;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .container {
-    max-width: 100%;
-    padding: 0 17px;
-  }
-
+@media screen and (max-width: 400px) {
   .benefits .grid-layout__col_3 {
     width: 100%;
   }
