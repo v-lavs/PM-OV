@@ -151,11 +151,11 @@
 }
 
 .video_enabled .btn_video {
-  display: block;
+  display: flex;
 }
 
 @include respond-to($lg){
-  .video{
+ .video{
     &__content{
       padding-top: 60%;
     }

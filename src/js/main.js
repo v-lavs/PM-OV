@@ -102,17 +102,36 @@ $(document).ready(function () {
         },
     });
 
-    const majorProjectsSlider = new Swiper(".slider-mj-project", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        slidesOffsetAfter: 30,
-        speed: 1500,
-        navigation: {
-            nextEl: ".slider__arrow_next",
-            prevEl: ".slider__arrow_prev",
-        },
-    });
 
+    let majorProjectsSlider;
+
+    function slidersInit() {
+        if ($(window).width() >= 678) {
+            if (!majorProjectsSlider) {
+                majorProjectsSlider = new Swiper(".slider-mj-project", {
+                    slidesPerView: "auto",
+                    spaceBetween: 30,
+                    slidesOffsetAfter: 30,
+                    speed: 1500,
+                    navigation: {
+                        nextEl: ".slider__arrow_next",
+                        prevEl: ".slider__arrow_prev",
+                    },
+                });
+            }
+        } else {
+            if (majorProjectsSlider) {
+                majorProjectsSlider.destroy(true, true);
+                majorProjectsSlider = null;
+            }
+        }
+    }
+
+    slidersInit();
+
+    $(window).on('resize', function () {
+        slidersInit();
+    });
 
     // LAYOUT TOGGLE
 
@@ -331,6 +350,8 @@ $(document).ready(function () {
             offset: '50%'
         });
     }
+
+
 
     const majorProect = document.querySelector('.major-projects');
     if (majorProect) {

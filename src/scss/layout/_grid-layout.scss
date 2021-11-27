@@ -33,6 +33,7 @@
       .grid-layout__content_md {
         padding-top: 60.344%;
       }
+
       .grid-layout__content_lg {
         padding-top: 76.344%;
       }
@@ -48,7 +49,8 @@
       .grid-layout__content_md {
         padding-top: 29.167%;
       }
-      .grid-layout__content_lg{
+
+      .grid-layout__content_lg {
         padding-top: 46.25%;
       }
     }
@@ -58,6 +60,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
     &:before {
       display: none;
     }
@@ -96,6 +99,7 @@
     justify-content: space-between;
     padding: 40px;
     z-index: 1;
+
     &_align-end {
       justify-content: flex-end;
     }
@@ -114,19 +118,96 @@
   }
 }
 
+@include respond-to($laptop) {
+  .benefits .grid-layout__inner {
+    padding: 20px;
+  }
+}
 
-@include respond-to($sm){
-  .grid-layout{
-    margin: 0 -17px;
+@include respond-to($lg) {
+  .advantages,
+  .benefits {
+    .grid-layout__col_3 {
+      width: 50%;
+    }
+
+    .grid-layout__col_6 {
+      width: 100%;
+    }
+
+    .grid-layout__inner {
+      padding: 40px;
+    }
   }
-  .grid-layout__col{
-    padding: 8px 0;
-  }
-  .grid-layout__col_6{
-    width: 100%;
-    .grid-layout__content_sm {
+}
+
+@include respond-to($sm) {
+  .gallery {
+    &__item:hover .icon-zoom {
+      left: 52px;
+      bottom: 32px;
+    }
+
+    .grid-layout {
+      margin: 0 -17px;
+
+      &__col_12,
+      &__col_6 {
+        width: 100%;
+        padding: 8px 0;
+
+        &__content_sm {
+          padding-top: 38.75%;
+        }
+      }
+    }
+
+    .grid-layout__col_12 .grid-layout__content_md,
+    .grid-layout__col_6 .grid-layout__content_md {
       padding-top: 38.75%;
     }
   }
+  .advantages {
+    .heading{
+      width: 100%;
+    }
+    .heading_sm {
+      font-size: 14px;
+    }
+  }
+  .benefits {
+    .benefits-card__title {
+      font-size: 14px;
+    }
 
+    .benefits-card__text {
+      font-size: 12px;
+    }
+  }
+  .advantages,
+  .benefits {
+
+    .grid-layout__inner {
+      padding: 25px;
+    }
+
+    .grid-layout__row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .grid-layout__col {
+      padding: 8px;
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .benefits .grid-layout__col_3 {
+    width: 100%;
+
+    .grid-layout__content_sm {
+      padding-top: 46.552%;
+    }
+  }
 }

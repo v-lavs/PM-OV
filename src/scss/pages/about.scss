@@ -83,13 +83,14 @@
 
   .section-banner {
     padding-bottom: 100px;
-    &__inner{
+
+    &__inner {
       transform: translateY(125px);
       opacity: 0;
     }
 
-   &.anim_started{
-      .section-banner__inner{
+    &.anim_started {
+      .section-banner__inner {
         transition: .65s;
         transform: translateY(0);
         opacity: 1;
@@ -186,23 +187,6 @@
     }
   }
 
-  .benefits {
-    position: relative;
-
-    &:before {
-      position: absolute;
-      content: '';
-      background-image: url(../assets/img/bg-light.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 396px;
-      width: 576px;
-      left: 0;
-      top: 0;
-      transform: rotate(-90deg) translate(30%, -50%);
-    }
-  }
 }
 
 .slider-mj-project {
@@ -215,5 +199,49 @@
     background-size: cover;
     padding: 40px 20px;
     color: #ffffff;
+  }
+}
+
+
+.benefits {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/bg-light.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 396px;
+    width: 576px;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg) translate(30%, -50%);
+  }
+}
+
+@include respond-to($md) {
+  .chart-wrap {
+    height: 584px;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    img {
+      max-width: 1200px;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .about-us {
+    .major-projects {
+      &__part_left {
+        display: none;
+      }
+    }
   }
 }
