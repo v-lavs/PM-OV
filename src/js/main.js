@@ -65,6 +65,15 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
+
+    //OPEN FILTER
+    const filter = $('.news-filter');
+
+    $('#openFilter').click(function (e) {
+         e.preventDefault();
+        filter.toggleClass('open');
+    });
+
     // SMOOTH SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
