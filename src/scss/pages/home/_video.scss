@@ -188,3 +188,8 @@
     }
   }
 }
+@include respond-to($xs){
+  .section-banner__content{
+    padding-top: 100px;
+  }
+}

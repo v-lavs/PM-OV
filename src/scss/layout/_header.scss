@@ -176,3 +176,8 @@
     }
   }
 }
+@include respond-to($xs){
+  .header{
+    padding: 22px 0;
+  }
+}

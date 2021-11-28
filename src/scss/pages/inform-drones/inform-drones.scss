@@ -3,7 +3,9 @@
   .section-banner {
     padding-bottom: 170px;
     color: #ffffff;
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     &__text-content {
       max-width: 580px;
       line-height: 1.2;
@@ -85,6 +87,25 @@
 
 }
 
-@include respond-to($sm) {
-
+@include respond-to($xs){
+  .inform-drones{
+    .section-banner{
+      padding-bottom: 0;
+      &__content{
+        padding-bottom: 105px;
+      }
+      .section__header{
+        padding-bottom: 60px;
+      }
+    }
+    .decor-light {
+      padding-top: 60px;
+      .heading{
+        margin-bottom: 35px;
+      }
+    }
+    .benefits .section__header {
+      padding-top: 60px;
+    }
+  }
 }

@@ -230,15 +230,12 @@
     width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 
     &::-webkit-scrollbar {
       width: 0;
     }
-
-    -ms-overflow-style: none;
-
-
-    overflow: -moz-scrollbars-none;
 
     img {
       max-width: 1200px;
@@ -330,6 +327,15 @@
 
 @include respond-to($xs) {
   .about-us {
+    .advantages{
+      padding-bottom: 0;
+      .section__header{
+        padding-top: 0;
+      }
+    }
+    .advantages:before{
+      display: none;
+    }
     .section-banner {
       padding-bottom: 60px;
     }

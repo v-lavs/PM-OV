@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>preloader</title>
 </head>
 <body>
@@ -28,33 +31,14 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        background-color: #f4f4f4
-    }
-
-    .loader__wrap-img {
-        width: auto;
-        height: 100vh;
-    }
-
-    .loader__img-neuron {
-        width: auto;
-        height: 100%;
-    }
-
-    .loader__img-neuron.rotate {
-        transform: scale(-1, 1)
-    }
-
-    .loader__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        background-color: #f4f4f4;
+        text-align: center;
     }
 
     .loader .logo-site {
@@ -83,59 +67,64 @@
         margin-right: 0;
     }
 
-    .loader .cover-anim_top .cover-anim__frame {
-        overflow: hidden;
-        transform: translateY(110%);
-        opacity: 0;
+    .loader_bg {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        width: 26%;
+        transform: translateY(-50%);
     }
 
-    .loader .cover-anim_top .cover-anim__content {
-        transform: translateY(-110%);
-        opacity: 0;
-    }
-
-
-    .loader .cover-anim_top.anim_started .cover-anim__frame,
-    .loader .cover-anim_top.anim_started .cover-anim__content {
-        transition: transform 2s;
-        transform: none;
-        opacity: 1;
+    .loader_bg svg {
+        display: block;
     }
 
 
-    @media only screen and (max-width: 1180px) {
-        .loader .logo-site {
-            max-width: 243px
+    .loader_bg-left {
+        left: 0;
+    }
+
+    .loader_bg-right {
+        right: 0;
+        transform: scale(-1, 1) translateY(-50%);
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .dots {
+            margin-bottom: 40px;
         }
 
-        .loader__wrap-img {
-            width: 30%
+        .loader_bg {
+            width: 181px;
+            left: 50%;
+            right: auto;
+            transform-origin: 0 50%;
+        }
+
+        .loader_bg-left {
+            top: auto;
+            transform: translateY(50%) rotate(-90deg);
+            right: 0;
+            bottom: 0;
+        }
+
+        .loader_bg-right {
+            transform: translateY(-50%) rotate(90deg);
+            top: 0;
         }
     }
 
-    @media only screen and (max-width: 767px) {
-        .loader {
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            flex-direction: column;
-
-        }
-        .loader__wrap-img {
-            width: auto;
-        }
-    }
-
-    @media only screen and (max-width: 580px) {
-
-    }
 </style>
 
 
 <div class="preloader">
     <div class="loader">
-        <div class="loader__wrap-img">
-            <div class="loader__img-neuron" id="loaderNeuron"></div>
+        <div class="loader_bg loader_bg-left">
+            <div class="lottie-bg__container" id="loaderNeuron"></div>
+        </div>
+        <div class="loader_bg loader_bg-right">
+            <div class="lottie-bg__container rotate" id="loaderNeuronRight"></div>
         </div>
         <div class="loader__content">
             <div class="cover-anim_top">
@@ -155,10 +144,6 @@
             <div class="counter">
                 0%
             </div>
-        </div>
-
-        <div class="loader__wrap-img">
-            <div class="loader__img-neuron rotate" id="loaderNeuronRight"></div>
         </div>
     </div>
 </div>
@@ -198,7 +183,7 @@
                     clearInterval(t);
                     w = 0;
                 }
-            },40);
+            }, 40);
     }
 
     loader();
@@ -209,7 +194,7 @@
             if (!preloader.classList.contains('done')) {
                 preloader.classList.add('done');
             }
-        },50);
+        }, 50);
     });
 </script>
 </body>

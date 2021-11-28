@@ -317,6 +317,7 @@ $(document).ready(function () {
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
 
 
+
     //    ANIMATION
 
     $('.fadeInUp').addClass('active_anim');
@@ -401,7 +402,7 @@ $(document).ready(function () {
         rendererSettings: {
             preserveAspectRatio: 'xMidYMax slice'
         },
-        path: './assets/json/main_screen.json'
+        path: './assets/json/black_screen.json'
     });
     const neuronContainerR = document.getElementById('neuronBgBlackRight');
     const animationBgBlackR = lottie.loadAnimation({
@@ -412,7 +413,7 @@ $(document).ready(function () {
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'
         },
-        path: './assets/json/main_screen.json'
+        path: './assets/json/black_screen.json'
     });
 
     document.addEventListener('scroll', function () {
@@ -421,21 +422,25 @@ $(document).ready(function () {
     });
 
 
-    // let renderNeuron = new Waypoint({
-    //     element: neuronContainer,
-    //     handler: function (direction) {
-    //         animationBgBlack.play();
-    //     },
-    //     offset: '40%'
-    // })
-    // let renderNeuronR = new Waypoint({
-    //     element: neuronContainerR,
-    //     handler: function (direction) {
-    //         animationBgBlackR.play();
-    //     },
-    //     offset: '40%'
-    // })
-
+    const neuronContainerDron = document.getElementById('neuronDrones');
+    const animationNeuronDron = lottie.loadAnimation({
+        container: neuronContainerDron,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        // rendererSettings: {
+        //     preserveAspectRatio: 'xMidYMid slice'
+        // },
+        path: './assets/json/main_screen.json'
+    });
+    let neuronAnimBlock = new Waypoint({
+        element: neuronContainerDron,
+        handler: function (direction) {
+            animationNeuronDron.setSpeed(1.2);
+            animationNeuronDron.play();
+        },
+        offset: '65%'
+    })
 });
 
 

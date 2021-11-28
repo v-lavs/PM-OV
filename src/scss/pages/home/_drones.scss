@@ -27,19 +27,19 @@
     top: 0;
     bottom: 0;
     right: 0;
-    padding-left: 75px;
-    display: flex;
-    align-items: center;
+    //padding-left: 75px;
+    //display: flex;
+    //align-items: center;
   }
 
-  &__lottie-anim {
-    position: relative;
-    max-width: 615px;
-    width: 100%;
-    height: auto;
-    z-index: 0;
-
-  }
+  //&__lottie-anim {
+  //  position: relative;
+  //  max-width: 615px;
+  //  width: 100%;
+  //  height: auto;
+  //  z-index: 0;
+  //
+  //}
 
   &__img-blocks {
     position: absolute;
@@ -72,6 +72,17 @@
 
   .heading {
     margin-bottom: 62px;
+  }
+
+  .drones-neuron{
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    width: 50%;
+    transform: scale(-1, 1) translateY(-50%);
+    svg{
+      display: block;
+    }
   }
 }
 
@@ -111,7 +122,7 @@
     }
 
     &__part-inner {
-      padding-left: 0;
+      //padding-left: 0;
       max-width: 490px;
       width: 82%;
       background-color: burlywood;
@@ -148,6 +159,5 @@
     &__img-blocks {
       width: 78%;
     }
-
   }
 }

@@ -2575,17 +2575,6 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  padding-left: 75px;
-  display: flex;
-  align-items: center;
-}
-
-.drones__lottie-anim {
-  position: relative;
-  max-width: 615px;
-  width: 100%;
-  height: auto;
-  z-index: 0;
 }
 
 .drones__img-blocks {
@@ -2619,6 +2608,18 @@ body {
 
 .drones .heading {
   margin-bottom: 62px;
+}
+
+.drones .drones-neuron {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  width: 50%;
+  transform: scale(-1, 1) translateY(-50%);
+}
+
+.drones .drones-neuron svg {
+  display: block;
 }
 
 .contacts {
@@ -3182,6 +3183,7 @@ body {
 
 .banner-video .info-project {
   display: flex;
+  flex-wrap: wrap;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -3221,6 +3223,9 @@ body {
 .inform-drones .section-banner {
   padding-bottom: 170px;
   color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .inform-drones .section-banner__text-content {
@@ -3885,6 +3890,90 @@ body {
   .video__content {
     padding-top: 60%;
   }
+
+  .single-projects .section-banner .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .single-projects .section-banner__part_left {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .single-projects .section-banner__part_right {
+    width: 100vw;
+    padding-top: 40%;
+  }
+
+  .single-projects .section-banner__thumb {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .single-projects .section-banner .heading_lg {
+    font-size: 46px;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .single-projects .section-banner .heading_lg:before {
+    display: none;
+  }
+
+  .services .section-banner .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .services .section-banner__part_left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .services .section-banner__part_right {
+    width: 100vw;
+  }
+
+  .services .section-banner__thumb {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .services .section-banner .heading_lg {
+    font-size: 46px;
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .services .section-banner .heading_lg:before {
+    display: none;
+  }
+
+  .news .section__header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .news .search-result {
+    padding-top: 40px;
+    width: 100%;
+  }
+
+  .news .news-filter {
+    width: 100%;
+  }
+
+  .news .section__header-item {
+    margin-right: 0;
+  }
+
+  .news .posts-list {
+    padding-top: 30px;
+  }
+
+  .news .circle-decor {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 920px) {
@@ -4004,7 +4093,6 @@ body {
   }
 
   .drones__part-inner {
-    padding-left: 0;
     max-width: 490px;
     width: 82%;
     background-color: burlywood;
@@ -4107,6 +4195,21 @@ body {
 
   .about-us .slider-mj-project__title {
     font-size: 32px;
+  }
+
+  .news .post {
+    flex-wrap: wrap;
+  }
+
+  .news .post__content,
+  .news .post__thumb {
+    width: 100%;
+  }
+
+  .news .post__thumb {
+    padding-top: 44%;
+    margin-bottom: 30px;
+    margin-right: 0;
   }
 }
 
@@ -4414,19 +4517,81 @@ body {
     height: 100px;
   }
 
+  .banner-video .info-project {
+    font-size: 20px;
+  }
+
+  .banner-video .info-project__item {
+    padding-right: 15px;
+    margin-right: 15px;
+  }
+
+  .banner-video .info-project__item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
   .decor-light .bg-neuron_light {
     display: none;
+  }
+
+  .services .section-banner {
+    min-height: auto;
+  }
+
+  .services .section-banner .section__header {
+    padding-bottom: 40px;
+  }
+
+  .services .section-banner__content {
+    padding-bottom: 52px;
+  }
+
+  .services .section-banner__content .d-flex {
+    padding-bottom: 15px;
+    padding-top: 0;
+  }
+
+  .services .decor-light .heading {
+    margin-bottom: 35px;
+  }
+
+  .services-provided {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .gallery {
+    padding-bottom: 0;
   }
 }
 
 @media only screen and (max-width: 580px) {
+  .section-banner .section__header {
+    padding-top: 35px;
+  }
+
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
   .decor-wrap-btn {
     min-width: 100%;
   }
 
   .container {
     max-width: 100%;
-    padding: 0 17px;
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 22px 0;
+  }
+
+  .decor-grey__row:after {
+    width: 50%;
   }
 
   .section-intro .services {
@@ -4455,6 +4620,73 @@ body {
 
   .slider-services .swiper-slide {
     width: 100%;
+  }
+
+  .section-banner__content {
+    padding-top: 100px;
+  }
+
+  .section-reviews {
+    padding-bottom: 0;
+  }
+
+  .slider-review__row {
+    margin-bottom: 40px;
+  }
+
+  .projects .section-projects .section__header {
+    padding-top: 35px;
+    margin-bottom: 60px;
+  }
+
+  .single-projects .project-work {
+    padding-top: 60px;
+  }
+
+  .single-projects .section-banner .d-flex {
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: auto;
+  }
+
+  .single-projects .section-banner__part_right {
+    padding-top: 58%;
+  }
+
+  .inform-drones .section-banner {
+    padding-bottom: 0;
+  }
+
+  .inform-drones .section-banner__content {
+    padding-bottom: 105px;
+  }
+
+  .inform-drones .section-banner .section__header {
+    padding-bottom: 60px;
+  }
+
+  .inform-drones .decor-light {
+    padding-top: 60px;
+  }
+
+  .inform-drones .decor-light .heading {
+    margin-bottom: 35px;
+  }
+
+  .inform-drones .benefits .section__header {
+    padding-top: 60px;
+  }
+
+  .about-us .advantages {
+    padding-bottom: 0;
+  }
+
+  .about-us .advantages .section__header {
+    padding-top: 0;
+  }
+
+  .about-us .advantages:before {
+    display: none;
   }
 
   .about-us .section-banner {
@@ -4494,6 +4726,23 @@ body {
 
   .about-us .partner-quote__title {
     font-size: 16px;
+  }
+
+  .news .posts-list {
+    padding: 14px 0 20px;
+  }
+
+  .news .post__thumb {
+    padding-top: 61.25%;
+    margin-bottom: 20px;
+  }
+
+  .news .post__text {
+    margin-bottom: 15px;
+  }
+
+  .page__pagination {
+    padding-bottom: 0;
   }
 }
 

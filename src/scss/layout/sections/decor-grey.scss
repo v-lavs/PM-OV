@@ -1,8 +1,9 @@
-.decor-grey{
+.decor-grey {
   background-color: #d9d9d9;
   padding: 60px 0 65px;
+
   &__content,
-  &__content-inner{
+  &__content-inner {
     position: relative;
     width: 100%;
 
@@ -16,7 +17,8 @@
       z-index: 1;
     }
   }
-  &__content{
+
+  &__content {
     &:before {
       left: 0;
       top: 0;
@@ -28,7 +30,8 @@
       transform: rotate(90deg);
     }
   }
-  &__content-inner{
+
+  &__content-inner {
 
     &:before {
       left: 0;
@@ -42,16 +45,19 @@
       transform: rotate(180deg);
     }
   }
-  .dots{
+
+  .dots {
     padding-top: 60px;
     text-align: left;
     padding-left: 40px;
   }
-  &__row{
+
+  &__row {
     position: relative;
     padding: 60px 26px 88px;
     justify-content: space-between;
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       background-image: url(../assets/img/line-d-grey.svg);
@@ -66,29 +72,39 @@
       bottom: 0;
     }
   }
-  &__col{
+
+  &__col {
     padding-left: 14px;
     width: 50%;
     max-width: 580px;
   }
 }
 
-@include respond-to($md){
-  .decor-grey{
-    .d-flex{
+@include respond-to($md) {
+  .decor-grey {
+    .d-flex {
       flex-direction: column;
     }
-    .decor-grey__row{
+
+    .decor-grey__row {
       padding-top: 40px;
       padding-bottom: 40px;
     }
-    .decor-grey__col{
+
+    .decor-grey__col {
       width: 100%;
       margin-bottom: 40px;
 
     }
-    .dots{
+
+    .dots {
       padding-top: 40px;
     }
+  }
+}
+
+@include respond-to($xs) {
+  .decor-grey__row:after {
+    width: 50%;
   }
 }

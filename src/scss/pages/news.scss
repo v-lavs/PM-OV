@@ -3,7 +3,8 @@
     justify-content: flex-end;
     text-transform: uppercase;
   }
-  .breadcrumbs{
+
+  .breadcrumbs {
     margin-right: auto;
   }
 
@@ -11,14 +12,16 @@
     margin-left: auto;
     color: #7F7F7F;
   }
-  .news-filter{
+
+  .news-filter {
     display: flex;
     align-items: center;
     color: #7F7F7F;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    .nice-select{
+
+    .nice-select {
       margin-right: 20px;
       font-weight: 700;
     }
@@ -94,5 +97,76 @@
     &:focus {
       text-decoration: underline;
     }
+  }
+}
+
+@include respond-to($lg) {
+  .news {
+    .section__header {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .search-result {
+      padding-top: 40px;
+      width: 100%;
+    }
+
+    .news-filter {
+      width: 100%;
+    }
+
+    .section__header-item {
+      margin-right: 0;
+    }
+
+    .posts-list {
+      padding-top: 30px;
+    }
+
+    .circle-decor {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .news {
+    .post {
+      flex-wrap: wrap;
+
+      &__content,
+      &__thumb {
+        width: 100%;
+      }
+
+      &__thumb {
+        padding-top: 44%;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .news {
+    .posts-list {
+      padding: 14px 0 20px;
+    }
+
+    .post {
+      &__thumb {
+        padding-top: 61.25%;
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .page__pagination {
+    padding-bottom: 0;
   }
 }

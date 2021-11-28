@@ -243,3 +243,20 @@
     }
   }
 }
+
+@include respond-to($xs){
+  .section-reviews{
+    padding-bottom: 0;
+  }
+  .slider-review__row{
+    margin-bottom: 40px;
+  }
+  .projects{
+    .section-projects{
+      .section__header{
+        padding-top: 35px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
