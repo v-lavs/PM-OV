@@ -1970,6 +1970,11 @@ body {
   transition: .35s;
 }
 
+.header__link svg {
+  width: 100%;
+  height: auto;
+}
+
 .header__link:hover svg path,
 .header__link:focus svg path {
   fill: #000000;
@@ -3869,6 +3874,11 @@ body {
     margin-left: auto;
   }
 
+  .header__link {
+    width: 32px;
+    height: 32px;
+  }
+
   .header .lang-switch,
   .header .btn-close,
   .header .btn-burger,
@@ -4745,6 +4755,17 @@ body {
 
   .header {
     padding: 22px 0;
+  }
+
+  .header .btn-burger,
+  .header__link {
+    margin-left: 20px;
+  }
+
+  .header .btn-burger svg,
+  .header__link svg {
+    width: 100%;
+    height: auto;
   }
 
   .decor-grey__row:after {

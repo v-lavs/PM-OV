@@ -95,6 +95,11 @@
     display: inline-block;
     transition: .35s;
 
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
     &:hover,
     &:focus {
       svg path {
@@ -121,6 +126,11 @@
   .header {
     .header__right-bar {
       margin-left: auto;
+    }
+
+    &__link {
+      width: 32px;
+      height: 32px;
     }
 
     .lang-switch,
@@ -165,8 +175,19 @@
     }
   }
 }
-@include respond-to($xs){
-  .header{
+
+@include respond-to($xs) {
+  .header {
     padding: 22px 0;
+
+    .btn-burger,
+    &__link {
+      margin-left: 20px;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
