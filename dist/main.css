@@ -3724,12 +3724,12 @@ body {
   padding-bottom: 60px;
   margin-bottom: 64px;
   overflow: hidden;
-  background-position: center top 30px;
+  background-position: center;
   transition: .85s;
 }
 
 .single-news .section-banner.active_anim {
-  background-position: center center;
+  background-position: center bottom -30px;
 }
 
 .single-news .section-banner.active_anim .heading {
