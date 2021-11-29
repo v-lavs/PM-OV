@@ -3719,12 +3719,21 @@ body {
 .single-news .section-banner {
   min-height: 550px;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   color: #ffffff;
   padding-bottom: 60px;
   margin-bottom: 64px;
   overflow: hidden;
+  background-position: center top 30px;
+  transition: .85s;
+}
+
+.single-news .section-banner.active_anim {
+  background-position: center center;
+}
+
+.single-news .section-banner.active_anim .heading {
+  opacity: 1;
 }
 
 .single-news .section-banner:before {
@@ -3742,6 +3751,8 @@ body {
   color: #ffffff;
   text-align: center;
   margin: auto;
+  opacity: 0;
+  transition: opacity .85s;
 }
 
 .single-news .article__inner {

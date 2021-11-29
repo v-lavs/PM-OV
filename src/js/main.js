@@ -346,6 +346,8 @@ $(document).ready(function () {
         $('.section-banner').addClass('anim_started');
     }, 500);
 
+        $('.single-news .section-banner').addClass('active_anim');
+
 
     const sectionDrones = document.querySelector('.drones');
     if (sectionDrones) {

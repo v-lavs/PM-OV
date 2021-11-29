@@ -2,12 +2,19 @@
   .section-banner {
     min-height: 550px;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     color: #ffffff;
     padding-bottom: 60px;
     margin-bottom: 64px;
     overflow: hidden;
+    background-position: center top 30px ;
+    transition: .85s;
+    &.active_anim{
+      background-position: center center;
+      .heading{
+        opacity: 1
+      }
+    }
 
     &:before {
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -24,6 +31,8 @@
       color: #ffffff;
       text-align: center;
       margin: auto;
+      opacity: 0;
+      transition: opacity .85s;
     }
   }
 
