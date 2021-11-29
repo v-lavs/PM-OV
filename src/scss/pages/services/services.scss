@@ -39,6 +39,9 @@
       margin-bottom: 42px;
     }
   }
+  .gallery__item-inner:before {
+    pointer-events: none;
+  }
 }
 
 @include respond-to($lg) {

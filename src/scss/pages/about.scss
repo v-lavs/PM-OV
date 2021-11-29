@@ -190,6 +190,25 @@
     }
   }
 
+  .chart-wrap_mob {
+    display: none;
+    height: 584px;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    img {
+      max-width: 1200px;
+      height: 100%;
+      display: block;
+    }
+  }
 }
 
 .slider-mj-project {
@@ -225,24 +244,6 @@
 }
 
 @include respond-to($md) {
-  .chart-wrap {
-    height: 584px;
-    width: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-
-    img {
-      max-width: 1200px;
-      height: 100%;
-      display: block;
-    }
-  }
 
   .partner-quote {
     background: url("../assets/img/svg/bg-logo.svg") left 30px center no-repeat;
@@ -325,17 +326,32 @@
   }
 }
 
+@include respond-to($sm) {
+  .about-us {
+    .chart-wrap_deck {
+      display: none;
+    }
+
+    .chart-wrap_mob {
+      display: block;
+    }
+  }
+}
+
 @include respond-to($xs) {
   .about-us {
-    .advantages{
+    .advantages {
       padding-bottom: 0;
-      .section__header{
+
+      .section__header {
         padding-top: 0;
       }
     }
-    .advantages:before{
+
+    .advantages:before {
       display: none;
     }
+
     .section-banner {
       padding-bottom: 60px;
     }

@@ -3355,6 +3355,10 @@ body {
   margin-bottom: 42px;
 }
 
+.services .gallery__item-inner:before {
+  pointer-events: none;
+}
+
 .about-us .heading {
   margin-bottom: 32px;
   max-width: 470px;
@@ -3532,6 +3536,26 @@ body {
 .about-us .advantages .heading_sm {
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.about-us .chart-wrap_mob {
+  display: none;
+  height: 584px;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.about-us .chart-wrap_mob::-webkit-scrollbar {
+  width: 0;
+}
+
+.about-us .chart-wrap_mob img {
+  max-width: 1200px;
+  height: 100%;
+  display: block;
 }
 
 .slider-mj-project .swiper-slide {
@@ -4213,25 +4237,6 @@ body {
     display: none;
   }
 
-  .chart-wrap {
-    height: 584px;
-    width: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-  }
-
-  .chart-wrap::-webkit-scrollbar {
-    width: 0;
-  }
-
-  .chart-wrap img {
-    max-width: 1200px;
-    height: 100%;
-    display: block;
-  }
-
   .partner-quote {
     background: url("../assets/img/svg/bg-logo.svg") left 30px center no-repeat;
     background-size: contain;
@@ -4790,6 +4795,14 @@ body {
 
   .gallery {
     padding-bottom: 0;
+  }
+
+  .about-us .chart-wrap_deck {
+    display: none;
+  }
+
+  .about-us .chart-wrap_mob {
+    display: block;
   }
 
   .news .open-filter {
