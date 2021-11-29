@@ -1,4 +1,8 @@
 .about-us {
+  .cover-anim_top .cover-anim__content {
+    transition: none;
+  }
+
   .heading {
     margin-bottom: 32px;
     max-width: 470px;
@@ -90,13 +94,18 @@
     &__inner {
       transform: translateY(125px);
       opacity: 0;
+      transition: none;
     }
 
     &.anim_started {
       .section-banner__inner {
-        transition: .65s;
+        transition: transform .85s;
         transform: translateY(0);
         opacity: 1;
+      }
+
+      .cover-anim_top .cover-anim__content {
+        transition: transform .85s;
       }
     }
 
@@ -121,7 +130,7 @@
 
     &__bg {
       position: relative;
-      min-height: 570px;
+      min-height: 600px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -196,12 +205,6 @@
     width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
 
     img {
       max-width: 1200px;
@@ -262,7 +265,6 @@
       min-height: auto;
 
       &__inner {
-        min-height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -334,6 +336,12 @@
 
     .chart-wrap_mob {
       display: block;
+    }
+
+    .chart {
+      .container {
+        padding-right: 0;
+      }
     }
   }
 }
