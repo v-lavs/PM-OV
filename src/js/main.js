@@ -74,6 +74,13 @@ $(document).ready(function () {
         filter.toggleClass('open');
     });
 
+    const filterPr = $('.projects-filter');
+
+    $('#openFilterPr').click(function (e) {
+        e.preventDefault();
+        filterPr.toggleClass('open');
+    });
+
     // SMOOTH SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {

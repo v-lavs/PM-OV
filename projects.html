@@ -123,8 +123,10 @@
                 <header class="section__header">
                     <a href="index.html" class="back-btn">
                         <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8H0V10H1V8ZM24 10C24.5523 10 25 9.55228 25 9C25 8.44772 24.5523 8 24 8V10ZM1 10H24V8H1V10Z" fill="#000000"/>
-                            <path d="M17 2L24 9L17 16" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                            <path d="M1 8H0V10H1V8ZM24 10C24.5523 10 25 9.55228 25 9C25 8.44772 24.5523 8 24 8V10ZM1 10H24V8H1V10Z"
+                                  fill="#000000"/>
+                            <path d="M17 2L24 9L17 16" stroke="#000000" stroke-width="2" stroke-linecap="square"
+                                  stroke-linejoin="round"/>
                         </svg>
                     </a>
 
@@ -137,45 +139,47 @@
                         </div>
                     </nav>
 
-                    <div class="section__header-item section__header-item_right search-result">
-                        РЕЗУЛЬТАТИ 1-12 З 20
+                    <div class="filter-wrap">
+                        <div class="section__header-item section__header-item_right search-result">
+                            РЕЗУЛЬТАТИ 1-12 З 20
+                        </div>
+                        <button class="btn open-filter" id="openFilterPr"></button>
+                        <div class="projects-filter section__header-item">
+                            <div class="projects-filter__item">
+                                <select class="custom-select">
+                                    <option data-disrlay="ТИП ОБ’ЄКТУ">ТИП ОБ’ЄКТУ</option>
+                                    <option value="1">ТИП 1</option>
+                                    <option value="2">ТИП 2</option>
+                                </select>
+                            </div>
+
+                            <div class="projects-filter__item">
+                                <select class="custom-select">
+                                    <option value="">РІК</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </div>
+
+                            <div class="projects-filter__item">
+                                <select class="custom-select">
+                                    <option value="">ЛОКАЦІЯ</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="circle-decor section__header-item"></div>
+
+                        <nav class="layout-toggle section__header-item" data-for="projects-layout">
+                            <button
+                                    data-layout="projects-layout_grid"
+                                    class="layout-toggle__btn layout-toggle__btn_grid"></button>
+                            <button
+                                    data-layout="projects-layout_list"
+                                    class="layout-toggle__btn layout-toggle__btn_list layout-toggle__btn_active"></button>
+                        </nav>
                     </div>
-
-                    <div class="projects-filter section__header-item">
-                        <div class="projects-filter__item">
-                            <select class="custom-select">
-                                <option data-disrlay="ТИП ОБ’ЄКТУ">ТИП ОБ’ЄКТУ</option>
-                                <option value="1">ТИП 1</option>
-                                <option value="2">ТИП 2</option>
-                            </select>
-                        </div>
-
-                        <div class="projects-filter__item">
-                            <select class="custom-select">
-                                <option value="">РІК</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                            </select>
-                        </div>
-
-                        <div class="projects-filter__item">
-                            <select class="custom-select">
-                                <option value="">ЛОКАЦІЯ</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="circle-decor section__header-item"></div>
-
-                    <nav class="layout-toggle section__header-item" data-for="projects-layout">
-                        <button
-                                data-layout="projects-layout_grid"
-                                class="layout-toggle__btn layout-toggle__btn_grid"></button>
-                        <button
-                                data-layout="projects-layout_list"
-                                class="layout-toggle__btn layout-toggle__btn_list layout-toggle__btn_active"></button>
-                    </nav>
                 </header>
 
                 <div class="projects-layout projects-layout_list fadeInUp" id="projects-layout">
