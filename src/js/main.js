@@ -373,6 +373,17 @@ $(document).ready(function () {
         });
     }
 
+    const partnersSlide = document.querySelector('.partners-slide__wrap');
+    if (partnersSlide) {
+        const slideGroving = new Waypoint({
+            element: partnersSlide,
+            handler: function (direction) {
+                this.element.classList.add('anim_started');
+            },
+            offset: '50%'
+        });
+    }
+
 
     const majorProect = document.querySelector('.major-projects');
 
@@ -444,15 +455,15 @@ $(document).ready(function () {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        // rendererSettings: {
-        //     preserveAspectRatio: 'xMidYMid slice'
-        // },
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        },
         path: './assets/json/main_screen.json'
     });
     let neuronAnimBlock = new Waypoint({
         element: neuronContainerDron,
         handler: function (direction) {
-            animationNeuronDron.setSpeed(1.2);
+            animationNeuronDron.setSpeed(1.1);
             animationNeuronDron.play();
         },
         offset: '65%'

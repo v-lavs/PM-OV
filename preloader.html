@@ -89,6 +89,15 @@
         transform: scale(-1, 1) translateY(-50%);
     }
 
+    .loaded_hiding .preloader {
+        transition: 0.3s opacity;
+        opacity: 0;
+    }
+
+    .loaded .preloader {
+        display: none;
+    }
+
     @media screen and (max-width: 768px) {
 
         .dots {
@@ -188,14 +197,13 @@
 
     loader();
 
-    window.addEventListener("load", function (event) {
-        setTimeout(function () {
-            var preloader = document.getElementById('preloader');
-            if (!preloader.classList.contains('done')) {
-                preloader.classList.add('done');
-            }
-        }, 50);
-    });
+    // window.onload = function () {
+    //     document.body.classList.add('loaded_hiding');
+    //     window.setTimeout(function () {
+    //         document.body.classList.add('loaded');
+    //         document.body.classList.remove('loaded_hiding');
+    //     }, 20000);
+    // }
 </script>
 </body>
 </html>

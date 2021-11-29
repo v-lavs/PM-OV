@@ -5089,4 +5089,13 @@ body {
   .benefits .grid-layout__col_3 .grid-layout__content_sm {
     padding-top: 46.552%;
   }
+
+  .projects-layout__info-item:after {
+    margin: 0 9px;
+  }
+
+  .projects-layout__content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
