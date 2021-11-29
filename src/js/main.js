@@ -347,7 +347,7 @@ $(document).ready(function () {
     }, 500);
     setTimeout(function () {
         $('.single-news .section-banner').addClass('active_anim');
-    }, 500);
+    }, 100);
 
     const sectionDrones = document.querySelector('.drones');
     if (sectionDrones) {

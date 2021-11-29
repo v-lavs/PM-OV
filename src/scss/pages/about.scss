@@ -340,6 +340,9 @@
 
 @include respond-to($xs) {
   .about-us {
+    .section-banner .cover-anim__frame{
+      margin: 0 -16px;
+    }
     .advantages {
       padding-bottom: 0;
 

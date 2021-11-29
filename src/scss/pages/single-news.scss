@@ -36,7 +36,7 @@
       height: 120%;
       width: 120%;
       object-fit: cover;
-      transform: translateY(30px);
+      transform: translateY(40px);
       transition: .85s;
     }
 
@@ -156,7 +156,7 @@
         left: 0;
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50px);
       }
     }
   }
@@ -254,6 +254,13 @@
 
 @include respond-to($xs) {
   .single-news {
+    .section-banner{
+      &.active_anim{
+        .banner-img__img{
+          transform: translateY(-45px);
+        }
+      }
+    }
     .section-related-post {
       .heading:after {
         background: linear-gradient(to right, transparent 55%, #000000 55%);

@@ -117,3 +117,11 @@
 
 }
 
+@include respond-to($xs){
+ .services .section-banner__part_right {
+    padding-top: 70.5%;
+   min-height: 410px;
+   margin: 0 -17px;
+  }
+}
+

@@ -19,6 +19,7 @@
   .projects-filter {
     display: flex;
     align-items: center;
+    transform-origin: 50% 100%;
 
     &__item {
       display: flex;
@@ -265,6 +266,7 @@
     }
 
     .filter-wrap {
+
       padding-top: 20px;
     }
 
