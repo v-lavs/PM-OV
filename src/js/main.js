@@ -142,6 +142,7 @@ $(document).ready(function () {
     $('.custom-select').niceSelect();
 
     //BANNER SLIDER HOME
+
     const home_banner_slider = new Swiper(".slider-services", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -320,7 +321,6 @@ $(document).ready(function () {
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
 
 
-
     //    ANIMATION
 
     $('.fadeInUp').addClass('active_anim');
@@ -337,7 +337,7 @@ $(document).ready(function () {
     }, 100);
 
     const sectionDrones = document.querySelector('.drones');
-    if (sectionDrones) {
+    if (sectionDrones.length) {
         const sectorRotate = new Waypoint({
             element: sectionDrones,
             handler: function (direction) {
@@ -352,7 +352,7 @@ $(document).ready(function () {
     }
 
     const sectionGallery = document.querySelector('.gallery');
-    if (sectionGallery) {
+    if (sectionGallery.length) {
         const imgGroving = new Waypoint({
             element: sectionGallery,
             handler: function (direction) {
@@ -363,7 +363,7 @@ $(document).ready(function () {
     }
 
     const partnersSlide = document.querySelector('.partners-slide__wrap');
-    if (partnersSlide) {
+    if (partnersSlide.length) {
         const slideGroving = new Waypoint({
             element: partnersSlide,
             handler: function (direction) {
@@ -376,7 +376,7 @@ $(document).ready(function () {
 
     const majorProect = document.querySelector('.major-projects');
 
-    if (majorProect) {
+    if (majorProect.length) {
         const sliderGroving = new Waypoint({
             element: majorProect,
             handler: function (direction) {

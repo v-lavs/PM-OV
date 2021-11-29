@@ -103,8 +103,7 @@
         transform: translateY(0);
         opacity: 1;
       }
-
-      .cover-anim_top .cover-anim__content {
+      .cover-anim__content {
         transition: transform .85s;
       }
     }

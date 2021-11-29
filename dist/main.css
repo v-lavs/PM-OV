@@ -3471,7 +3471,7 @@ body {
   opacity: 1;
 }
 
-.about-us .section-banner.anim_started .cover-anim_top .cover-anim__content {
+.about-us .section-banner.anim_started .cover-anim__content {
   transition: transform .85s;
 }
 
@@ -3907,7 +3907,7 @@ body {
   left: 0;
   right: 0;
   top: 50%;
-  transform: translateY(-50px);
+  transform: translateY(-50%);
 }
 
 @media only screen and (max-width: 1440px) {
