@@ -27,19 +27,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    //padding-left: 75px;
-    //display: flex;
-    //align-items: center;
   }
-
-  //&__lottie-anim {
-  //  position: relative;
-  //  max-width: 615px;
-  //  width: 100%;
-  //  height: auto;
-  //  z-index: 0;
-  //
-  //}
 
   &__img-blocks {
     position: absolute;
@@ -118,14 +106,11 @@
     &__part-left {
       min-height: 490px;
       margin-bottom: 62px;
-      background-color: powderblue;
     }
 
     &__part-inner {
-      //padding-left: 0;
       max-width: 490px;
       width: 82%;
-      background-color: burlywood;
       left: 0;
     }
   }

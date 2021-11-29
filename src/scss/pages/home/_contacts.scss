@@ -65,6 +65,15 @@
     border-color: transparent;
   }
 
+  .contacts_part{
+    position: relative;
+
+    transition: transform .5s ,opacity .6s;
+    &.animate{
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  }
   .parallax-bg {
     width: 100vw;
     height: 100vh;

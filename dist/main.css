@@ -2699,6 +2699,16 @@ body {
   border-color: transparent;
 }
 
+.contacts-slider .contacts_part {
+  position: relative;
+  transition: transform .5s ,opacity .6s;
+}
+
+.contacts-slider .contacts_part.animate {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
 .contacts-slider .parallax-bg {
   width: 100vw;
   height: 100vh;
@@ -4293,13 +4303,11 @@ body {
   .drones__part-left {
     min-height: 490px;
     margin-bottom: 62px;
-    background-color: powderblue;
   }
 
   .drones__part-inner {
     max-width: 490px;
     width: 82%;
-    background-color: burlywood;
     left: 0;
   }
 

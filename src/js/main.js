@@ -142,7 +142,6 @@ $(document).ready(function () {
     $('.custom-select').niceSelect();
 
     //BANNER SLIDER HOME
-
     const home_banner_slider = new Swiper(".slider-services", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -220,7 +219,7 @@ $(document).ready(function () {
     const quoteHolder = $('#partner-quote');
 
     function showPartnerQuote(currSlide) {
-        if (quoteHolder.length > 0) {
+        if (quoteHolder && quoteHolder.length > 0) {
             const quote = $(currSlide).find('.quote-template').html();
             quoteHolder.html(quote);
         }
@@ -321,6 +320,7 @@ $(document).ready(function () {
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
 
 
+
     //    ANIMATION
 
     $('.fadeInUp').addClass('active_anim');
@@ -337,7 +337,7 @@ $(document).ready(function () {
     }, 100);
 
     const sectionDrones = document.querySelector('.drones');
-    if (sectionDrones.length) {
+    if (sectionDrones) {
         const sectorRotate = new Waypoint({
             element: sectionDrones,
             handler: function (direction) {
@@ -352,7 +352,7 @@ $(document).ready(function () {
     }
 
     const sectionGallery = document.querySelector('.gallery');
-    if (sectionGallery.length) {
+    if (sectionGallery) {
         const imgGroving = new Waypoint({
             element: sectionGallery,
             handler: function (direction) {
@@ -363,7 +363,7 @@ $(document).ready(function () {
     }
 
     const partnersSlide = document.querySelector('.partners-slide__wrap');
-    if (partnersSlide.length) {
+    if (partnersSlide) {
         const slideGroving = new Waypoint({
             element: partnersSlide,
             handler: function (direction) {
@@ -376,7 +376,7 @@ $(document).ready(function () {
 
     const majorProect = document.querySelector('.major-projects');
 
-    if (majorProect.length) {
+    if (majorProect) {
         const sliderGroving = new Waypoint({
             element: majorProect,
             handler: function (direction) {
