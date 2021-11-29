@@ -7,11 +7,13 @@
     padding-bottom: 60px;
     margin-bottom: 64px;
     overflow: hidden;
-    background-position: center top 30px ;
+    background-position: center top 30px;
     transition: .85s;
-    &.active_anim{
+
+    &.active_anim {
       background-position: center center;
-      .heading{
+
+      .heading {
         opacity: 1
       }
     }
@@ -226,12 +228,23 @@
     }
   }
 }
+
 @include respond-to($xs) {
   .single-news {
     .section-related-post {
       .heading:after {
         background: linear-gradient(to right, transparent 55%, #000000 55%);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .single-news {
+    .section-banner {
+.heading{
+  font-size: 28px;
+}
     }
   }
 }

@@ -5122,4 +5122,8 @@ body {
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  .single-news .section-banner .heading {
+    font-size: 28px;
+  }
 }
