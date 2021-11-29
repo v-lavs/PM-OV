@@ -53,13 +53,25 @@
     overflow: hidden;
     padding-top: 40%;
 
+    iframe {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+    }
+
     &.video_enabled {
       display: block;
       cursor: pointer;
     }
   }
 
-  &__link,
+  &__poster,
   &__media {
     position: absolute;
     top: 0;
@@ -70,7 +82,7 @@
     outline-width: 0;
   }
 
-  &__link {
+  &__poster {
     img {
       position: absolute;
       left: 0;
@@ -80,6 +92,7 @@
       object-fit: cover;
       height: 100%;
       width: 100%;
+      z-index: 4;
     }
   }
 }

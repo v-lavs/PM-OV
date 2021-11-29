@@ -491,12 +491,18 @@
                 <div class="video__wrap">
                     <div class="video__inner">
                         <div class="video__content">
-                            <div class="video__link">
+                            <iframe id="youtube-video" width="1046" height="445" src="https://www.youtube.com/embed/U3_uxUSeZV4"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            <div class="video__poster">
                                 <img src="assets/img/poster.jpg" data-video="U3_uxUSeZV4" alt="" class="video__media">
+                                <button class="btn_video" aria-label="button play" id="customPlaybtn"><span
+                                        class="rounded"></span>
+                                    <span class="btn__text">Переглянути відео</span>
+                                </button>
                             </div>
-                            <button class="btn_video" aria-label="button play"><span class="rounded"></span>
-                                <span class="btn__text">Переглянути відео</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -827,6 +833,7 @@
         </div>
     </footer>
 </div>
+
 
 <script>
     //  LOADER

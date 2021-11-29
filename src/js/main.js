@@ -10,6 +10,41 @@
 
 // CUSTOM SCRIPTS
 
+// global variable for the player
+let player;
+
+function onPlayerReady(event) {
+    // bind events
+    alert('onPlayerReady')
+    const playButton = document.getElementById("customPlaybtn");
+
+    playButton.addEventListener("click", function () {
+        console.log('clcik')
+        player.playVideo();
+        document.querySelector('.video__poster').style.display = 'none'
+    });
+}
+
+// this function gets called when API is ready to use
+function onYouTubePlayerAPIReady() {
+    // create the global player from the specific iframe (#video)
+    player = new YT.Player("youtube-video", {
+        events: {
+            // call this function when player is ready to use
+            onReady: onPlayerReady
+        }
+    });
+}
+
+
+// Inject YouTube API script
+const tag = document.createElement("script");
+tag.src = "//www.youtube.com/player_api";
+const firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+
 $(document).ready(function () {
     function useTextRevealAnim() {
         const $textWrap = $('.text-reveal');
@@ -280,54 +315,6 @@ $(document).ready(function () {
     });
 
 
-//    VIDEO YOUTYBE
-    function findVideos() {
-        let videos = document.querySelectorAll('.video__content');
-
-        for (let i = 0; i < videos.length; i++) {
-            setupVideo(videos[i]);
-        }
-    }
-
-    function setupVideo(video) {
-        const link = video.querySelector('.video__link');
-        const media = video.querySelector('.video__media');
-        const button = video.querySelector('.btn_video');
-
-        const id = media.getAttribute('data-video');
-
-        video.addEventListener('click', () => {
-            const iframe = createIframe(id);
-
-            link.remove();
-            button.remove();
-            video.appendChild(iframe);
-        });
-
-        link.removeAttribute('href');
-        video.classList.add('video_enabled');
-    }
-
-
-    function createIframe(id) {
-        let iframe = document.createElement('iframe');
-
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('allow', 'autoplay');
-        iframe.setAttribute('src', generateURL(id));
-        iframe.classList.add('video__media');
-
-        return iframe;
-    }
-
-    function generateURL(id) {
-        const query = '?rel=0&showinfo=0&autoplay=1';
-
-        return 'https://www.youtube.com/embed/' + id + query;
-    }
-
-    findVideos();
-
 
     //    GALLERY
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
@@ -469,7 +456,8 @@ $(document).ready(function () {
             animationNeuronDron.play();
         },
         offset: '65%'
-    })
+    });
+
 });
 
 
