@@ -245,6 +245,7 @@ $(document).ready(function () {
     });
 
 //CONTACTS SLIDER
+
     if ($('.contacts-slider').length > 0) {
         let contactSlider = new Swiper(".contacts-slider", {
             direction: "horizontal",
@@ -307,10 +308,11 @@ $(document).ready(function () {
 
 
     setTimeout(function () {
-        $('.section-banner').addClass('anim_started');
+        $('.section-banner').addClass('section-anim');
     }, 600);
+
     setTimeout(function () {
-        $('.single-news .section-banner').addClass('active_anim');
+        $('.single-news .section-banner').addClass('section-anim');
     }, 300);
 
     const sectionGallery = document.querySelector('.gallery');
@@ -318,7 +320,7 @@ $(document).ready(function () {
         const imgGroving = new Waypoint({
             element: sectionGallery,
             handler: function (direction) {
-                this.element.classList.add('anim_started');
+                this.element.classList.add('section-anim');
             },
             offset: '50%'
         });
@@ -338,7 +340,7 @@ $(document).ready(function () {
         const sliderGroving = new Waypoint({
             element: majorProect,
             handler: function (direction) {
-                this.element.classList.add('anim_started');
+                this.element.classList.add('section-anim');
             },
             offset: '50%'
         });

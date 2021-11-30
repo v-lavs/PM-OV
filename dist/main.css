@@ -891,12 +891,10 @@ body {
 .cover-anim_top__frame {
   overflow: hidden;
   transform: translateY(110%);
-  transition: transform .85s;
 }
 
 .cover-anim_top__content {
   transform: translateY(-110%);
-  transition: transform .85s;
 }
 
 .fade {
@@ -907,6 +905,7 @@ body {
 .section-anim .cover-anim_top__frame,
 .section-anim .cover-anim_top__content {
   transform: none;
+  transition: transform .85s;
 }
 
 .anim_started .cover-anim__frame,
@@ -972,7 +971,7 @@ body {
 }
 
 .fadeInUp.active_anim {
-  transition: .85s;
+  transition: transform .85s, opacity .8s;
   transform: translateY(0);
   opacity: 1;
 }
@@ -3221,8 +3220,8 @@ body {
   opacity: 0;
 }
 
-.section-banner.anim_started .wrap-btn,
-.section-banner.anim_started .section-banner__part_left {
+.section-banner.section-anim .wrap-btn,
+.section-banner.section-anim .section-banner__part_left {
   transition: .85s;
   transform: translateY(0);
   opacity: 1;
@@ -3389,7 +3388,7 @@ body {
   display: none;
 }
 
-.services .section-banner.anim_started .heading:before {
+.services .section-banner.section-anim .heading:before {
   top: -20px;
   opacity: 1;
   transition: .85s;
@@ -3488,23 +3487,11 @@ body {
   padding-bottom: 100px;
 }
 
-.about-us .section-banner .cover-anim_top .cover-anim__content {
+.about-us .section-banner .cover-anim_top .cover-anim_top__content {
   transition: none;
 }
 
-.about-us .section-banner__inner {
-  transform: translateY(125px);
-  opacity: 0;
-  transition: none;
-}
-
-.about-us .section-banner.anim_started .section-banner__inner {
-  transition: transform .85s;
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.about-us .section-banner.anim_started .cover-anim__content {
+.about-us .section-banner.section-anim .cover-anim_top__content {
   transition: transform .85s;
 }
 
@@ -3792,17 +3779,17 @@ body {
   z-index: 1;
 }
 
-.single-news .active_anim .heading {
+.single-news .section-anim .heading {
   transition: opacity .85s;
   opacity: 1;
 }
 
-.single-news .active_anim .banner__img {
+.single-news .section-anim .banner__img {
   transition: transform .85s;
   transform: translateY(0px);
 }
 
-.single-news .active_anim.section-banner .heading {
+.single-news .section-anim.section-banner .heading {
   opacity: 1;
 }
 
@@ -5104,8 +5091,20 @@ body {
     margin: 0 -17px;
   }
 
-  .about-us .section-banner .cover-anim__frame {
+  .about-us .section-banner .cover-anim_top__frame {
     margin: 0 -16px;
+  }
+
+  .about-us .section-banner__inner {
+    position: static;
+  }
+
+  .about-us .btn_scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 
   .about-us .advantages {

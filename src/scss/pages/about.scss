@@ -1,5 +1,5 @@
 .about-us {
-    .heading {
+  .heading {
     margin-bottom: 32px;
     max-width: 470px;
     width: 80%;
@@ -86,22 +86,13 @@
 
   .section-banner {
     padding-bottom: 100px;
-    .cover-anim_top .cover-anim__content {
-      transition: none;
-    }
-    &__inner {
-      transform: translateY(125px);
-      opacity: 0;
+
+    .cover-anim_top .cover-anim_top__content {
       transition: none;
     }
 
-    &.anim_started {
-      .section-banner__inner {
-        transition: transform .85s;
-        transform: translateY(0);
-        opacity: 1;
-      }
-      .cover-anim__content {
+    &.section-anim {
+      .cover-anim_top__content {
         transition: transform .85s;
       }
     }
@@ -244,11 +235,11 @@
 }
 
 @include respond-to($md) {
-
   .partner-quote {
     background: url("../assets/img/svg/bg-logo.svg") left 30px center no-repeat;
     background-size: contain;
   }
+
   .benefits:before {
     display: none;
   }
@@ -345,9 +336,22 @@
 
 @include respond-to($xs) {
   .about-us {
-    .section-banner .cover-anim__frame{
+    .section-banner .cover-anim_top__frame {
       margin: 0 -16px;
     }
+
+    .section-banner__inner {
+      position: static;
+    }
+
+    .btn_scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
     .advantages {
       padding-bottom: 0;
 

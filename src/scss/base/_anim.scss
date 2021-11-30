@@ -15,14 +15,11 @@
   &__frame {
     overflow: hidden;
     transform: translateY(110%);
-    transition: transform .85s;
   }
 
   &__content {
     transform: translateY(-110%);
-    transition: transform .85s;
   }
-
 }
 
 .fade {
@@ -34,6 +31,7 @@
   .cover-anim_top__frame,
   .cover-anim_top__content {
     transform: none;
+    transition: transform .85s;
   }
 }
 
@@ -109,7 +107,7 @@
   opacity: 0;
 
   &.active_anim {
-    transition: .85s;
+    transition: transform .85s, opacity .8s;
     transform: translateY(0);
     opacity: 1
   }

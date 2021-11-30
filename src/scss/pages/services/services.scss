@@ -1,6 +1,5 @@
 .services {
   .section-banner {
-
     .heading {
       position: relative;
       padding-left: 20px;
@@ -22,7 +21,7 @@
       display: none;
     }
 
-    &.anim_started {
+    &.section-anim {
       .heading:before {
         top: -20px;
         opacity: 1;
