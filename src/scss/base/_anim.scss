@@ -1,24 +1,24 @@
 .cover-anim {
-  &__frame {
+  .cover-anim__frame {
     overflow: hidden;
     transform: translateX(-110%);
     transition: transform .5s;
   }
 
-  &__content {
+  .cover-anim__content {
     transform: translateX(110%);
     transition: transform .5s;
   }
 }
 
 .cover-anim_top {
-  .cover-anim__frame {
+  &__frame {
     overflow: hidden;
     transform: translateY(110%);
     transition: transform .85s;
   }
 
-  .cover-anim__content {
+  &__content {
     transform: translateY(-110%);
     transition: transform .85s;
   }
@@ -28,6 +28,13 @@
 .fade {
   opacity: 0;
   transition: opacity .5s;
+}
+
+.section-anim {
+  .cover-anim_top__frame,
+  .cover-anim_top__content {
+    transform: none;
+  }
 }
 
 .anim_started {

@@ -877,24 +877,24 @@ body {
   font-size: 12px;
 }
 
-.cover-anim__frame {
+.cover-anim .cover-anim__frame {
   overflow: hidden;
   transform: translateX(-110%);
   transition: transform .5s;
 }
 
-.cover-anim__content {
+.cover-anim .cover-anim__content {
   transform: translateX(110%);
   transition: transform .5s;
 }
 
-.cover-anim_top .cover-anim__frame {
+.cover-anim_top__frame {
   overflow: hidden;
   transform: translateY(110%);
   transition: transform .85s;
 }
 
-.cover-anim_top .cover-anim__content {
+.cover-anim_top__content {
   transform: translateY(-110%);
   transition: transform .85s;
 }
@@ -902,6 +902,11 @@ body {
 .fade {
   opacity: 0;
   transition: opacity .5s;
+}
+
+.section-anim .cover-anim_top__frame,
+.section-anim .cover-anim_top__content {
+  transform: none;
 }
 
 .anim_started .cover-anim__frame,

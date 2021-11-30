@@ -210,8 +210,10 @@ $(document).ready(function () {
         on: {
             afterInit: function () {
                 const currSlide = this.slides[this.activeIndex];
-                $(currSlide).find('.cover-anim').addClass('anim_started');
+
+                $('.partners-slider').find('.partner__photo').addClass('anim_started').addClass('cover-anim');
                 $(currSlide).find('.fade').addClass('anim_started');
+
                 showPartnerQuote(currSlide);
             }
         }
@@ -219,11 +221,12 @@ $(document).ready(function () {
 
     const animTime = 600;
 
-    //CLIENTS REVIEW
     partners_slider.on('slideChange', function () {
         const currSlide = this.slides[this.activeIndex];
+
         $(currSlide).find('.cover-anim').addClass('anim_started');
         $(currSlide).find('.fade').addClass('anim_started');
+
         showPartnerQuote(currSlide);
     });
 
@@ -242,9 +245,8 @@ $(document).ready(function () {
     });
 
 //CONTACTS SLIDER
-    let contactSlider;
-    if (!contactSlider) {
-        contactSlider = new Swiper(".contacts-slider", {
+    if ($('.contacts-slider').length > 0) {
+        let contactSlider = new Swiper(".contacts-slider", {
             direction: "horizontal",
             pagination: {
                 el: ".swiper-pagination",
@@ -260,13 +262,8 @@ $(document).ready(function () {
                     direction: "vertical",
                 }
             },
-
         });
     }
-    console.log(contactSlider);
-    contactSlider.on('slideChange', function () {
-
-    });
 
 
     //SLIDER REVIEW
@@ -327,16 +324,13 @@ $(document).ready(function () {
         });
     }
 
-    const partnersSlide = document.querySelector('.partners-slide__wrap');
-    if (partnersSlide) {
-        const slideGroving = new Waypoint({
-            element: partnersSlide,
-            handler: function (direction) {
-                this.element.classList.add('anim_started');
-            },
-            offset: '50%'
-        });
-    }
+    const partnerSection = new Waypoint({
+        element: document.querySelector('.partners-slider'),
+        handler: function (direction) {
+            this.element.classList.add('section-anim');
+        },
+        offset: '50%'
+    });
 
 
     const majorProect = document.querySelector('.major-projects__part_right');
