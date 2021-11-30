@@ -10,41 +10,19 @@
 
 // CUSTOM SCRIPTS
 
-// global variable for the player
-let player;
+function youtubeVideo() {
+    $('#customPlaybtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.video__poster').fadeOut(700);
 
-function onPlayerReady(event) {
-    // bind events
-    alert('onPlayerReady')
-    const playButton = document.getElementById("customPlaybtn");
-
-    playButton.addEventListener("click", function () {
-        console.log('clcik')
-        player.playVideo();
-        document.querySelector('.video__poster').style.display = 'none'
-    });
+        $('#youtube-video').attr({src: $(this).data('iframe')})
+    })
 }
-
-// this function gets called when API is ready to use
-function onYouTubePlayerAPIReady() {
-    // create the global player from the specific iframe (#video)
-    player = new YT.Player("youtube-video", {
-        events: {
-            // call this function when player is ready to use
-            onReady: onPlayerReady
-        }
-    });
-}
-
-
-// Inject YouTube API script
-const tag = document.createElement("script");
-tag.src = "//www.youtube.com/player_api";
-const firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
 $(document).ready(function () {
+    youtubeVideo();
+
     function useTextRevealAnim() {
         const $textWrap = $('.text-reveal');
 
