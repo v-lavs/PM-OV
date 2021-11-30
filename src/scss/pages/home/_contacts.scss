@@ -37,6 +37,25 @@
   }
 }
 
+.contacts-data {
+  position: relative;
+
+  transition: 2s transform, 1.5s opacity;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.contacts .swiper-slide {
+  overflow: hidden;
+}
+
+.swiper-slide-active {
+  .contacts-data {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .contacts-slider {
   height: 506px;
 
@@ -47,7 +66,7 @@
   }
 
   .swiper-pagination-vertical.swiper-pagination-bullets,
-  .swiper-vertical > .swiper-pagination-bullets{
+  .swiper-vertical > .swiper-pagination-bullets {
     mix-blend-mode: difference !important;
     right: 50px;
   }
@@ -65,14 +84,16 @@
     border-color: transparent;
   }
 
-  .contacts_part{
+  .contacts_part {
     position: relative;
-    transition: transform .5s ,opacity .6s;
-    &.animated{
+    transition: transform .5s, opacity .6s;
+
+    &.animated {
       transform: translateY(-50px);
       opacity: 0;
     }
   }
+
   .parallax-bg {
     width: 100vw;
     height: 100vh;

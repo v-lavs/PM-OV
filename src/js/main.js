@@ -250,7 +250,7 @@ $(document).ready(function () {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            speed: 3000,
+            speed: 2000,
             breakpoints: {
                 320: {
                     direction: "horizontal",
