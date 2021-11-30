@@ -1,9 +1,5 @@
 .about-us {
-  .cover-anim_top .cover-anim__content {
-    transition: none;
-  }
-
-  .heading {
+    .heading {
     margin-bottom: 32px;
     max-width: 470px;
     width: 80%;
@@ -90,7 +86,9 @@
 
   .section-banner {
     padding-bottom: 100px;
-
+    .cover-anim_top .cover-anim__content {
+      transition: none;
+    }
     &__inner {
       transform: translateY(125px);
       opacity: 0;

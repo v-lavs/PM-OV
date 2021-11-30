@@ -67,9 +67,8 @@
 
   .contacts_part{
     position: relative;
-
     transition: transform .5s ,opacity .6s;
-    &.animate{
+    &.animated{
       transform: translateY(-50px);
       opacity: 0;
     }

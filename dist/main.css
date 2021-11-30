@@ -2157,10 +2157,9 @@ body {
 .section-intro .neuron__wrap-img {
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 80px;
   width: 53%;
   z-index: -1;
-  bottom: 0;
 }
 
 .section-intro .neuron__wrap-img:before {
@@ -2176,17 +2175,16 @@ body {
 }
 
 .section-intro .neuron__wrap-img .neuron__img {
-  transform: rotate(90deg);
-  width: auto;
+  transform: rotate(0deg);
+  width: 100%;
   height: 100%;
-  position: relative;
-  top: -24%;
+  top: 0;
 }
 
 .section-intro .neuron__wrap-img .neuron__img svg {
-  display: block;
-  width: auto;
+  width: 100%;
   height: 100%;
+  display: block;
 }
 
 .section-intro .services {
@@ -2625,6 +2623,10 @@ body {
   top: 50%;
   width: 50%;
   transform: scale(-1, 1) translateY(-50%);
+  top: 45%;
+  width: 64%;
+  max-width: 540px;
+  right: 25%;
 }
 
 .drones .drones-neuron svg {
@@ -2704,7 +2706,7 @@ body {
   transition: transform .5s ,opacity .6s;
 }
 
-.contacts-slider .contacts_part.animate {
+.contacts-slider .contacts_part.animated {
   transform: translateY(-50px);
   opacity: 0;
 }
@@ -3384,10 +3386,6 @@ body {
   pointer-events: none;
 }
 
-.about-us .cover-anim_top .cover-anim__content {
-  transition: none;
-}
-
 .about-us .heading {
   margin-bottom: 32px;
   max-width: 470px;
@@ -3467,6 +3465,10 @@ body {
 
 .about-us .section-banner {
   padding-bottom: 100px;
+}
+
+.about-us .section-banner .cover-anim_top .cover-anim__content {
+  transition: none;
 }
 
 .about-us .section-banner__inner {

@@ -44,7 +44,6 @@ const firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
-
 $(document).ready(function () {
     function useTextRevealAnim() {
         const $textWrap = $('.text-reveal');
@@ -80,8 +79,8 @@ $(document).ready(function () {
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            preserveAspectRatio: "xMidYMid meet",
-            path: './assets/json/main_screen.json'
+            // preserveAspectRatio: "xMidYMid meet",
+            path: './assets/json/index.json'
         })
     }, 600);
 
@@ -105,7 +104,7 @@ $(document).ready(function () {
     const filter = $('.news-filter');
 
     $('#openFilter').click(function (e) {
-         e.preventDefault();
+        e.preventDefault();
         filter.toggleClass('open');
     });
 
@@ -265,24 +264,29 @@ $(document).ready(function () {
     });
 
 //CONTACTS SLIDER
+    let contactSlider;
+    if (!contactSlider) {
+        contactSlider = new Swiper(".contacts-slider", {
+            direction: "horizontal",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            speed: 3000,
+            breakpoints: {
+                320: {
+                    direction: "horizontal",
+                },
 
-    const contactSlider = new Swiper(".contacts-slider", {
-
-        direction: "horizontal",
-
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            320: {
-                direction: "horizontal",
+                767: {
+                    direction: "vertical",
+                }
             },
 
-            767: {
-                direction: "vertical",
-            }
-        }
+        });
+    }
+    console.log(contactSlider);
+    contactSlider.on('slideChange', function () {
 
     });
 
@@ -315,10 +319,8 @@ $(document).ready(function () {
     });
 
 
-
     //    GALLERY
     const gallery = baguetteBox.run('.gallery', {animation: 'fadeIn'});
-
 
 
     //    ANIMATION
@@ -331,25 +333,10 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('.section-banner').addClass('anim_started');
-    }, 500);
+    }, 600);
     setTimeout(function () {
         $('.single-news .section-banner').addClass('active_anim');
-    }, 100);
-
-    const sectionDrones = document.querySelector('.drones');
-    if (sectionDrones) {
-        const sectorRotate = new Waypoint({
-            element: sectionDrones,
-            handler: function (direction) {
-                this.element.classList.add('active_anim');
-                setTimeout(function () {
-
-                    $('.drones').addClass('anim_started');
-                }, 1100);
-            },
-            offset: '60%'
-        });
-    }
+    }, 300);
 
     const sectionGallery = document.querySelector('.gallery');
     if (sectionGallery) {
@@ -374,8 +361,7 @@ $(document).ready(function () {
     }
 
 
-    const majorProect = document.querySelector('.major-projects');
-
+    const majorProect = document.querySelector('.major-projects__part_right');
     if (majorProect) {
         const sliderGroving = new Waypoint({
             element: majorProect,
@@ -385,6 +371,7 @@ $(document).ready(function () {
             offset: '50%'
         });
     }
+
 //    LOTTIE ANIMATION
     window.addEventListener('resize', function () {
         window.lottie.resize();
@@ -444,20 +431,24 @@ $(document).ready(function () {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        },
-        path: './assets/json/main_screen.json'
-    });
-    let neuronAnimBlock = new Waypoint({
-        element: neuronContainerDron,
-        handler: function (direction) {
-            animationNeuronDron.setSpeed(1.1);
-            animationNeuronDron.play();
-        },
-        offset: '65%'
+        path: './assets/json/drone_line.json'
     });
 
+    const sectionDrones = document.querySelector('.drones');
+    if (sectionDrones) {
+        const sectorRotate = new Waypoint({
+            element: sectionDrones,
+            handler: function (direction) {
+                this.element.classList.add('active_anim');
+                setTimeout(function () {
+
+                    $('.drones').addClass('anim_started');
+                    animationNeuronDron.play();
+                }, 500);
+            },
+            offset: '60%'
+        });
+    }
 });
 
 

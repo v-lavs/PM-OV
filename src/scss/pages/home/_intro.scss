@@ -13,10 +13,9 @@
   .neuron__wrap-img {
     position: absolute;
     right: 0;
-    top: 100px;
+    top: 80px;
     width: 53%;
     z-index: -1;
-    bottom: 0;
 
     &:before {
       position: absolute;
@@ -31,16 +30,15 @@
     }
 
     .neuron__img {
-      transform: rotate(90deg);
-      width: auto;
+      transform: rotate(0deg);
+      width: 100%;
       height: 100%;
-      position: relative;
-      top: -24%;
+      top: 0;
 
       svg {
-        display: block;
-        width: auto;
+        width: 100%;
         height: 100%;
+        display: block;
       }
     }
   }
