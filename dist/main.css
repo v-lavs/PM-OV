@@ -3495,6 +3495,11 @@ body {
   transition: transform .85s;
 }
 
+.about-us .section-banner.section-anim .section-banner__inner {
+  transform: translateY(0);
+  transition: 1s transform;
+}
+
 .about-us .section-banner:before {
   display: none;
 }
@@ -3510,6 +3515,7 @@ body {
 .about-us .section-banner__inner {
   position: relative;
   width: 100%;
+  transform: translateY(100px);
   text-align: center;
   z-index: 2;
 }
@@ -4344,6 +4350,7 @@ body {
   }
 
   .about-us .section-banner__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -4888,8 +4895,17 @@ body {
     padding-bottom: 0;
   }
 
+  .about-us .section-banner__inner {
+    height: 580px;
+    padding-bottom: 0;
+  }
+
   .about-us .chart-wrap_deck {
     display: none;
+  }
+
+  .about-us .btn_scroll {
+    margin-top: 30px;
   }
 
   .about-us .chart-wrap_mob {
@@ -5095,18 +5111,6 @@ body {
     margin: 0 -16px;
   }
 
-  .about-us .section-banner__inner {
-    position: static;
-  }
-
-  .about-us .btn_scroll {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-
   .about-us .advantages {
     padding-bottom: 0;
   }
@@ -5136,7 +5140,6 @@ body {
   }
 
   .about-us .section-banner__bg {
-    min-height: 605px;
     padding-bottom: 20px;
   }
 
