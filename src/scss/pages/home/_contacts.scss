@@ -125,6 +125,10 @@
 
 @include respond-to($sm) {
   .contacts {
+    .contacts-data {
+      transform: none;
+      opacity: 1;
+    }
     .d-flex {
       flex-wrap: wrap;
     }

@@ -4715,6 +4715,11 @@ body {
     width: 78%;
   }
 
+  .contacts .contacts-data {
+    transform: none;
+    opacity: 1;
+  }
+
   .contacts .d-flex {
     flex-wrap: wrap;
   }
