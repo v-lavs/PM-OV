@@ -1594,44 +1594,7 @@ body {
 
 .gallery__item-img {
   transition: .8s;
-}
-
-.gallery__item .icon-zoom {
-  position: absolute;
-  width: 67px;
-  height: 68px;
-  left: 86px;
-  bottom: 86px;
-  opacity: 0;
-}
-
-.gallery__item .icon-zoom:after,
-.gallery__item .icon-zoom:before {
-  position: absolute;
-  content: '';
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.gallery__item .icon-zoom:after {
-  width: 67px;
-  height: 68px;
-  background-image: url(../assets/img/svg/round_btn_bg-w.svg);
-  transform: rotate(-45deg);
-  z-index: 1;
-  transition: .3s;
-}
-
-.gallery__item .icon-zoom:before {
-  width: 32px;
-  height: 32px;
-  background-image: url(../assets/img/svg/maximize-2.svg);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  cursor: url(../assets/img/svg/btn-zoom.svg) 33 34, move;
 }
 
 .gallery__item:hover .gallery__item-img,
@@ -1651,18 +1614,6 @@ body {
 .gallery__item:focus .card-decor:after {
   right: 25px;
   bottom: 25px;
-}
-
-.gallery__item:hover .icon-zoom,
-.gallery__item:focus .icon-zoom {
-  z-index: 2;
-  opacity: 1;
-}
-
-.gallery__item:hover .icon-zoom:after,
-.gallery__item:focus .icon-zoom:after {
-  transition: .3s;
-  transform: rotate(0deg);
 }
 
 .services .gallery__item:hover .gallery__item-inner:before,
@@ -3548,6 +3499,10 @@ body {
   width: 40%;
 }
 
+.about-us .decor-grey .dots {
+  text-align: center;
+}
+
 .about-us .decor-grey__row {
   justify-content: center;
 }
@@ -3587,6 +3542,29 @@ body {
 .about-us .advantages .heading_sm {
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.about-us .advantages .grid-layout__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us .advantages .media-holder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .8s;
+}
+
+.about-us .advantages .grid-layout__content:hover .media-holder,
+.about-us .advantages .grid-layout__content:focus .media-holder {
+  transition: .8s;
+  transform: scale(1.07);
 }
 
 .about-us .chart-wrap_deck {
@@ -4357,10 +4335,6 @@ body {
     display: none;
   }
 
-  .about-us .decor-grey__col {
-    text-align: left;
-  }
-
   .about-us .section-banner {
     min-height: 0;
   }
@@ -4541,11 +4515,6 @@ body {
 
   .container {
     max-width: 580px;
-  }
-
-  .gallery__item:hover .icon-zoom {
-    left: 52px;
-    bottom: 32px;
   }
 
   .gallery .grid-layout {
@@ -4914,6 +4883,14 @@ body {
 
   .gallery {
     padding-bottom: 0;
+  }
+
+  .about-us .decor-grey__col {
+    text-align: left;
+  }
+
+  .about-us .decor-grey .dots {
+    text-align: left;
   }
 
   .about-us .section-banner__inner {

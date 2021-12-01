@@ -144,11 +144,6 @@
 
 @include respond-to($sm) {
   .gallery {
-    &__item:hover .icon-zoom {
-      left: 52px;
-      bottom: 32px;
-    }
-
     .grid-layout {
       margin: 0 -17px;
 
