@@ -204,7 +204,7 @@ $(document).ready(function () {
         }
     }
 
-    if($('.partners-slider').length > 0) {
+    if ($('.partners-slider').length > 0) {
         const partners_slider = new Swiper(".partners-slider", {
             slidesPerView: 1,
             speed: 0,
@@ -427,6 +427,16 @@ $(document).ready(function () {
         path: './assets/json/drone_line.json'
     });
 
+    const sectionCart = document.getElementById('chart');
+    const animationChart = lottie.loadAnimation({
+        container: sectionCart,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: './assets/json/graphic.json'
+    });
+
+
     const sectionDrones = document.querySelector('.drones');
 
     if (sectionDrones) {
@@ -439,6 +449,16 @@ $(document).ready(function () {
                     $('.drones').addClass('anim_started');
                     animationNeuronDron.play();
                 }, 500);
+            },
+            offset: '60%'
+        });
+    }
+
+    if (sectionCart) {
+        const animChart = new Waypoint({
+            element: sectionCart,
+            handler: function (direction) {
+                animationChart.play();
             },
             offset: '60%'
         });
