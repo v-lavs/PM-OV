@@ -1594,7 +1594,7 @@ body {
 
 .gallery__item-img {
   transition: .8s;
-  cursor: url(../assets/img/svg/btn-zoom.svg) 33 34, move;
+  cursor: url(../assets/img/svg/btn-zoom.svg) 33 34, pointer;
 }
 
 .gallery__item:hover .gallery__item-img,
