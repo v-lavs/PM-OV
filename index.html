@@ -94,6 +94,26 @@
             transform: scale(-1, 1) translateY(-50%);
         }
 
+
+        .loader .cover-anim_top .cover-anim_top__frame {
+            overflow: hidden;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+
+        .loader .cover-anim_top .cover-anim_top__content {
+            transform: translateY(-110%);
+            opacity: 0;
+        }
+
+
+        .loader .cover-anim_top.anim_started .cover-anim_top__frame,
+        .loader .cover-anim_top.anim_started .cover-anim_top__content {
+            transition: transform 2s;
+            transform: none;
+            opacity: 1;
+        }
+
         .loaded_hiding .preloader {
             transition: 0.3s opacity;
             opacity: 0;
@@ -785,7 +805,6 @@
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container">
             <div class="footer_top">
@@ -876,7 +895,7 @@
             path: './assets/json/preloader.json'
         });
 
-        document.querySelector('.cover-anim_top').classList.add('anim_started');
+        document.querySelector('.cover-anim_top').classList.add('section-anim');
 
         let w = 0,
             t = setInterval(function () {
