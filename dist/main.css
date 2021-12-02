@@ -1967,8 +1967,10 @@ body {
 .footer_bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 1px solid #c4c4c4;
   padding: 33px 0;
+  text-transform: uppercase;
 }
 
 .footer__nav {
@@ -2019,6 +2021,16 @@ body {
 .footer .social-bar__link {
   width: 24px;
   height: 24px;
+}
+
+.footer .develop {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer .develop img {
+  width: 78px;
+  height: 30px;
 }
 
 .decor-grey {
@@ -4578,6 +4590,7 @@ body {
     padding: 45px 0;
     flex-wrap: wrap;
     text-align: center;
+    align-items: center;
   }
 
   .footer .copywriting {
@@ -4587,6 +4600,10 @@ body {
   .footer .copywriting,
   .footer .develop {
     width: 100%;
+  }
+
+  .footer .develop {
+    justify-content: center;
   }
 
   .footer__nav {
