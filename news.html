@@ -19,9 +19,9 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header class="header fadeInDown">
         <div class="container">
-            <a href="index.html" class="header__logo">
+            <a href="#" class="header__logo">
                 <img src="assets/img/logo.svg" alt="OV Project Management" class="header__logo-img">
             </a>
             <nav class="header__nav">
@@ -40,7 +40,7 @@
                         <a href="inform-drones.html" class="menu__link">ІМБ</a>
                     </li>
                     <!--<li class="menu__item">-->
-                        <!--<a href="news.html" class="menu__link">НОВИНИ</a>-->
+                    <!--<a href="news.html" class="menu__link">НОВИНИ</a>-->
                     <!--</li>-->
                     <li class="menu__item">
                         <a href="index.html#contacts" class="menu__link">КОНТАКТИ</a>
@@ -48,9 +48,9 @@
                 </ul>
 
                 <div class="lang-switch">
-                    <a href="#" class="lang-switch__link active">УКР</a>
-                    <a href="#" class="lang-switch__link">РУС</a>
-                    <a href="#" class="lang-switch__link">ENG</a>
+                    <a href="index.html" class="lang-switch__link active">УКР</a>
+                    <a href="./index_ru.html" class="lang-switch__link">РУС</a>
+                    <a href="./index_eng.html" class="lang-switch__link">ENG</a>
                 </div>
                 <div class="header__nav-footer">
                     <div class="social-bar social-bar_small">
@@ -92,21 +92,29 @@
                     </div>
                 </div>
             </nav>
+
+            <div class="lang-switch_desktop">
+                <div class="lang-switch_desktop__current">УКР</div>
+
+                <div class="lang-switch_desktop__dropdown">
+                    <a href="./index_ru.html" class="lang-switch_desktop__link">РУС</a>
+                    <a href="./index_eng.html" class="lang-switch_desktop__link">ENG</a>
+                </div>
+            </div>
+
             <div class="header__right-bar">
-                <a href="#" class="header__link">
-                    <span class="header__link-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 4H2V20H22V4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#7F7F7F"/>
+                <a href="mailto:info@ov-pm.com" class="header__link">
+                    <svg class="header__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 4H2V20H22V4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#7F7F7F"/>
                     </svg>
-                    </span>
                 </a>
-                <a href="#" class="header__link">
-                    <span class="header__link-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="tel:+38 067 583 8582" class="header__link">
+                    <svg class="header__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.0004 15.46L15.7304 14.85L13.2104 17.37C10.3804 15.93 8.06039 13.62 6.62039 10.78L9.15039 8.25L8.54039 3H3.03039C2.45039 13.18 10.8204 21.55 21.0004 20.97V15.46Z"
                               fill="#7F7F7F"/>
-                        </svg>
-                    </span>
+                    </svg>
                 </a>
             </div>
             <button type="button" class="btn-burger" aria-label="бургер-меню">
@@ -117,6 +125,7 @@
         </div>
         <div class="backdrop"></div>
     </header>
+
     <main class="main blog">
         <section class="news">
             <div class="container">
@@ -379,9 +388,9 @@
                     <li class="footer__nav-item">
                         <a href="inform-drones.html" class="footer__nav-link">ІМБ</a>
                     </li>
-                    <li class="footer__nav-item">
-                        <a href="news.html" class="footer__nav-link">НОВИНИ</a>
-                    </li>
+                    <!--<li class="footer__nav-item">-->
+                        <!--<a href="news.html" class="footer__nav-link">НОВИНИ</a>-->
+                    <!--</li>-->
                     <li class="footer__nav-item">
                         <a href="index.html#contacts" class="footer__nav-link">КОНТАКТИ</a>
                     </li>
