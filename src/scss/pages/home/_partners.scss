@@ -3,6 +3,27 @@
     margin-bottom: 73px;
   }
 
+  .partners-slider__mob-nav {
+    display: none;
+    @include respond-to($md) {
+      display: flex;
+    }
+  }
+
+  @include respond-to($md) {
+    .partners-slider__desktop-nav {
+      display: none;
+    }
+  }
+
+  .section__header {
+    margin-bottom: 72px;
+
+    .dots {
+      margin-bottom: 10px;
+    }
+  }
+
   .d-flex {
     justify-content: space-between;
     align-items: flex-end;
@@ -21,6 +42,10 @@
 
 .partners-slider {
   color: #545454;
+
+  .partners-slider__mob-nav {
+    display: none;
+  }
 
   .swiper-slide {
     display: flex;

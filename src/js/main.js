@@ -43,6 +43,24 @@ $(document).ready(function () {
         });
     }
 
+    // Lang dropdown
+
+    $('.lang-switch_desktop__current').click(function (e) {
+        e.preventDefault();
+
+        $('.lang-switch_desktop__dropdown').slideToggle(300);
+    });
+
+    $('.lang-switch_desktop__dropdown a').click(function () {
+        $('.lang-switch_desktop__dropdown').slideUp(300);
+    });
+
+    window.addEventListener('click', function(e){
+        if (!$('.lang-switch_desktop').get(0).contains(e.target)){
+            $('.lang-switch_desktop__dropdown').slideUp(300);
+        }
+    });
+
     // HOME BANNER ANIMATION
     useTextRevealAnim();
 

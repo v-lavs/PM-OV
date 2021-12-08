@@ -1862,6 +1862,61 @@ body {
   background-color: #000000;
 }
 
+.header .lang-switch_desktop {
+  position: relative;
+  width: 50px;
+  padding: 0 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header .lang-switch_desktop__current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.header .lang-switch_desktop__current:after {
+  content: '';
+  display: block;
+  margin-left: 3px;
+  margin-right: -9px;
+  border-style: solid;
+  border-width: 3px 3px 0 3px;
+  border-color: #000000 transparent;
+}
+
+.header .lang-switch_desktop__dropdown {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  padding: 8px 3px 4px;
+  background-color: #f4f4f4;
+  left: 0%;
+  z-index: 11;
+}
+
+.header .lang-switch_desktop__link {
+  display: block;
+  padding: 4px 0;
+  line-height: 1;
+  transition: .4s;
+  margin-bottom: 5px;
+}
+
+.header .lang-switch_desktop__link:last-child {
+  margin-bottom: 0;
+}
+
+.header .lang-switch_desktop__link:hover {
+  font-weight: 700;
+}
+
 .header .lang-switch {
   display: none;
   font-size: 20px;
@@ -1878,6 +1933,10 @@ body {
 
 .header .lang-switch__link.active {
   font-weight: 700;
+}
+
+.header__nav {
+  display: flex;
 }
 
 .header__nav-footer {
@@ -2361,6 +2420,18 @@ body {
   margin-bottom: 73px;
 }
 
+.company-partners .partners-slider__mob-nav {
+  display: none;
+}
+
+.company-partners .section__header {
+  margin-bottom: 72px;
+}
+
+.company-partners .section__header .dots {
+  margin-bottom: 10px;
+}
+
 .company-partners .d-flex {
   justify-content: space-between;
   align-items: flex-end;
@@ -2378,6 +2449,10 @@ body {
 
 .partners-slider {
   color: #545454;
+}
+
+.partners-slider .partners-slider__mob-nav {
+  display: none;
 }
 
 .partners-slider .swiper-slide {
@@ -3376,6 +3451,10 @@ body {
   width: 80%;
 }
 
+.about-us .company-partners .heading {
+  margin-bottom: 0;
+}
+
 .about-us .major-projects {
   padding-top: 100px;
   background-image: url(../assets/img/bg-light.png);
@@ -4022,6 +4101,10 @@ body {
     height: 32px;
   }
 
+  .header .lang-switch_desktop {
+    display: none;
+  }
+
   .header .lang-switch,
   .header .btn-close,
   .header .btn-burger,
@@ -4270,6 +4353,14 @@ body {
     width: 376px;
     height: 240px;
     padding: 30px;
+  }
+
+  .company-partners .partners-slider__mob-nav {
+    display: flex;
+  }
+
+  .company-partners .partners-slider__desktop-nav {
+    display: none;
   }
 
   .company-partners .dots {
