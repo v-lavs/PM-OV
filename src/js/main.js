@@ -445,13 +445,17 @@ $(document).ready(function () {
         path: './assets/json/drone_line.json'
     });
 
-    const sectionCart = document.getElementById('chart');
+    const chart = document.getElementById('chart');
+
+    const animJSON = $(chart).data('anim');
+    console.log(animJSON)
+
     const animationChart = lottie.loadAnimation({
-        container: sectionCart,
+        container: chart,
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: './assets/json/graphic.json'
+        path: animJSON
     });
 
 
@@ -472,9 +476,9 @@ $(document).ready(function () {
         });
     }
 
-    if (sectionCart) {
+    if (chart) {
         const animChart = new Waypoint({
-            element: sectionCart,
+            element: chart,
             handler: function (direction) {
                 animationChart.play();
             },
