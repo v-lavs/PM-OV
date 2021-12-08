@@ -448,7 +448,6 @@ $(document).ready(function () {
     const chart = document.getElementById('chart');
 
     const animJSON = $(chart).data('anim');
-    console.log(animJSON)
 
     const animationChart = lottie.loadAnimation({
         container: chart,
