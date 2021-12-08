@@ -3029,6 +3029,7 @@ body {
 
 .projects-layout_grid .projects-layout__inner {
   padding-top: 50.7%;
+  width: 100%;
   min-height: 272px;
 }
 
@@ -3065,13 +3066,32 @@ body {
   bottom: 0;
   top: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
 }
 
-.projects-layout__inner:hover .projects-layout__content {
+.projects-layout__inner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform .5s;
+  z-index: 1;
+}
+
+.projects-layout__inner:hover .projects-layout__inner-bg {
+  transform: scale(1.1, 1.1);
+}
+
+.projects-layout__inner:hover .projects-layout__content_drawer {
   color: black;
 }
 
-.projects-layout__inner:hover .projects-layout__content:before {
+.projects-layout__inner:hover .projects-layout__content_drawer:before {
   transform: translateY(0);
 }
 
@@ -3089,7 +3109,12 @@ body {
   z-index: 2;
 }
 
-.projects-layout__content:before {
+.projects-layout__content_bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.projects-layout__content_drawer:before {
   content: '';
   display: block;
   position: absolute;
@@ -4030,6 +4055,18 @@ body {
   transform: translateY(-50%);
 }
 
+.page-services .section__header {
+  margin-bottom: 60px;
+}
+
+.page-services .projects-layout__inner:before {
+  transform: rotate(180deg);
+}
+
+.page-services .projects-layout__title {
+  text-transform: none;
+}
+
 @media only screen and (max-width: 1440px) {
   .social-bar .social-bar__link_round {
     width: 60px;
@@ -4629,6 +4666,10 @@ body {
     max-width: 580px;
   }
 
+  .projects-layout_grid .projects-layout__item {
+    width: 100%;
+  }
+
   .gallery .grid-layout {
     margin: 0 -17px;
   }
@@ -4918,11 +4959,6 @@ body {
     padding-right: 35px;
   }
 
-  .projects-layout__item {
-    padding: 0;
-    margin-bottom: 15px;
-  }
-
   .projects-layout__content {
     padding: 40px 40px 10px;
   }
@@ -4952,6 +4988,11 @@ body {
     max-width: 310px;
     width: auto;
     height: 100px;
+  }
+
+  .projects-layout .projects-layout__item {
+    padding: 0;
+    margin-bottom: 15px;
   }
 
   .banner-video .info-project {

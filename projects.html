@@ -149,38 +149,38 @@
                     </nav>
 
                     <div class="filter-wrap">
-                        <div class="section__header-item section__header-item_right search-result">
-                            РЕЗУЛЬТАТИ 1-12 З 20
-                        </div>
-                        <button class="btn open-filter" id="openFilterPr"></button>
-                        <div class="projects-filter section__header-item">
-                            <div class="projects-filter__item">
-                                <select class="custom-select">
-                                    <option data-disrlay="ТИП ОБ’ЄКТУ">ТИП ОБ’ЄКТУ</option>
-                                    <option value="1">ТИП 1</option>
-                                    <option value="2">ТИП 2</option>
-                                </select>
-                            </div>
+                        <!--<div class="section__header-item section__header-item_right search-result">-->
+                            <!--РЕЗУЛЬТАТИ 1-12 З 20-->
+                        <!--</div>-->
+                        <!--<button class="btn open-filter" id="openFilterPr"></button>-->
+                        <!--<div class="projects-filter section__header-item">-->
+                            <!--<div class="projects-filter__item">-->
+                                <!--<select class="custom-select">-->
+                                    <!--<option data-disrlay="ТИП ОБ’ЄКТУ">ТИП ОБ’ЄКТУ</option>-->
+                                    <!--<option value="1">ТИП 1</option>-->
+                                    <!--<option value="2">ТИП 2</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
 
-                            <div class="projects-filter__item">
-                                <select class="custom-select">
-                                    <option value="">РІК</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
-                                </select>
-                            </div>
+                            <!--<div class="projects-filter__item">-->
+                                <!--<select class="custom-select">-->
+                                    <!--<option value="">РІК</option>-->
+                                    <!--<option value="2022">2022</option>-->
+                                    <!--<option value="2021">2021</option>-->
+                                    <!--<option value="2020">2020</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
 
-                            <div class="projects-filter__item">
-                                <select class="custom-select">
-                                    <option value="">ЛОКАЦІЯ</option>
-                                </select>
-                            </div>
-                        </div>
+                            <!--<div class="projects-filter__item">-->
+                                <!--<select class="custom-select">-->
+                                    <!--<option value="">ЛОКАЦІЯ</option>-->
+                                <!--</select>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
-                        <div class="circle-decor section__header-item"></div>
+                        <!--<div class="circle-decor section__header-item"></div>-->
 
-                        <nav class="layout-toggle section__header-item" data-for="projects-layout">
+                        <nav style="margin-left: auto;" class="layout-toggle section__header-item" data-for="projects-layout">
                             <button
                                     data-layout="projects-layout_grid"
                                     class="layout-toggle__btn layout-toggle__btn_grid"></button>
@@ -195,7 +195,7 @@
                     <div class="projects-layout__item">
                         <a href="single-project.html" class="projects-layout__inner"
                            style="background-image: url('assets/img/projects/1.jpg')">
-                            <div class="projects-layout__content">
+                            <div class="projects-layout__content projects-layout__content_drawer">
                                 <h2 class="projects-layout__title">PORSHE CENTER</h2>
 
                                 <div class="projects-layout__info">
@@ -210,7 +210,7 @@
                     <div class="projects-layout__item">
                         <a href="single-project.html" class="projects-layout__inner"
                            style="background-image: url('assets/img/projects/2.jpg')">
-                            <div class="projects-layout__content">
+                            <div class="projects-layout__content projects-layout__content_drawer">
                                 <h2 class="projects-layout__title">PORSHE CENTER</h2>
 
                                 <div class="projects-layout__info">
@@ -225,7 +225,7 @@
                     <div class="projects-layout__item">
                         <a href="single-project.html" class="projects-layout__inner"
                            style="background-image: url('assets/img/projects/3.jpg')">
-                            <div class="projects-layout__content">
+                            <div class="projects-layout__content projects-layout__content_drawer">
                                 <h2 class="projects-layout__title">PLAZA RIO</h2>
 
                                 <div class="projects-layout__info">
@@ -240,7 +240,7 @@
                     <div class="projects-layout__item">
                         <a href="single-project.html" class="projects-layout__inner"
                            style="background-image: url('assets/img/projects/4.jpg')">
-                            <div class="projects-layout__content">
+                            <div class="projects-layout__content projects-layout__content_drawer">
                                 <h2 class="projects-layout__title">EAST GATE LOGISTIC</h2>
 
                                 <div class="projects-layout__info">
@@ -255,14 +255,14 @@
             </div>
         </section>
 
-        <div class="pagination page__pagination">
+        <div class="pagination page__pagination" style="display:none;">
             <a class="pagination__item pagination__item_prev pagination__item_disabled" href="#">ПОПЕРЕДНЯ</a>
             <a class="pagination__item pagination__item_active" href="#">1</a>
             <a class="pagination__item" href="#">2</a>
             <a class="pagination__item pagination__item_next pagination__item_active" href="#">НАСТУПНА</a>
         </div>
 
-        <section class="section section-reviews">
+        <section style="display:none;" class="section section-reviews">
             <div class="container">
 
                 <header class="section__header">
@@ -403,7 +403,7 @@
                         <a href="inform-drones.html" class="footer__nav-link">ІМБ</a>
                     </li>
                     <!--<li class="footer__nav-item">-->
-                        <!--<a href="news.html" class="footer__nav-link">НОВИНИ</a>-->
+                    <!--<a href="news.html" class="footer__nav-link">НОВИНИ</a>-->
                     <!--</li>-->
                     <li class="footer__nav-item">
                         <a href="index.html#contacts" class="footer__nav-link">КОНТАКТИ</a>
@@ -430,7 +430,8 @@
                         </svg>
                     </a>
 
-                    <a target="_blank" href="https://www.linkedin.com/company/ov-project-management" class="social-bar__link">
+                    <a target="_blank" href="https://www.linkedin.com/company/ov-project-management"
+                       class="social-bar__link">
                         <span class="hide">linkedin</span>
                         <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -445,7 +446,8 @@
             </div>
             <div class="footer_bottom">
                 <div class="copywriting">&copy; 2021 OV PROJECT MANEGMENT ВСІ ПРАВА ЗАХИЩЕНІ</div>
-                <a href="https://profi-creative.com/" class="develop">Створено<img src="assets/img/svg/logo_company.svg" alt="Profi Creative"></a>
+                <a href="https://profi-creative.com/" class="develop">Створено<img src="assets/img/svg/logo_company.svg"
+                                                                                   alt="Profi Creative"></a>
             </div>
         </div>
     </footer>

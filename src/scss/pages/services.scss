@@ -1,0 +1,13 @@
+.page-services {
+  .section__header {
+    margin-bottom: 60px;
+  }
+
+  .projects-layout__inner:before {
+    transform: rotate(180deg);
+  }
+
+  .projects-layout__title {
+    text-transform: none;
+  }
+}

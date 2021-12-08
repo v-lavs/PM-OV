@@ -139,10 +139,15 @@
       padding: 40px;
     }
   }
-
 }
 
 @include respond-to($sm) {
+  .projects-layout_grid {
+    .projects-layout__item {
+      width: 100%;
+    }
+  }
+
   .gallery {
     .grid-layout {
       margin: 0 -17px;
@@ -163,14 +168,17 @@
       padding-top: 38.75%;
     }
   }
+
   .advantages {
-    .heading{
+    .heading {
       width: 100%;
     }
+
     .heading_sm {
       font-size: 14px;
     }
   }
+
   .benefits {
     .benefits-card__title {
       font-size: 14px;
@@ -180,9 +188,9 @@
       font-size: 12px;
     }
   }
+
   .advantages,
   .benefits {
-
     .grid-layout__inner {
       padding: 25px;
     }
@@ -198,7 +206,7 @@
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
   .benefits .grid-layout__col_3 {
     width: 100%;
 
