@@ -1940,10 +1940,6 @@ body {
   vertical-align: middle;
 }
 
-.header .lang-switch__link.active {
-  font-weight: 700;
-}
-
 .header__nav {
   display: flex;
 }
