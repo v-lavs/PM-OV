@@ -1941,6 +1941,10 @@ body {
   align-items: center;
 }
 
+.header .lang-switch__link.active {
+  font-weight: 700;
+}
+
 .header__nav {
   display: flex;
 }
