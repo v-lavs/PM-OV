@@ -1937,7 +1937,10 @@ body {
 .header .lang-switch__link {
   display: inline-block;
   margin: 0 11px;
-  vertical-align: middle;
+}
+
+.header .lang-switch__link.active {
+  font-weight: 700;
 }
 
 .header__nav {

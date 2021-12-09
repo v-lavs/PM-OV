@@ -90,10 +90,11 @@
     &__link {
       display: inline-block;
       margin: 0 11px;
-      vertical-align: middle;
+      //vertical-align: middle;
 
       &.active {
-        //font-weight: 700;
+        //-webkit-text-stroke: 1px #000000;
+        font-weight: 700;
       }
     }
   }
