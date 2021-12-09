@@ -88,8 +88,10 @@
     margin-bottom: 50px;
 
     &__link {
-      display: inline-block;
+      display: inline-flex;
       margin: 0 11px;
+      justify-content: center;
+      align-items: center;
       //vertical-align: middle;
 
       &.active {
