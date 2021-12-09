@@ -1935,8 +1935,10 @@ body {
 }
 
 .header .lang-switch__link {
-  display: inline-block;
+  display: inline-flex;
   margin: 0 11px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__nav {
