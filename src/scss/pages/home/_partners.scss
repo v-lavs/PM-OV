@@ -3,6 +3,12 @@
     margin-bottom: 73px;
   }
 
+  .partners-slider__desktop-nav {
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+  }
+
   .partners-slider__mob-nav {
     display: none;
     @include respond-to($md) {
@@ -58,7 +64,7 @@
 
   &__part {
     width: 50%;
-
+    height: 100%;
     &_media {
       * {
         height: 100%;
@@ -97,15 +103,11 @@
 
   &__footer {
     position: absolute;
-    width: 50%;
+    width: auto;
     bottom: 0;
     right: 0;
-    padding-left: 40px;
     height: 42px;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    z-index: 20;
   }
 
   &__prev {
@@ -116,16 +118,16 @@
     }
   }
 
+  .social-bar_small {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+  }
+
   .social-bar__link {
     width: 24px;
     height: 24px;
     margin-right: 16px;
-  }
-}
-
-@include respond-to($lg) {
-  .partners-slider__content {
-    padding-bottom: 0;
   }
 }
 

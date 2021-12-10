@@ -71,13 +71,14 @@
   }
 
   .social-bar {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: -10%;
     transform: translateY(-50%);
     text-align: center;
     flex-direction: column;
     opacity: 0;
+    z-index: 5;
   }
 
   .btn_scroll {
