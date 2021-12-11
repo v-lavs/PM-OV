@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Главная</title>
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*preloader*/
+        .preloader {
+            position: fixed;
+            overflow: hidden;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+
+        }
+
+        .loader {
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .loader .logo-site {
+            display: block;
+            max-width: 296px;
+            height: auto;
+            margin: 0 auto 40px
+        }
+
+        .loader .dots {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .loader .dot {
+            display: inline-block;
+            background-color: #7f7f7f;
+            width: 6px;
+            line-height: 1;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .loader .dot:last-child {
+            margin-right: 0;
+        }
+
+        .loader_bg {
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            width: 26%;
+            transform: translateY(-50%);
+        }
+
+        .loader_bg svg {
+            display: block;
+        }
+
+
+        .loader_bg-left {
+            left: 0;
+        }
+
+        .loader_bg-right {
+            right: 0;
+            transform: scale(-1, 1) translateY(-50%);
+        }
+
+
+        .loader .cover-anim_top .cover-anim_top__frame {
+            overflow: hidden;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+
+        .loader .cover-anim_top .cover-anim_top__content {
+            transform: translateY(-110%);
+            opacity: 0;
+        }
+
+
+        .loader .cover-anim_top.anim_started .cover-anim_top__frame,
+        .loader .cover-anim_top.anim_started .cover-anim_top__content {
+            transition: transform 2s;
+            transform: none;
+            opacity: 1;
+        }
+
+        .loaded_hiding .preloader {
+            transition: 0.3s opacity;
+            opacity: 0;
+        }
+
+        .loaded .preloader {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .dots {
+                margin-bottom: 40px;
+            }
+
+            .loader_bg {
+                width: 181px;
+                left: 50%;
+                right: auto;
+                transform-origin: 0 50%;
+            }
+
+            .loader_bg-left {
+                top: auto;
+                transform: translateY(50%) rotate(-90deg);
+                right: 0;
+                bottom: 0;
+            }
+
+            .loader_bg-right {
+                transform: translateY(-50%) rotate(90deg);
+                top: 0;
+            }
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="lib/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./dist/main.css">
+    <script src="lib/lottie/lottie.js"></script>
+</head>
+
+<body>
+
+<div class="preloader">
+    <div class="loader">
+        <div class="loader_bg loader_bg-left">
+            <div class="lottie-bg__container" id="loaderNeuron"></div>
+        </div>
+        <div class="loader_bg loader_bg-right">
+            <div class="lottie-bg__container rotate" id="loaderNeuronRight"></div>
+        </div>
+        <div class="loader__content">
+            <div class="cover-anim_top">
+                <div class="cover-anim_top__frame">
+                    <div class="cover-anim_top__content">
+                        <a href="#" class="logo-site">
+                            <img src="assets/img/logo-OV.svg" alt="OV, Project Management">
+                        </a>
+                        <div class="dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter">
+                0%
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header class="header fadeInDown">
+        <div class="container">
+            <a href="#" class="header__logo">
+                <img src="assets/img/logo.svg" alt="OV Project Management" class="header__logo-img">
+            </a>
+            <nav class="header__nav">
+                <button class="btn-close" id="closeMenu" aria-label="Закрити"></button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="about_ru.html" class="menu__link">О НАС</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="services_ru.html" class="menu__link">УСЛУГИ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="projects_ru.html" class="menu__link">ПРОЕКТЫ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="inform-drones_ru.html" class="menu__link">ИМБ</a>
+                    </li>
+                    <!--<li class="menu__item">-->
+                    <!--<a href="news.html" class="menu__link">НОВИНИ</a>-->
+                    <!--</li>-->
+                    <li class="menu__item">
+                        <a href="#contacts" class="menu__link">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+
+                <div class="lang-switch">
+                    <a href="index.html" class="lang-switch__link">УКР</a>
+                    <a href="./index_ru.html" class="lang-switch__link active">РУС</a>
+                    <a href="./index_eng.html" class="lang-switch__link">ENG</a>
+                </div>
+                <div class="header__nav-footer">
+                    <div class="social-bar social-bar_small">
+                        <a href="https://www.facebook.com/OV-Project-Management-144792907705433/"
+                           class="social-bar__link">
+                            <span class="hide">Facebook</span>
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.958 2.00781H10.038C9.18928 2.00781 8.37534 2.34495 7.77523 2.94507C7.17511 3.54519 6.83797 4.35912 6.83797 5.20781V7.12781H4.91797V9.68781H6.83797V14.8078H9.39797V9.68781H11.318L11.958 7.12781H9.39797V5.20781C9.39797 5.03807 9.4654 4.87529 9.58542 4.75526C9.70544 4.63524 9.86823 4.56781 10.038 4.56781H11.958V2.00781Z"
+                                      fill="#7f7f7f"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.instagram.com/ov_project_management/" class="social-bar__link">
+                            <span class="hide">Instagram</span>
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M4.91777 2.00781H11.3178C13.0851 2.00781 14.5178 3.4405 14.5178 5.20781V11.6078C14.5178 13.3751 13.0851 14.8078 11.3178 14.8078H4.91777C3.15046 14.8078 1.71777 13.3751 1.71777 11.6078V5.20781C1.71777 3.4405 3.15046 2.00781 4.91777 2.00781ZM10.9978 4.88781C10.9978 4.53435 11.2843 4.24781 11.6378 4.24781H11.6442C11.9976 4.24781 12.2842 4.53435 12.2842 4.88781C12.2842 5.24127 11.9976 5.52781 11.6442 5.52781H11.6378C11.2843 5.52781 10.9978 5.24127 10.9978 4.88781ZM8.42722 6.48089C8.02774 6.42165 7.61976 6.48988 7.26129 6.67588C6.90283 6.86188 6.61214 7.15618 6.43058 7.51691C6.24901 7.87764 6.18581 8.28643 6.24997 8.68515C6.31413 9.08387 6.50238 9.4522 6.78794 9.73776C7.07351 10.0233 7.44184 10.2116 7.84056 10.2757C8.23928 10.3399 8.64807 10.2767 9.0088 10.0951C9.36953 9.91357 9.66383 9.62288 9.84983 9.26441C10.0358 8.90595 10.1041 8.49796 10.0448 8.09849C9.9844 7.691 9.79452 7.31376 9.50323 7.02247C9.21195 6.73119 8.8347 6.54131 8.42722 6.48089ZM6.67176 5.53973C7.2692 5.22973 7.94918 5.116 8.61498 5.21473C9.29411 5.31544 9.92286 5.6319 10.4083 6.11738C10.8938 6.60285 11.2103 7.23159 11.311 7.91073C11.4097 8.57653 11.296 9.25651 10.986 9.85394C10.676 10.4514 10.1855 10.9359 9.58428 11.2385C8.98306 11.5411 8.30173 11.6464 7.63721 11.5395C6.97268 11.4325 6.35879 11.1188 5.88285 10.6429C5.40691 10.1669 5.09316 9.55303 4.98623 8.8885C4.8793 8.22397 4.98463 7.54265 5.28724 6.94143C5.58985 6.34022 6.07433 5.84973 6.67176 5.53973Z"
+                                      fill="#7F7F7F"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/ov-project-management" class="social-bar__link">
+                            <span class="hide">linkedin</span>
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6779 5.84778C11.6963 5.84778 12.673 6.25235 13.3932 6.97249C14.1133 7.69263 14.5179 8.66935 14.5179 9.68778V14.1678H11.9579V9.68778C11.9579 9.3483 11.823 9.02273 11.583 8.78268C11.3429 8.54264 11.0174 8.40778 10.6779 8.40778C10.3384 8.40778 10.0128 8.54264 9.77279 8.78268C9.53275 9.02273 9.39789 9.3483 9.39789 9.68778V14.1678H6.83789V9.68778C6.83789 8.66935 7.24246 7.69263 7.9626 6.97249C8.68274 6.25235 9.65946 5.84778 10.6779 5.84778Z"
+                                      fill="#7F7F7F"/>
+                                <path d="M4.27777 6.48779H1.71777V14.1678H4.27777V6.48779Z" fill="#7F7F7F"/>
+                                <path d="M2.99777 4.56781C3.7047 4.56781 4.27777 3.99474 4.27777 3.28781C4.27777 2.58089 3.7047 2.00781 2.99777 2.00781C2.29085 2.00781 1.71777 2.58089 1.71777 3.28781C1.71777 3.99474 2.29085 4.56781 2.99777 4.56781Z"
+                                      fill="#7F7F7F"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="copywriting">
+                        <span>	&copy; 2021 OV PROJECT MANEGMENT ВСІ ПРАВА ЗАХИЩЕНІ</span>
+                        <span>DEVELOPMENT BY <strong>CREATIVE GROUP</strong></span>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="lang-switch_desktop">
+                <div class="lang-switch_desktop__current">РУС</div>
+
+                <div class="lang-switch_desktop__dropdown">
+                    <a href="./index_ru.html" class="lang-switch_desktop__link">УКР</a>
+                    <a href="./index_eng.html" class="lang-switch_desktop__link">ENG</a>
+                </div>
+            </div>
+
+            <div class="header__right-bar">
+                <a href="mailto:info@ov-pm.com" class="header__link">
+                    <svg class="header__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 4H2V20H22V4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#7F7F7F"/>
+                    </svg>
+                </a>
+                <a href="tel:+38 067 583 8582" class="header__link">
+                    <svg class="header__link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.0004 15.46L15.7304 14.85L13.2104 17.37C10.3804 15.93 8.06039 13.62 6.62039 10.78L9.15039 8.25L8.54039 3H3.03039C2.45039 13.18 10.8204 21.55 21.0004 20.97V15.46Z"
+                              fill="#7F7F7F"/>
+                    </svg>
+                </a>
+            </div>
+            <button type="button" class="btn-burger" aria-label="бургер-меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+        <div class="backdrop"></div>
+    </header>
+
+    <main class="main home">
+        <section class="section section-intro">
+            <div class="social-bar">
+                <a href="https://www.facebook.com/OV-Project-Management-144792907705433/"
+                   class="social-bar__link social-bar__link_round">
+                    <span class="hide">Facebook</span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.958 2.00781H10.038C9.18928 2.00781 8.37534 2.34495 7.77523 2.94507C7.17511 3.54519 6.83797 4.35912 6.83797 5.20781V7.12781H4.91797V9.68781H6.83797V14.8078H9.39797V9.68781H11.318L11.958 7.12781H9.39797V5.20781C9.39797 5.03807 9.4654 4.87529 9.58542 4.75526C9.70544 4.63524 9.86823 4.56781 10.038 4.56781H11.958V2.00781Z"
+                              fill="#7f7f7f"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/ov_project_management/"
+                   class="social-bar__link social-bar__link_round">
+                    <span class="hide">Instagram</span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4.91777 2.00781H11.3178C13.0851 2.00781 14.5178 3.4405 14.5178 5.20781V11.6078C14.5178 13.3751 13.0851 14.8078 11.3178 14.8078H4.91777C3.15046 14.8078 1.71777 13.3751 1.71777 11.6078V5.20781C1.71777 3.4405 3.15046 2.00781 4.91777 2.00781ZM10.9978 4.88781C10.9978 4.53435 11.2843 4.24781 11.6378 4.24781H11.6442C11.9976 4.24781 12.2842 4.53435 12.2842 4.88781C12.2842 5.24127 11.9976 5.52781 11.6442 5.52781H11.6378C11.2843 5.52781 10.9978 5.24127 10.9978 4.88781ZM8.42722 6.48089C8.02774 6.42165 7.61976 6.48988 7.26129 6.67588C6.90283 6.86188 6.61214 7.15618 6.43058 7.51691C6.24901 7.87764 6.18581 8.28643 6.24997 8.68515C6.31413 9.08387 6.50238 9.4522 6.78794 9.73776C7.07351 10.0233 7.44184 10.2116 7.84056 10.2757C8.23928 10.3399 8.64807 10.2767 9.0088 10.0951C9.36953 9.91357 9.66383 9.62288 9.84983 9.26441C10.0358 8.90595 10.1041 8.49796 10.0448 8.09849C9.9844 7.691 9.79452 7.31376 9.50323 7.02247C9.21195 6.73119 8.8347 6.54131 8.42722 6.48089ZM6.67176 5.53973C7.2692 5.22973 7.94918 5.116 8.61498 5.21473C9.29411 5.31544 9.92286 5.6319 10.4083 6.11738C10.8938 6.60285 11.2103 7.23159 11.311 7.91073C11.4097 8.57653 11.296 9.25651 10.986 9.85394C10.676 10.4514 10.1855 10.9359 9.58428 11.2385C8.98306 11.5411 8.30173 11.6464 7.63721 11.5395C6.97268 11.4325 6.35879 11.1188 5.88285 10.6429C5.40691 10.1669 5.09316 9.55303 4.98623 8.8885C4.8793 8.22397 4.98463 7.54265 5.28724 6.94143C5.58985 6.34022 6.07433 5.84973 6.67176 5.53973Z"
+                              fill="#7F7F7F"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/company/ov-project-management"
+                   class="social-bar__link social-bar__link_round">
+                    <span class="hide">linkedin</span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6779 5.84778C11.6963 5.84778 12.673 6.25235 13.3932 6.97249C14.1133 7.69263 14.5179 8.66935 14.5179 9.68778V14.1678H11.9579V9.68778C11.9579 9.3483 11.823 9.02273 11.583 8.78268C11.3429 8.54264 11.0174 8.40778 10.6779 8.40778C10.3384 8.40778 10.0128 8.54264 9.77279 8.78268C9.53275 9.02273 9.39789 9.3483 9.39789 9.68778V14.1678H6.83789V9.68778C6.83789 8.66935 7.24246 7.69263 7.9626 6.97249C8.68274 6.25235 9.65946 5.84778 10.6779 5.84778Z"
+                              fill="#7F7F7F"/>
+                        <path d="M4.27777 6.48779H1.71777V14.1678H4.27777V6.48779Z" fill="#7F7F7F"/>
+                        <path d="M2.99777 4.56781C3.7047 4.56781 4.27777 3.99474 4.27777 3.28781C4.27777 2.58089 3.7047 2.00781 2.99777 2.00781C2.29085 2.00781 1.71777 2.58089 1.71777 3.28781C1.71777 3.99474 2.29085 4.56781 2.99777 4.56781Z"
+                              fill="#7F7F7F"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="neuron__wrap-img">
+                <div class="neuron__img" id="neuron__img"></div>
+            </div>
+            <div class="container">
+                <div class="section-intro__content">
+                    <ul class="services">
+                        <li class="services__item">
+                            <div class="text-reveal">Управление проектами</div>
+                        </li>
+                        <li class="services__item">
+                            <div class="text-reveal">Девелопмент</div>
+                        </li>
+                        <li class="services__item">
+                            <div class="text-reveal">Услуги инжиниринга в строительстве</div>
+                        </li>
+                    </ul>
+                    <a href="#presentation" class="btn btn_color-black btn_scroll">
+                        <span class="round">
+                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M5.83301 1.00018L5.83301 15.0002" stroke="black" stroke-width="1.5" stroke-linecap="square"
+      stroke-linejoin="round"/>
+<path d="M10 11.0002L5.83333 15.1668L1.66667 11.0002" stroke="black" stroke-width="1.5" stroke-linecap="square"
+      stroke-linejoin="round"/>
+</svg>
+                        </span>
+                        БОЛЬШЕ О НАС</a>
+                </div>
+
+                <div class="swiper slider-services">
+                    <div class="swiper-wrapper">
+                        <a href="project-management.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/1.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Управление проектами
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="development.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/2.jpg)"></span>
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Управление строительством
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="ingeniring.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/3.jpg)"></span>
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Инжиниринг
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="tenders.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/4.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Тендерные процедуры
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="coordination.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/5.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Координация проекта
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="audit.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/6.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Аудит и техническое наблюдение
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="monitoring.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/7.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Мониторинг расходов
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+
+                        <a href="contracts.html" class="swiper-slide">
+                            <span class="slider-services__bg"
+                                  style="background-image: url(assets/img/slider-services/8.jpg)"></span>
+
+                            <div class="slider-services__content">
+                                <h2 class="slider-services__title">
+                                    Заключение контрактов
+                                </h2>
+
+                                <div class="slider-services__text"></div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="slider__arrow slider__arrow_next"></div>
+                    <div class="slider__arrow slider__arrow_prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section presentation bg-dark" id="presentation">
+            <div class="presentation_bg presentation_bg-left">
+                <div class="lottie-bg__container" id="neuronBgBlack"></div>
+            </div>
+            <div class="presentation_bg presentation_bg-right">
+                <div class="lottie-bg__container rotate" id="neuronBgBlackRight"></div>
+            </div>
+
+            <div class="container">
+                <div class="section__text">
+                    Мы превращаем процессы девелопмента<b> в цивилизованные, управляемые, своевременные и
+                    эффективные, </b>в соответствии с лучшими мировыми практиками
+                </div>
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="decor-wrap-btn">
+                    <a href="assets/pdf/OV PM_General presentation_RU.pdf" class="btn btn_large">
+                        <span class="round">
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5" stroke-linecap="square"
+                              stroke-linejoin="round"/>
+                        <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black" stroke-width="1.5"
+                              stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                 </span>
+                        Загрузить презентацию
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section video" style="display: none;">
+            <div class="container">
+                <div class="video__wrap">
+                    <div class="video__inner">
+                        <div class="video__content">
+                            <iframe id="youtube-video" src=""
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                            <div class="video__poster">
+                                <img src="assets/img/poster.jpg" data-video="U3_uxUSeZV4" alt="" class="video__media">
+                                <button
+                                        data-iframe="https://www.youtube.com/embed/U3_uxUSeZV4?autoplay=1"
+                                        class="btn_video"
+                                        id="customPlaybtn"
+                                ><span
+                                        class="rounded"></span>
+                                    <span class="btn__text">Просмотреть видео</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section company-partners">
+            <header class="section__header">
+                <div class="container d-flex">
+                    <h2 class="heading">Управляющие партнеры</h2>
+
+                    <nav class="partners-slider__mob-nav">
+                        <button class="slider__btn partners-slider__prev">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 5.83374L0.999999 5.83374" stroke="black" stroke-linecap="square"
+                                      stroke-linejoin="round"/>
+                                <path d="M5 10.0005L0.833334 5.83382L5 1.66716" stroke="black"
+                                      stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <button class="slider__btn partners-slider__next">
+                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.16724L15 5.16724" stroke="black" stroke-linecap="square"
+                                      stroke-linejoin="round"/>
+                                <path d="M11 1.00049L15.1667 5.16716L11 9.33382" stroke="black"
+                                      stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </nav>
+
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container">
+                <div class="swiper partners-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="partners-slider__part partners-slider__part_media">
+                                <div class="cover-anim_top">
+                                    <div class="cover-anim_top__frame">
+                                        <div class="cover-anim_top__content">
+                                            <div class="partner__photo">
+                                                <div class="cover-anim__frame">
+                                                    <div class="cover-anim__content">
+                                                        <div class="partners-slider__img-wrap">
+                                                            <img src="assets/img/partners-slider/1.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="partners-slider__part partners-slider__content">
+                                <article class="partners-slider__article fade">
+                                    <header class="partners-slider__header">
+                                        <h3>Кирилл Осетрин</h3>
+                                        <p>Управляющий партнер</p>
+                                    </header>
+
+                                    <p> 20 лет в сегменте коммерческой недвижимости.</p>
+
+                                    <p><strong>Архитектор, MBA, PMP, руководитель и технический директор международных
+                                        проектов.</strong></p>
+
+                                    <p><strong>Ключевые компетенции: инвестиции в недвижимость, управление активами,
+                                        координация проектов, девелопмент.</strong></p>
+
+                                    <p>Кирилл Осетрин принимал участие во всех этапах реализации успешных проектов
+                                        коммерческой недвижимости как в Украине, так и в Испании: Karavan Megastore,
+                                        Ghelamco Kopylov Logistic Park, Akron East Gate Logistic, Gorky Park, Plaza Rio
+                                        2 (Мадрид), Mandarin Plaza, Colliers Ukraine и др.
+                                    </p>
+                                </article>
+                                <div class="social-bar social-bar_small">
+                                    <a target="_blank"
+                                       href="https://www.facebook.com/kirill.osetrin.7"
+                                       class="social-bar__link">
+                                        <span class="hide">Facebook</span>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.958 2.00781H10.038C9.18928 2.00781 8.37534 2.34495 7.77523 2.94507C7.17511 3.54519 6.83797 4.35912 6.83797 5.20781V7.12781H4.91797V9.68781H6.83797V14.8078H9.39797V9.68781H11.318L11.958 7.12781H9.39797V5.20781C9.39797 5.03807 9.4654 4.87529 9.58542 4.75526C9.70544 4.63524 9.86823 4.56781 10.038 4.56781H11.958V2.00781Z"
+                                                  fill="#7f7f7f"/>
+                                        </svg>
+                                    </a>
+
+                                    <a target="_blank"
+                                       href="https://www.linkedin.com/in/kyryloosetrin/"
+                                       class="social-bar__link">
+                                        <span class="hide">linkedin</span>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.6779 5.84778C11.6963 5.84778 12.673 6.25235 13.3932 6.97249C14.1133 7.69263 14.5179 8.66935 14.5179 9.68778V14.1678H11.9579V9.68778C11.9579 9.3483 11.823 9.02273 11.583 8.78268C11.3429 8.54264 11.0174 8.40778 10.6779 8.40778C10.3384 8.40778 10.0128 8.54264 9.77279 8.78268C9.53275 9.02273 9.39789 9.3483 9.39789 9.68778V14.1678H6.83789V9.68778C6.83789 8.66935 7.24246 7.69263 7.9626 6.97249C8.68274 6.25235 9.65946 5.84778 10.6779 5.84778Z"
+                                                  fill="#7F7F7F"/>
+                                            <path d="M4.27777 6.48779H1.71777V14.1678H4.27777V6.48779Z" fill="#7F7F7F"/>
+                                            <path d="M2.99777 4.56781C3.7047 4.56781 4.27777 3.99474 4.27777 3.28781C4.27777 2.58089 3.7047 2.00781 2.99777 2.00781C2.29085 2.00781 1.71777 2.58089 1.71777 3.28781C1.71777 3.99474 2.29085 4.56781 2.99777 4.56781Z"
+                                                  fill="#7F7F7F"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <template class="quote-template">
+                                <figure>
+                                    <blockquote class="partner-quote__text" id="partner-quote-text">
+                                        <div class="container">
+                                            <p>Сегодня игроки строительной отрасли находятся в поисках решения для
+                                                трансформации производительности и реализации проектов через новейшие
+                                                технологии и лучшие практики.</p>
+                                        </div>
+                                    </blockquote>
+
+                                    <figcaption>
+                                        <h4 class="partner-quote__title">Кирилл Осетрин</h4>
+                                        <p class="partner-quote__position">Управляющий партнер</p>
+                                    </figcaption>
+                                </figure>
+                            </template>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners-slider__part partners-slider__part_media">
+                                <div class="cover-anim_top">
+                                    <div class="cover-anim_top__frame">
+                                        <div class="cover-anim_top__content">
+                                            <div class="partner__photo">
+                                                <div class="cover-anim__frame">
+                                                    <div class="cover-anim__content">
+                                                        <div class="partners-slider__img-wrap">
+                                                            <img src="assets/img/partners-slider/2.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="partners-slider__part partners-slider__content">
+                                <article class="partners-slider__article fade">
+                                    <header class="partners-slider__header">
+                                        <h3>Александр Высоцкий</h3>
+                                        <p>Управляющий партнер</p>
+                                    </header>
+
+                                    <p>15 лет принимает участие в успешных индустриальных, инфраструктурных проектах и
+                                        проектах коммерческой недвижимости.</p>
+
+                                    <p><strong>Инженер-конструктор ПЦБ, руководитель проектов, технический директор и
+                                        представитель заказчиков.</strong></p>
+
+                                    <p><strong>Ключевые компетенции: проектирование, девелопмент, управление
+                                        строительством, Управление активами. Руководитель специальных команд
+                                        проектов.</strong></p>
+                                    <p>
+                                        При участии Александра Высоцкого реализованы масштабные проекты
+                                        производственного направления, проекты офисной и торговой недвижимости, а
+                                        именно: цементный завод CRH, Аэропорт «Борисполь» Терминал D, автоцентры BMW и
+                                        Porsche, TSUM, а также ряд проектов за рубежом
+                                    </p>
+                                </article>
+                                <div class="social-bar social-bar_small">
+                                    <a target="_blank"
+                                       href="https://www.facebook.com/alexandr.vysotsky"
+                                       class="social-bar__link">
+                                        <span class="hide">Facebook</span>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.958 2.00781H10.038C9.18928 2.00781 8.37534 2.34495 7.77523 2.94507C7.17511 3.54519 6.83797 4.35912 6.83797 5.20781V7.12781H4.91797V9.68781H6.83797V14.8078H9.39797V9.68781H11.318L11.958 7.12781H9.39797V5.20781C9.39797 5.03807 9.4654 4.87529 9.58542 4.75526C9.70544 4.63524 9.86823 4.56781 10.038 4.56781H11.958V2.00781Z"
+                                                  fill="#7f7f7f"/>
+                                        </svg>
+                                    </a>
+
+                                    <a target="_blank" href=" https://www.linkedin.com/in/alexandr-vysotsky-a3830220/"
+                                       class="social-bar__link">
+                                        <span class="hide">linkedin</span>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.6779 5.84778C11.6963 5.84778 12.673 6.25235 13.3932 6.97249C14.1133 7.69263 14.5179 8.66935 14.5179 9.68778V14.1678H11.9579V9.68778C11.9579 9.3483 11.823 9.02273 11.583 8.78268C11.3429 8.54264 11.0174 8.40778 10.6779 8.40778C10.3384 8.40778 10.0128 8.54264 9.77279 8.78268C9.53275 9.02273 9.39789 9.3483 9.39789 9.68778V14.1678H6.83789V9.68778C6.83789 8.66935 7.24246 7.69263 7.9626 6.97249C8.68274 6.25235 9.65946 5.84778 10.6779 5.84778Z"
+                                                  fill="#7F7F7F"/>
+                                            <path d="M4.27777 6.48779H1.71777V14.1678H4.27777V6.48779Z" fill="#7F7F7F"/>
+                                            <path d="M2.99777 4.56781C3.7047 4.56781 4.27777 3.99474 4.27777 3.28781C4.27777 2.58089 3.7047 2.00781 2.99777 2.00781C2.29085 2.00781 1.71777 2.58089 1.71777 3.28781C1.71777 3.99474 2.29085 4.56781 2.99777 4.56781Z"
+                                                  fill="#7F7F7F"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <template class="quote-template">
+                                <figure>
+                                    <blockquote class="partner-quote__text">
+                                        <div class="container">
+                                            <p>
+                                                Методология управления применяется во всех фазах (этапах) жизненного
+                                                цикла проекта, но в случае привлечения специализированной команды на
+                                                ранней стадии, проект будет управляемым уже на этапе инициализации...
+                                            </p>
+                                        </div>
+                                    </blockquote>
+
+                                    <figcaption>
+                                        <h4 class="partner-quote__title">Александр Высоцкий</h4>
+                                        <p class="partner-quote__position">Управляющий партнер</p>
+                                    </figcaption>
+                                </figure>
+                            </template>
+                        </div>
+                    </div>
+
+                    <footer class="partners-slider__footer">
+                        <nav class="partners-slider__desktop-nav">
+                            <button class="slider__btn partners-slider__prev">
+                                <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 5.83374L0.999999 5.83374" stroke="black" stroke-linecap="square"
+                                          stroke-linejoin="round"/>
+                                    <path d="M5 10.0005L0.833334 5.83382L5 1.66716" stroke="black"
+                                          stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+
+                            <button class="slider__btn partners-slider__next">
+                                <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 5.16724L15 5.16724" stroke="black" stroke-linecap="square"
+                                          stroke-linejoin="round"/>
+                                    <path d="M11 1.00049L15.1667 5.16716L11 9.33382" stroke="black"
+                                          stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </nav>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <section class="drones">
+            <div class="container d-flex">
+                <div class="drones__part-left">
+
+                    <div class="drones__part-inner ">
+                        <div class="drones-neuron">
+                            <div class="drones-neuron__img" id="neuronDrones"></div>
+                        </div>
+
+                        <div class="drones__img-blocks">
+                            <img src="assets/img/copter.png" alt="" class="drones__img">
+                            <img src="assets/img/ellips-sector.png" alt="" class="drones__img-sector">
+                        </div>
+                    </div>
+                </div>
+                <div class="drones__part-right">
+                    <h2 class="heading">Беспилотники для строительства и инженерных работ</h2>
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <a href="tel:+38 067 583 8582" class="btn btn_color-black">
+                        <span class="round">
+                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5" stroke-linecap="square"
+                                      stroke-linejoin="round"/>
+                                <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black" stroke-width="1.5"
+                                      stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                        </span> Заказать видеосъемку
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+            <div class="swiper contacts-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide contacts-slider__slide">
+                        <div class="container d-flex contacts-data">
+                            <h2 class="heading">Контакты</h2>
+                            <div class="contacts_left contacts_part">
+                                <h3 class="heading heading_md">ООО «ОВ ПРОДЖЕКТ МЕНЕДЖМЕНТ»</h3>
+                                <div class="contacts__info">
+                                    <div class="contacts__info-item phone">
+                                        <h4 class="heading_sm">Телефон</h4>
+                                        <a href="tel:+38(067)4323215">+38 (067) 432 32 15</a>
+                                    </div>
+                                    <div class="contacts__info-item">
+                                        <h4 class="heading_sm"> Email</h4>
+                                        <a href="mailto: info@ov-pm.com" class="mail">info@ov-pm.com</a>
+                                    </div>
+                                    <div class="contacts__info-item">
+                                        <h4 class="heading_sm"> Адрес</h4>
+                                        <p>Бизнес-центр IQ<br>
+                                            ул. Болсуновская, 13-15<br>
+                                            Киев, Украина 01014</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts_right contacts_part">
+                                <span class="heading heading_md">МЫ ВСЕГДА НА СВЯЗИ</span>
+                                <form action="#" class="contact-form">
+                                    <div class="form-group">
+                                        <label class="hide">Имя</label>
+                                        <input type="text" class="input" placeholder="Имя">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="hide">Email</label>
+                                        <input type="text" class="input" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="hide">Сообщение</label>
+                                        <textarea class="textarea" rows="1" cols="45"
+                                                  placeholder="Сообщение"></textarea>
+                                    </div>
+                                    <button class="btn btn_color-white btn_submit">
+                                        <span class="round">
+                                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 6.1648L15 6.16479" stroke="black" stroke-width="1.5"
+                                                      stroke-linecap="square" stroke-linejoin="round"/>
+                                                <path d="M11 1.99805L15.1667 6.16471L11 10.3314" stroke="black"
+                                                      stroke-width="1.5" stroke-linecap="square"
+                                                      stroke-linejoin="round"/>
+                                            </svg>
+                                        </span> Отправить запрос
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide contacts-slider__slide">
+                        <section class="section-map" id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.0069101745685!2d30.551119714010525!3d50.42180696731292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6e072b61a3%3A0x28b8941f826fe32!2sIQ%20Business%20Center!5e0!3m2!1sru!2sua!4v1637403887137!5m2!1sru!2sua"
+                                    width="600" height="450" style="border:0;" allowfullscreen=""
+                                    loading="lazy">
+                            </iframe>
+                        </section>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_top">
+                <ul class="footer__nav">
+                    <li class="footer__nav-item">
+                        <a href="about_ru.html" class="footer__nav-link">О НАС</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="services_ru.html" class="footer__nav-link">УСЛУГИ</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="projects_ru.html" class="footer__nav-link">ПРОЕКТЫ</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="inform-drones_ru.html" class="footer__nav-link">ИМБ</a>
+                    </li>
+                    <!--<li class="footer__nav-item">-->
+                    <!--<a href="news.html" class="footer__nav-link">НОВИНИ</a>-->
+                    <!--</li>-->
+                    <li class="footer__nav-item">
+                        <a href="#contacts" class="footer__nav-link">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+                <div class="social-bar social-bar_small">
+                    <a target="_blank" href="https://www.facebook.com/OV-Project-Management-144792907705433/"
+                       class="social-bar__link">
+                        <span class="hide">Facebook</span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.958 2.00781H10.038C9.18928 2.00781 8.37534 2.34495 7.77523 2.94507C7.17511 3.54519 6.83797 4.35912 6.83797 5.20781V7.12781H4.91797V9.68781H6.83797V14.8078H9.39797V9.68781H11.318L11.958 7.12781H9.39797V5.20781C9.39797 5.03807 9.4654 4.87529 9.58542 4.75526C9.70544 4.63524 9.86823 4.56781 10.038 4.56781H11.958V2.00781Z"
+                                  fill="#7f7f7f"/>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="https://www.instagram.com/ov_project_management/" class="social-bar__link">
+                        <span class="hide">Instagram</span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.91777 2.00781H11.3178C13.0851 2.00781 14.5178 3.4405 14.5178 5.20781V11.6078C14.5178 13.3751 13.0851 14.8078 11.3178 14.8078H4.91777C3.15046 14.8078 1.71777 13.3751 1.71777 11.6078V5.20781C1.71777 3.4405 3.15046 2.00781 4.91777 2.00781ZM10.9978 4.88781C10.9978 4.53435 11.2843 4.24781 11.6378 4.24781H11.6442C11.9976 4.24781 12.2842 4.53435 12.2842 4.88781C12.2842 5.24127 11.9976 5.52781 11.6442 5.52781H11.6378C11.2843 5.52781 10.9978 5.24127 10.9978 4.88781ZM8.42722 6.48089C8.02774 6.42165 7.61976 6.48988 7.26129 6.67588C6.90283 6.86188 6.61214 7.15618 6.43058 7.51691C6.24901 7.87764 6.18581 8.28643 6.24997 8.68515C6.31413 9.08387 6.50238 9.4522 6.78794 9.73776C7.07351 10.0233 7.44184 10.2116 7.84056 10.2757C8.23928 10.3399 8.64807 10.2767 9.0088 10.0951C9.36953 9.91357 9.66383 9.62288 9.84983 9.26441C10.0358 8.90595 10.1041 8.49796 10.0448 8.09849C9.9844 7.691 9.79452 7.31376 9.50323 7.02247C9.21195 6.73119 8.8347 6.54131 8.42722 6.48089ZM6.67176 5.53973C7.2692 5.22973 7.94918 5.116 8.61498 5.21473C9.29411 5.31544 9.92286 5.6319 10.4083 6.11738C10.8938 6.60285 11.2103 7.23159 11.311 7.91073C11.4097 8.57653 11.296 9.25651 10.986 9.85394C10.676 10.4514 10.1855 10.9359 9.58428 11.2385C8.98306 11.5411 8.30173 11.6464 7.63721 11.5395C6.97268 11.4325 6.35879 11.1188 5.88285 10.6429C5.40691 10.1669 5.09316 9.55303 4.98623 8.8885C4.8793 8.22397 4.98463 7.54265 5.28724 6.94143C5.58985 6.34022 6.07433 5.84973 6.67176 5.53973Z"
+                                  fill="#7F7F7F"/>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="https://www.linkedin.com/company/ov-project-management"
+                       class="social-bar__link">
+                        <span class="hide">linkedin</span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6779 5.84778C11.6963 5.84778 12.673 6.25235 13.3932 6.97249C14.1133 7.69263 14.5179 8.66935 14.5179 9.68778V14.1678H11.9579V9.68778C11.9579 9.3483 11.823 9.02273 11.583 8.78268C11.3429 8.54264 11.0174 8.40778 10.6779 8.40778C10.3384 8.40778 10.0128 8.54264 9.77279 8.78268C9.53275 9.02273 9.39789 9.3483 9.39789 9.68778V14.1678H6.83789V9.68778C6.83789 8.66935 7.24246 7.69263 7.9626 6.97249C8.68274 6.25235 9.65946 5.84778 10.6779 5.84778Z"
+                                  fill="#7F7F7F"/>
+                            <path d="M4.27777 6.48779H1.71777V14.1678H4.27777V6.48779Z" fill="#7F7F7F"/>
+                            <path d="M2.99777 4.56781C3.7047 4.56781 4.27777 3.99474 4.27777 3.28781C4.27777 2.58089 3.7047 2.00781 2.99777 2.00781C2.29085 2.00781 1.71777 2.58089 1.71777 3.28781C1.71777 3.99474 2.29085 4.56781 2.99777 4.56781Z"
+                                  fill="#7F7F7F"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="copywriting">&copy; 2021 OV PROJECT MANEGMENT ВСЕ ПРАВА ЗАЩИЩЕНЫ</div>
+                <a href="https://profi-creative.com/" class="develop">Создано<img src="assets/img/svg/logo_company.svg"
+                                                                                  alt="Profi Creative"></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script>
+    //  LOADER
+    const obj = document.querySelector('.preloader');
+    const inner = document.querySelector('.preloader .counter');
+
+    function loader() {
+        lottie.loadAnimation({
+            container: document.getElementById('loaderNeuron'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+
+        lottie.loadAnimation({
+            container: document.getElementById('loaderNeuronRight'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            preserveAspectRatio: 'xMidYMid slice',
+            path: './assets/json/preloader.json'
+        });
+
+        document.querySelector('.cover-anim_top').classList.add('anim_started');
+
+        let w = 0,
+            t = setInterval(function () {
+                w = w + 2;
+                inner.textContent = w + '%';
+                if (w === 100) {
+                    clearInterval(t);
+                    w = 0;
+                }
+            }, 500);
+    }
+
+    loader();
+
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 30);
+    }
+</script>
+
+<script src="lib/swiper@7/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>

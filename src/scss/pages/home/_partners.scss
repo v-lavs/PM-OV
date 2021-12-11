@@ -169,6 +169,9 @@
 }
 
 @include respond-to($sm) {
+  .company-partners{
+    padding-top: 20px;
+  }
   .partners-slider {
     &__article {
       margin-bottom: 20px;
