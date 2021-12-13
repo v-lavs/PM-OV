@@ -193,3 +193,9 @@
   }
 }
 
+@include respond-to($xs) {
+  .partners-slider__part {
+    min-height: 262px;
+  }
+}
+
